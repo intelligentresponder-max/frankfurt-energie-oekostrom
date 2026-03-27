@@ -1,1 +1,388 @@
-
+{
+  "meta": {
+    "stand": "27.03.2026",
+    "naechste_pruefung": "03.04.2026",
+    "grundversorger": [
+      {
+        "name": "Grundversorger Frankfurt",
+        "plz_von": 60001,
+        "plz_bis": 60599,
+        "ap_ct": 41.0,
+        "gp_euro_jahr": 180.0
+      },
+      {
+        "name": "Grundversorger Frankfurt",
+        "plz_von": 65901,
+        "plz_bis": 65936,
+        "ap_ct": 41.0,
+        "gp_euro_jahr": 180.0
+      }
+    ]
+  },
+  "tarife": [
+    {
+      "id": "gruenvolt-oekoplus24",
+      "anbieter": "GrünVolt",
+      "tarif": "ÖkoPlus 24",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 31.90,
+        "gp_euro_jahr": 120.00
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat",
+        "mindestlaufzeit_monate": 12
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "plz_ausnahmen": [],
+        "nur_plz": [],
+        "bundeslaender": []
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0,
+        "bonus_typ": "",
+        "aktions_ende": "",
+        "letzter_wechsel": "",
+        "countdown_aktiv": false
+      },
+      "bedingungen": {
+        "nur_privatkunden": true,
+        "nur_gewerbe": false,
+        "neukunden_only": true,
+        "kein_gewerbe": true,
+        "kein_neubau": false,
+        "kein_heizstrom": false,
+        "max_verbrauch_kwh": 100000,
+        "sonstiges": ""
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "ok-power",
+        "herkunft": "Wind & Solar",
+        "co2_neutral": true
+      },
+      "anzeige": {
+        "empfehlung": "gold",
+        "badge": "🥇 Beste Wahl",
+        "highlight": true,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "nordstream-komfort24",
+      "anbieter": "NordStream Energie",
+      "tarif": "Komfort 24",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 32.83,
+        "gp_euro_jahr": 115.00
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 24,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat",
+        "mindestlaufzeit_monate": 24
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "plz_ausnahmen": [],
+        "nur_plz": [],
+        "bundeslaender": []
+      },
+      "aktion": {
+        "aktiv": true,
+        "bonus_euro": 40,
+        "bonus_typ": "Gutschrift nach 3 Monaten",
+        "aktions_ende": "30.06.2026",
+        "letzter_wechsel": "15.06.2026",
+        "countdown_aktiv": true
+      },
+      "bedingungen": {
+        "nur_privatkunden": true,
+        "nur_gewerbe": false,
+        "neukunden_only": true,
+        "kein_gewerbe": true,
+        "kein_neubau": false,
+        "kein_heizstrom": true,
+        "max_verbrauch_kwh": 50000,
+        "sonstiges": "Nicht kombinierbar mit anderen Aktionen"
+      },
+      "produkt": {
+        "oekostrom": false,
+        "zertifikat": "",
+        "herkunft": "",
+        "co2_neutral": false
+      },
+      "anzeige": {
+        "empfehlung": "gold",
+        "badge": "⭐ Höchste Ersparnis",
+        "highlight": true,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "skypower-stadtstrom24",
+      "anbieter": "SkyPower",
+      "tarif": "Stadtstrom 24",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 32.56,
+        "gp_euro_jahr": 114.00
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat",
+        "mindestlaufzeit_monate": 12
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "plz_ausnahmen": [],
+        "nur_plz": [],
+        "bundeslaender": []
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0,
+        "bonus_typ": "",
+        "aktions_ende": "",
+        "letzter_wechsel": "",
+        "countdown_aktiv": false
+      },
+      "bedingungen": {
+        "nur_privatkunden": true,
+        "nur_gewerbe": false,
+        "neukunden_only": true,
+        "kein_gewerbe": true,
+        "kein_neubau": false,
+        "kein_heizstrom": false,
+        "max_verbrauch_kwh": 100000,
+        "sonstiges": ""
+      },
+      "produkt": {
+        "oekostrom": false,
+        "zertifikat": "",
+        "herkunft": "",
+        "co2_neutral": false
+      },
+      "anzeige": {
+        "empfehlung": "silver",
+        "badge": "💰 Günstigster Preis",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "ecobase-klimastabil",
+      "anbieter": "EcoBase",
+      "tarif": "KlimaStabil Plus",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 34.66,
+        "gp_euro_jahr": 118.00
+      },
+      "vertrag": {
+        "preisgarantie": "bis 31.12.2027",
+        "pg_monate": 24,
+        "laufzeit_monate": 24,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat",
+        "mindestlaufzeit_monate": 24
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "plz_ausnahmen": [],
+        "nur_plz": [],
+        "bundeslaender": []
+      },
+      "aktion": {
+        "aktiv": true,
+        "bonus_euro": 100,
+        "bonus_typ": "Sofortbonus auf Rechnung",
+        "aktions_ende": "31.12.2026",
+        "letzter_wechsel": "15.12.2026",
+        "countdown_aktiv": true
+      },
+      "bedingungen": {
+        "nur_privatkunden": true,
+        "nur_gewerbe": false,
+        "neukunden_only": true,
+        "kein_gewerbe": true,
+        "kein_neubau": false,
+        "kein_heizstrom": false,
+        "max_verbrauch_kwh": 100000,
+        "sonstiges": ""
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "TÜV",
+        "herkunft": "Wind & Wasser",
+        "co2_neutral": true
+      },
+      "anzeige": {
+        "empfehlung": "silver",
+        "badge": "🔒 Längste Preissicherheit",
+        "highlight": true,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "clearenergy-oekopriv24",
+      "anbieter": "ClearEnergy",
+      "tarif": "ÖkoPrivat 24",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 34.34,
+        "gp_euro_jahr": 116.00
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat",
+        "mindestlaufzeit_monate": 12
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "plz_ausnahmen": [],
+        "nur_plz": [],
+        "bundeslaender": []
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0,
+        "bonus_typ": "",
+        "aktions_ende": "",
+        "letzter_wechsel": "",
+        "countdown_aktiv": false
+      },
+      "bedingungen": {
+        "nur_privatkunden": true,
+        "nur_gewerbe": false,
+        "neukunden_only": true,
+        "kein_gewerbe": false,
+        "kein_neubau": false,
+        "kein_heizstrom": false,
+        "max_verbrauch_kwh": 100000,
+        "sonstiges": "Auch für Bestandskunden verfügbar"
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "ok-power",
+        "herkunft": "100% erneuerbar",
+        "co2_neutral": true
+      },
+      "anzeige": {
+        "empfehlung": "none",
+        "badge": "🌱 Ökostrom",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "ecobase-klimabonus12",
+      "anbieter": "EcoBase",
+      "tarif": "KlimaBonus 12",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 33.96,
+        "gp_euro_jahr": 116.00
+      },
+      "vertrag": {
+        "preisgarantie": "12 Monate",
+        "pg_monate": 12,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat",
+        "mindestlaufzeit_monate": 12
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "plz_ausnahmen": [],
+        "nur_plz": [],
+        "bundeslaender": []
+      },
+      "aktion": {
+        "aktiv": true,
+        "bonus_euro": 100,
+        "bonus_typ": "Gutschrift im 2. Monat",
+        "aktions_ende": "30.09.2026",
+        "letzter_wechsel": "15.09.2026",
+        "countdown_aktiv": true
+      },
+      "bedingungen": {
+        "nur_privatkunden": true,
+        "nur_gewerbe": false,
+        "neukunden_only": true,
+        "kein_gewerbe": true,
+        "kein_neubau": false,
+        "kein_heizstrom": false,
+        "max_verbrauch_kwh": 50000,
+        "sonstiges": ""
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "TÜV",
+        "herkunft": "Solar & Wind",
+        "co2_neutral": true
+      },
+      "anzeige": {
+        "empfehlung": "gold",
+        "badge": "🎁 100€ Bonus",
+        "highlight": true,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "skypower-stadtoko24",
+      "anbieter": "SkyPower",
+      "tarif": "Stadtstrom Öko 24",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 32.92,
+        "gp_euro_jahr": 114.00
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat",
+        "mindestlaufzeit_monate": 12
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "plz_ausnahmen": [],
+        "nur_plz": [],
+        "bundeslaender": []
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0,
+        "bonus_typ": "",
+        "aktions_ende": "",
+        "letzter_wechsel": "",
+        "countdown_aktiv": false
+      },
+      "bedingungen": {
+        "nur_privatkunden": true,
+        "nur_gewerbe": false,
+        "neukunden_only": true,
+        "kein_gewerbe": true,
+        "kein_neubau": false,
+        "kein_heizstrom": false,
+        "max_verbrauch_kwh": 100000,
+        "sonstiges": ""
+      },
+      
