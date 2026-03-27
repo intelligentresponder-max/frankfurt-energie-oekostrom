@@ -1,637 +1,311 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
-<meta name="description" content="André Schwarz – Ihr persönlicher Energieberater in Frankfurt. TELESON-Partner. Strom & Gas vergleichen, sofort sparen. Kostenlose Beratung.">
-<meta name="keywords" content="Energieberater Frankfurt, Stromvergleich, Gasvergleich, TELESON, Energiekosten senken, André Schwarz">
-<title>Frankfurt-Energie.Online · Ihr persönlicher Energieberater</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Zertifizierter Oekostrom in Frankfurt am Main – guenstiger als der Grundversorger. Kostenloser Tarifvergleich mit ok-power- und TUeV-zertifizierten Tarifen. Beratung zu Strom, Gas, Photovoltaik, Balkonkraftwerken und Solar. Jetzt sparen.">
+<meta name="keywords" content="Oekostrom Frankfurt, zertifizierter Oekostrom, ok-power, TUeV Oekostrom, Stromvergleich Frankfurt, guenstiger Oekostrom, Grundversorger Frankfurt, TELESON, Strom sparen Frankfurt, Photovoltaik Frankfurt, Balkonkraftwerk Frankfurt, Solar Installation Frankfurt, Gasvergleich Frankfurt, Fernwaerme Frankfurt">
+<title>Oekostrom Frankfurt – Zertifiziert. Guenstiger. Ehrlich. | Frankfurt Energie Online</title>
 <style>
-:root {
-  --bg: #FAFBFD;
-  --white: #FFFFFF;
-  --card: #FFFFFF;
-  --border: #E8ECF2;
-  --border-hover: #C4D0E0;
-  --text: #1A2332;
-  --text2: #4A5A6F;
-  --muted: #8494A7;
-  --green: #00875A;
-  --green-light: #E6F5EF;
-  --green-glow: rgba(0,135,90,0.08);
-  --orange: #E8730C;
-  --orange-light: #FFF4EB;
-  --blue: #0066CC;
-  --blue-light: #EBF5FF;
-  --gold: #C49A2A;
-  --gold-light: #FBF6E9;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 14px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.04);
-  --shadow-lg: 0 10px 30px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
-  --radius: 14px;
-  --serif: 'Playfair Display', Georgia, serif;
-  --sans: 'DM Sans', system-ui, -apple-system, sans-serif;
-}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: #1a1a2e; line-height: 1.7; }
 
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:var(--green);text-decoration:none}
-a:hover{text-decoration:underline}
+  .hero-oeko {
+    background: linear-gradient(135deg, #0a4d2e 0%, #16a34a 50%, #22c55e 100%);
+    color: white; padding: 60px 20px; text-align: center;
+  }
+  .hero-oeko h1 { font-size: 2rem; margin-bottom: 12px; font-weight: 800; }
+  .hero-oeko .subtitle { font-size: 1.15rem; opacity: 0.92; max-width: 720px; margin: 0 auto 24px; }
+  .hero-oeko .badge { display: inline-block; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); border-radius: 50px; padding: 8px 20px; font-size: 0.9rem; margin: 6px; backdrop-filter: blur(4px); }
 
-/* ═══ HEADER / NAV ═══ */
-.topbar{
-  position:sticky;top:0;z-index:100;
-  background:rgba(255,255,255,0.92);
-  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--border);
-  padding:0 24px;
-}
-.topbar-inner{
-  max-width:1080px;margin:0 auto;
-  display:flex;align-items:center;justify-content:space-between;
-  height:62px;gap:16px;
-}
-.brand{display:flex;align-items:center;gap:10px}
-.brand-icon{font-size:1.5rem}
-.brand-name{font-family:var(--serif);font-weight:700;font-size:1.1rem;color:var(--text);letter-spacing:-0.5px}
-.brand-name span{color:var(--green)}
-.nav-links{display:flex;gap:6px;flex-wrap:wrap}
-.nav-link{
-  font-size:0.82rem;font-weight:500;color:var(--text2);
-  padding:7px 16px;border-radius:8px;
-  border:1px solid transparent;cursor:pointer;
-  transition:all .2s;background:none;
-}
-.nav-link:hover,.nav-link.active{background:var(--green-light);color:var(--green);border-color:rgba(0,135,90,0.15)}
-.cta-nav{
-  font-size:0.8rem;font-weight:600;color:#fff;
-  background:var(--green);padding:8px 18px;border-radius:8px;
-  border:none;cursor:pointer;transition:all .2s;white-space:nowrap;
-}
-.cta-nav:hover{background:#006B48;transform:translateY(-1px);box-shadow:var(--shadow-sm)}
+  .section { max-width: 800px; margin: 0 auto; padding: 48px 20px; }
+  .section h2 { font-size: 1.55rem; color: #0a4d2e; margin-bottom: 16px; font-weight: 700; }
+  .section h3 { font-size: 1.2rem; color: #16a34a; margin: 28px 0 10px; font-weight: 700; }
+  .section p { margin-bottom: 16px; font-size: 1.02rem; color: #333; }
 
-/* ═══ HERO ═══ */
-.hero{
-  max-width:1080px;margin:0 auto;
-  padding:56px 24px 48px;
-  display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
-}
-@media(max-width:768px){.hero{grid-template-columns:1fr;text-align:center;padding:40px 20px 32px}}
-.hero-content{}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:6px;
-  font-size:0.75rem;font-weight:600;color:var(--green);
-  background:var(--green-light);padding:6px 14px;border-radius:20px;
-  margin-bottom:20px;
-}
-.hero-badge::before{content:'✓';font-weight:700}
-.hero h1{
-  font-family:var(--serif);font-size:clamp(2rem,4.5vw,3rem);font-weight:800;
-  line-height:1.15;letter-spacing:-1px;margin-bottom:16px;color:var(--text);
-}
-.hero h1 em{font-style:normal;color:var(--green)}
-.hero-sub{font-size:1.05rem;color:var(--text2);max-width:480px;margin-bottom:28px;font-weight:400;line-height:1.65}
-@media(max-width:768px){.hero-sub{margin:0 auto 28px}}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-@media(max-width:768px){.hero-actions{justify-content:center}}
-.btn-primary{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:0.95rem;font-weight:600;color:#fff;
-  background:var(--green);padding:14px 28px;border-radius:10px;
-  border:none;cursor:pointer;transition:all .2s;
-  box-shadow:0 2px 8px rgba(0,135,90,0.25);
-}
-.btn-primary:hover{background:#006B48;transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,135,90,0.3)}
-.btn-secondary{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:0.95rem;font-weight:500;color:var(--text);
-  background:var(--white);padding:14px 28px;border-radius:10px;
-  border:1px solid var(--border);cursor:pointer;transition:all .2s;
-}
-.btn-secondary:hover{border-color:var(--border-hover);background:#F5F7FA;transform:translateY(-1px)}
+  .highlight-box {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    border-left: 5px solid #16a34a; border-radius: 0 12px 12px 0;
+    padding: 24px 28px; margin: 28px 0;
+  }
+  .highlight-box strong { color: #0a4d2e; }
 
-/* HERO RIGHT: Savings Highlight */
-.hero-visual{
-  background:var(--white);border:1px solid var(--border);border-radius:var(--radius);
-  padding:32px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;
-}
-.hero-visual::before{
-  content:'';position:absolute;top:-60px;right:-60px;
-  width:200px;height:200px;border-radius:50%;
-  background:radial-gradient(circle,rgba(0,135,90,0.06),transparent 70%);
-}
-.hv-label{font-size:0.72rem;font-weight:600;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase;margin-bottom:6px}
-.hv-region{font-size:0.88rem;color:var(--text2);margin-bottom:20px}
-.hv-compare{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;margin-bottom:20px}
-.hv-price{text-align:center;padding:16px;border-radius:10px}
-.hv-price.old{background:#FEF2F2;border:1px solid #FECACA}
-.hv-price.new{background:var(--green-light);border:1px solid rgba(0,135,90,0.2)}
-.hv-price-label{font-size:0.68rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
-.hv-price.old .hv-price-label{color:#B91C1C}
-.hv-price.new .hv-price-label{color:var(--green)}
-.hv-price-val{font-family:var(--serif);font-size:1.8rem;font-weight:700}
-.hv-price.old .hv-price-val{color:#DC2626;text-decoration:line-through;text-decoration-color:#FCA5A5}
-.hv-price.new .hv-price-val{color:var(--green)}
-.hv-arrow{font-size:1.5rem;color:var(--green)}
-.hv-savings{
-  text-align:center;padding:14px;border-radius:10px;
-  background:linear-gradient(135deg,var(--green),#00A86B);color:#fff;
-}
-.hv-savings-val{font-family:var(--serif);font-size:1.4rem;font-weight:700}
-.hv-savings-label{font-size:0.72rem;opacity:0.9;margin-top:2px}
+  .comparison-card {
+    background: white; border-radius: 16px; padding: 28px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08); margin: 28px 0;
+    border: 1px solid #e5e7eb;
+  }
+  .comparison-card .vs { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; align-items: stretch; margin: 20px 0; }
+  .comparison-card .vs > div { flex: 1; min-width: 240px; padding: 20px; border-radius: 12px; text-align: center; }
+  .grundversorger { background: #fef2f2; border: 2px solid #fca5a5; }
+  .grundversorger .price { font-size: 2rem; font-weight: 800; color: #dc2626; }
+  .oekostrom-card { background: #f0fdf4; border: 2px solid #4ade80; }
+  .oekostrom-card .price { font-size: 2rem; font-weight: 800; color: #16a34a; }
+  .label-tag { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 8px; }
+  .savings { background: #16a34a; color: white; border-radius: 50px; display: inline-block; padding: 10px 28px; font-weight: 700; font-size: 1.1rem; margin-top: 12px; }
 
-/* ═══ TRUST BAR ═══ */
-.trust-bar{
-  max-width:1080px;margin:0 auto;padding:0 24px 40px;
-  display:flex;gap:32px;align-items:center;justify-content:center;flex-wrap:wrap;
-}
-.trust-item{display:flex;align-items:center;gap:8px;font-size:0.82rem;color:var(--muted);font-weight:500}
-.trust-icon{font-size:1.1rem}
+  .siegel-grid { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+  .siegel-item { flex: 1; min-width: 200px; background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; text-align: center; }
+  .siegel-item .icon { font-size: 2.2rem; margin-bottom: 8px; }
+  .siegel-item h4 { font-size: 1rem; color: #0a4d2e; margin-bottom: 6px; }
+  .siegel-item p { font-size: 0.88rem; color: #555; margin: 0; }
 
-/* ═══ SECTIONS ═══ */
-.section{max-width:1080px;margin:0 auto;padding:0 24px 56px}
-.section-header{text-align:center;margin-bottom:36px}
-.section-badge{
-  display:inline-block;font-size:0.7rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;
-  color:var(--orange);background:var(--orange-light);padding:5px 14px;border-radius:16px;margin-bottom:12px;
-}
-.section-title{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;color:var(--text);margin-bottom:8px}
-.section-sub{font-size:0.95rem;color:var(--text2);max-width:600px;margin:0 auto}
+  .fact-list { list-style: none; padding: 0; }
+  .fact-list li { padding: 10px 0 10px 32px; position: relative; font-size: 1rem; border-bottom: 1px solid #f0f0f0; }
+  .fact-list li::before { content: "\2713"; position: absolute; left: 0; color: #16a34a; font-weight: 800; font-size: 1.2rem; }
 
-/* ═══ PLZ TOOL ═══ */
-.tool-panel{
-  background:var(--white);border:1px solid var(--border);border-radius:var(--radius);
-  padding:28px;box-shadow:var(--shadow-md);margin-bottom:32px;
-}
-.tool-row{display:flex;gap:12px;align-items:stretch;flex-wrap:wrap}
-.plz-input{
-  flex:1;min-width:160px;
-  background:var(--bg);border:2px solid var(--border);
-  color:var(--text);font-family:var(--sans);font-size:1.6rem;font-weight:700;
-  padding:14px 18px;border-radius:10px;outline:none;
-  letter-spacing:8px;text-align:center;transition:border-color .2s;
-}
-.plz-input::placeholder{color:var(--muted);letter-spacing:2px;font-size:1rem;font-weight:400}
-.plz-input:focus{border-color:var(--green);box-shadow:0 0 0 3px rgba(0,135,90,0.1)}
-.meta-col{display:flex;flex-direction:column;gap:8px}
-.meta-select,.meta-input{
-  background:var(--bg);border:1px solid var(--border);
-  color:var(--text);font-family:var(--sans);font-size:0.85rem;
-  padding:10px 12px;border-radius:8px;outline:none;
-}
-.meta-select:focus,.meta-input:focus{border-color:var(--green)}
-.search-btn{
-  background:var(--green);color:#fff;
-  font-family:var(--sans);font-weight:700;font-size:0.95rem;
-  padding:14px 32px;border:none;border-radius:10px;cursor:pointer;
-  transition:all .2s;white-space:nowrap;
-  box-shadow:0 2px 8px rgba(0,135,90,0.2);
-}
-.search-btn:hover{background:#006B48;transform:translateY(-1px)}
-.region-label{margin-top:12px;font-size:0.85rem;color:var(--text2)}
-.region-label b{color:var(--green);font-weight:600}
+  .services-grid { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+  .service-item { flex: 1; min-width: 160px; background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; text-align: center; }
+  .service-item .icon { font-size: 2rem; margin-bottom: 8px; }
+  .service-item h4 { font-size: 0.95rem; color: #0a4d2e; margin-bottom: 4px; }
+  .service-item p { font-size: 0.82rem; color: #666; margin: 0; }
 
-/* ═══ CONTENT CARDS ═══ */
-.sec-label{font-size:0.7rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
-.partner-hero{
-  background:var(--white);border:2px solid var(--green);border-radius:var(--radius);
-  padding:24px;margin-bottom:20px;box-shadow:var(--shadow-md);
-  position:relative;overflow:hidden;
-}
-.partner-hero::after{
-  content:'';position:absolute;top:0;right:0;
-  width:120px;height:120px;
-  background:radial-gradient(circle at top right,rgba(0,135,90,0.06),transparent 70%);
-}
-.p-name{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:4px}
-.p-tel{font-size:0.88rem;color:var(--text2);margin-bottom:2px}
-.p-email{font-size:0.85rem;color:var(--muted);margin-bottom:12px}
-.p-tags{display:flex;gap:6px;flex-wrap:wrap}
-.p-tag{
-  font-size:0.72rem;font-weight:500;padding:4px 10px;border-radius:6px;
-  background:var(--green-light);color:var(--green);
-}
-.stars{color:var(--gold);font-size:0.95rem}
-.badge-cert{
-  display:inline-block;font-size:0.65rem;font-weight:600;
-  padding:3px 10px;border-radius:4px;margin-top:6px;
-  background:var(--gold-light);color:var(--gold);border:1px solid rgba(196,154,42,0.2);
-}
+  .cta-section {
+    background: linear-gradient(135deg, #0a4d2e, #16a34a);
+    color: white; text-align: center; padding: 48px 20px; border-radius: 20px; margin: 32px 0;
+  }
+  .cta-section h2 { color: white; margin-bottom: 12px; }
+  .cta-section p { color: rgba(255,255,255,0.9); margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .cta-btn {
+    display: inline-block; background: white; color: #0a4d2e;
+    padding: 16px 40px; border-radius: 50px; text-decoration: none;
+    font-weight: 800; font-size: 1.1rem; transition: transform 0.2s;
+  }
+  .cta-btn:hover { transform: scale(1.05); }
+  .cta-whatsapp {
+    display: inline-block; background: #25D366; color: white;
+    padding: 16px 40px; border-radius: 50px; text-decoration: none;
+    font-weight: 700; font-size: 1rem; margin-left: 12px; margin-top: 8px;
+  }
+  .cta-whatsapp:hover { transform: scale(1.05); }
 
-.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-bottom:24px}
-.card{
-  background:var(--white);border:1px solid var(--border);border-radius:12px;
-  padding:20px;transition:all .2s;cursor:default;position:relative;
-}
-.card:hover{border-color:var(--border-hover);box-shadow:var(--shadow-sm);transform:translateY(-2px)}
-.card-name{font-weight:600;font-size:0.95rem;margin-bottom:4px;color:var(--text)}
-.card-sub{font-size:0.82rem;color:var(--muted);margin-bottom:4px}
-.card-accent{font-size:0.82rem;color:var(--blue);font-weight:500;margin-bottom:4px}
-.card-stars{font-size:0.82rem;color:var(--gold)}
+  .partner-section { background: #f8fafc; padding: 48px 20px; }
+  .partner-grid { display: flex; gap: 20px; flex-wrap: wrap; max-width: 800px; margin: 0 auto; }
+  .partner-card { flex: 1; min-width: 220px; background: white; border-radius: 12px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+  .partner-card h4 { color: #0a4d2e; margin-bottom: 8px; }
+  .partner-card p { font-size: 0.9rem; color: #555; margin: 0; }
+  .partner-card .cert { display: inline-block; background: #dcfce7; color: #0a4d2e; font-size: 0.78rem; padding: 3px 10px; border-radius: 20px; margin-top: 8px; font-weight: 600; }
 
-/* LIEFERANTEN */
-.tarif-placeholder{
-  margin-top:14px;padding:12px;border-radius:8px;
-  background:var(--bg);border:1px dashed var(--border);
-  font-size:0.78rem;color:var(--muted);text-align:center;line-height:1.6;
-}
-.badge-placeholder{
-  position:absolute;top:10px;right:10px;
-  font-size:0.62rem;font-weight:600;padding:3px 8px;border-radius:4px;
-  background:var(--orange-light);color:var(--orange);
-}
+  .faq-item { border-bottom: 1px solid #e5e7eb; padding: 20px 0; }
+  .faq-item h3 { color: #1a1a2e; cursor: pointer; font-size: 1.05rem; }
+  .faq-item p { margin-top: 8px; color: #555; }
 
-/* VERBRAUCH */
-.verbrauch-panel{
-  background:var(--white);border:1px solid var(--border);border-radius:var(--radius);
-  padding:24px;margin-bottom:24px;
-}
-.verbrauch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
-.v-label{display:block;font-size:0.75rem;font-weight:500;color:var(--muted);margin-bottom:6px}
-.v-input{
-  width:100%;background:var(--bg);border:1px solid var(--border);
-  color:var(--text);font-family:var(--sans);font-size:1.05rem;font-weight:600;
-  padding:10px 14px;border-radius:8px;outline:none;text-align:right;
-}
-.v-input:focus{border-color:var(--green)}
+  .lang-bar { background: #0a4d2e; color: rgba(255,255,255,0.8); text-align: center; padding: 10px 20px; font-size: 0.85rem; }
+  .lang-bar strong { color: white; }
 
-/* MASSNAHMEN */
-.mass-card{
-  background:var(--white);border:1px solid var(--border);border-radius:12px;
-  padding:20px;cursor:pointer;transition:all .2s;position:relative;user-select:none;
-}
-.mass-card:hover{border-color:var(--green);box-shadow:var(--shadow-sm)}
-.mass-card.sel{background:var(--green-light);border-color:var(--green);box-shadow:0 0 0 3px rgba(0,135,90,0.08)}
-.mass-check{
-  position:absolute;top:12px;right:12px;width:24px;height:24px;
-  border:2px solid var(--border);border-radius:6px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:0.75rem;color:transparent;transition:all .2s;
-}
-.mass-card.sel .mass-check{background:var(--green);border-color:var(--green);color:#fff}
-.mass-icon{font-size:1.6rem;margin-bottom:10px}
-.mass-name{font-weight:600;font-size:0.95rem;margin-bottom:8px;padding-right:32px;color:var(--text)}
-.mass-detail{font-size:0.78rem;color:var(--muted);margin-bottom:3px}
-.mass-detail b{font-weight:600}
-.mass-detail .g{color:var(--green)}
-.mass-detail .y{color:var(--orange)}
-.mass-detail .b{color:var(--blue)}
+  footer { text-align: center; padding: 32px 20px; color: #888; font-size: 0.85rem; }
+  footer a { color: #16a34a; text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
 
-/* ERGEBNIS */
-.result-panel{
-  background:var(--white);border:2px solid var(--green);border-radius:var(--radius);
-  padding:28px;box-shadow:var(--shadow-lg);margin-top:24px;
-}
-.result-hero{text-align:center;padding-bottom:20px;border-bottom:1px solid var(--border);margin-bottom:20px}
-.result-label{font-size:0.7rem;font-weight:600;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:6px}
-.result-big{font-family:var(--serif);font-size:clamp(2.2rem,6vw,3rem);font-weight:700;color:var(--green);line-height:1}
-.result-sub{font-size:0.88rem;color:var(--text2);margin-top:8px}
-.stat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
-.stat-box{text-align:center;padding:16px 10px;background:var(--bg);border-radius:10px}
-.stat-val{font-family:var(--serif);font-size:1.3rem;font-weight:700;line-height:1.2}
-.stat-label{font-size:0.65rem;font-weight:500;color:var(--muted);letter-spacing:1px;margin-top:4px;text-transform:uppercase}
-.warn-box{
-  margin-top:18px;padding:14px 16px;border-radius:10px;
-  background:var(--orange-light);border:1px solid rgba(232,115,12,0.15);
-  font-size:0.8rem;color:var(--orange);text-align:center;line-height:1.7;
-}
-
-/* EMPTY */
-.empty{text-align:center;padding:60px 20px;color:var(--muted)}
-.empty-icon{font-size:3.5rem;margin-bottom:14px;opacity:.3}
-.empty-text{font-size:0.95rem;font-weight:500;margin-bottom:6px;color:var(--text2)}
-.empty-sub{font-size:0.85rem}
-
-/* ═══ ABOUT SECTION ═══ */
-.about-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
-@media(max-width:768px){.about-grid{grid-template-columns:1fr}}
-.about-card{
-  background:var(--white);border:1px solid var(--border);border-radius:var(--radius);
-  padding:28px;text-align:center;transition:all .2s;
-}
-.about-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
-.about-icon{font-size:2rem;margin-bottom:12px}
-.about-title{font-family:var(--serif);font-size:1.05rem;font-weight:700;margin-bottom:8px;color:var(--text)}
-.about-desc{font-size:0.85rem;color:var(--text2);line-height:1.6}
-
-/* ═══ CTA SECTION ═══ */
-.cta-section{
-  max-width:1080px;margin:0 auto 56px;padding:0 24px;
-}
-.cta-box{
-  background:linear-gradient(135deg,#00875A 0%,#00A86B 100%);
-  border-radius:var(--radius);padding:48px 36px;text-align:center;color:#fff;
-  box-shadow:0 8px 30px rgba(0,135,90,0.25);
-}
-.cta-box h2{font-family:var(--serif);font-size:clamp(1.4rem,3vw,2rem);font-weight:700;margin-bottom:12px}
-.cta-box p{font-size:0.95rem;opacity:0.9;max-width:500px;margin:0 auto 24px}
-.cta-box .btn-white{
-  display:inline-flex;align-items:center;gap:8px;
-  background:#fff;color:var(--green);font-weight:700;font-size:0.95rem;
-  padding:14px 32px;border-radius:10px;border:none;cursor:pointer;transition:all .2s;
-}
-.cta-box .btn-white:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,0.15)}
-.cta-contact{display:flex;gap:24px;justify-content:center;margin-top:20px;flex-wrap:wrap}
-.cta-contact a{color:rgba(255,255,255,0.9);font-size:0.85rem;font-weight:500}
-.cta-contact a:hover{color:#fff;text-decoration:none}
-
-/* ═══ FOOTER ═══ */
-.footer{
-  max-width:1080px;margin:0 auto;padding:24px;
-  border-top:1px solid var(--border);
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
-  font-size:0.78rem;color:var(--muted);
-}
-.footer-links{display:flex;gap:20px}
-.footer-links a{color:var(--muted);font-size:0.78rem}
-.footer-links a:hover{color:var(--green)}
-
-/* ═══ ANIMATIONS ═══ */
-@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-.anim{animation:fadeUp .5s ease both}
-.d1{animation-delay:.05s}.d2{animation-delay:.1s}.d3{animation-delay:.15s}.d4{animation-delay:.2s}
+  @media (max-width: 600px) {
+    .hero-oeko h1 { font-size: 1.5rem; }
+    .comparison-card .vs { flex-direction: column; }
+    .cta-whatsapp { margin-left: 0; display: block; margin-top: 12px; }
+    .services-grid { flex-direction: column; }
+  }
 </style>
 </head>
 <body>
 
-<!-- ═══ TOPBAR ═══ -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="brand">
-      <span class="brand-icon">⚡</span>
-      <span class="brand-name">Frankfurt-<span>Energie</span>.Online</span>
-    </div>
-    <div class="nav-links">
-      <button class="nav-link active" data-tab="partner" onclick="switchTab('partner')">Partnerfirmen</button>
-      <button class="nav-link" data-tab="lieferanten" onclick="switchTab('lieferanten')">Energielieferanten</button>
-      <button class="nav-link" data-tab="rechner" onclick="switchTab('rechner')">Sparrechner</button>
-    </div>
-    <button class="cta-nav" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Kostenlos beraten</button>
-  </div>
+<!-- Sprachleiste -->
+<div class="lang-bar">
+  Beratung in <strong>9 Sprachen</strong>: Deutsch, English, Espa&ntilde;ol, T&uuml;rk&ccedil;e, Hrvatski, Italiano, Rom&acirc;n&atilde;, Укра&iuml;нська, Polski
 </div>
 
-<!-- ═══ HERO ═══ -->
-<div class="hero anim">
-  <div class="hero-content">
-    <div class="hero-badge">TELESON-Vertriebspartner · Frankfurt</div>
-    <h1>Energiekosten <em>sofort senken.</em><br>Persönlich beraten.</h1>
-    <p class="hero-sub">Ich bin André Schwarz, Ihr Energieberater in Frankfurt. Als TELESON-Partner vergleiche ich Ihre Strom- und Gastarife und finde den besten Preis – kostenlos und unverbindlich.</p>
-    <div class="hero-actions">
-      <button class="btn-primary" onclick="document.getElementById('plz').focus()">⚡ PLZ eingeben & sparen</button>
-      <button class="btn-secondary" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">📞 Direkt Kontakt</button>
+<!-- Hero -->
+<section class="hero-oeko">
+  <h1>&Ouml;kostrom Frankfurt:<br>Zertifiziert. G&uuml;nstiger. Ehrlich.</h1>
+  <p class="subtitle">Unsere &Ouml;kostromtarife schlagen regelm&auml;&szlig;ig den Grundversorger im Preis &ndash; und du bekommst echten, zertifizierten &Ouml;kostrom mit Nachweis. Kein Greenwashing. Dazu kompetente Beratung f&uuml;r Photovoltaik, Balkonkraftwerke und Solar.</p>
+  <span class="badge">&#127941; ok-power zertifiziert</span>
+  <span class="badge">&#128270; T&Uuml;V-gepr&uuml;ft</span>
+  <span class="badge">&#127793; 100 % erneuerbar</span>
+  <span class="badge">&#9728;&#65039; Solar &amp; Photovoltaik</span>
+</section>
+
+<!-- Leistungsspektrum -->
+<section class="section">
+  <h2>Unser Leistungsspektrum: Mehr als nur Strom</h2>
+  <p>Wir haben deutschlandweit viele Anbieter von Energiedienstleistungen im Portfolio und beraten kompetent zu allen Bereichen der modernen Energieversorgung:</p>
+  <div class="services-grid">
+    <div class="service-item">
+      <div class="icon">&#9889;</div>
+      <h4>Strom &amp; &Ouml;kostrom</h4>
+      <p>Zertifizierte Tarife, g&uuml;nstiger als der Grundversorger</p>
+    </div>
+    <div class="service-item">
+      <div class="icon">&#128293;</div>
+      <h4>Gas</h4>
+      <p>Gasvergleich mit attraktiven Alternativtarifen</p>
+    </div>
+    <div class="service-item">
+      <div class="icon">&#9728;&#65039;</div>
+      <h4>Photovoltaik</h4>
+      <p>PV-Anlagen f&uuml;r Eigenheimbesitzer</p>
+    </div>
+    <div class="service-item">
+      <div class="icon">&#127759;</div>
+      <h4>Balkonkraftwerke</h4>
+      <p>Solar f&uuml;r Mieter und Wohnungseigent&uuml;mer</p>
+    </div>
+    <div class="service-item">
+      <div class="icon">&#128736;&#65039;</div>
+      <h4>Solar-Installation</h4>
+      <p>Beratung und Vermittlung professioneller Montage</p>
+    </div>
+    <div class="service-item">
+      <div class="icon">&#127777;&#65039;</div>
+      <h4>Fernw&auml;rme</h4>
+      <p>Beratung, wo verf&uuml;gbar</p>
     </div>
   </div>
-  <div class="hero-visual anim d2">
-    <div class="hv-label">Beispiel Frankfurt · PLZ 60389</div>
-    <div class="hv-region">Durchschnittlicher Haushalt, 3.500 kWh/Jahr</div>
-    <div class="hv-compare">
-      <div class="hv-price old">
-        <div class="hv-price-label">Regionaltarif</div>
-        <div class="hv-price-val">36,5 ct</div>
+</section>
+
+<!-- Was ist echter Oekostrom -->
+<section class="section">
+  <h2>Was wir unter &Ouml;kostrom verstehen &ndash; und was nicht</h2>
+  <p>Der Begriff &bdquo;&Ouml;kostrom&ldquo; ist in Deutschland gesetzlich nicht gesch&uuml;tzt. Das bedeutet: Jeder Stromanbieter darf seinen Tarif als &bdquo;&Ouml;ko&ldquo; bezeichnen &ndash; auch wenn er lediglich Herkunftsnachweise aus dem Ausland kauft, w&auml;hrend der tats&auml;chlich gelieferte Strom aus Kohle oder Gas stammt. Das ist legales Greenwashing.</p>
+  <p>Wir bei <strong>Frankfurt Energie Online</strong> &ndash; als Vertriebspartner der <strong>TELESON AG</strong> &ndash; definieren &Ouml;kostrom anders. F&uuml;r uns ist &Ouml;kostrom erst dann echt, wenn er diese drei Kriterien erf&uuml;llt:</p>
+  <ul class="fact-list">
+    <li>Der Strom stammt zu <strong>100 %</strong> aus erneuerbaren Energiequellen &ndash; Wind, Solar, Wasser, Biomasse</li>
+    <li>Die Herkunft ist durch ein <strong>unabh&auml;ngiges G&uuml;tesiegel zertifiziert</strong> &ndash; ok-power, T&Uuml;V Nord, T&Uuml;V S&uuml;d oder Gr&uuml;ner Strom-Label</li>
+    <li>Der Anbieter investiert <strong>nachweislich in den Ausbau</strong> neuer Erneuerbare-Energien-Anlagen in Deutschland</li>
+  </ul>
+
+  <div class="highlight-box">
+    <strong>Was TELESON-Partner unter &Ouml;kostrom verstehen:</strong> Die &uuml;ber TELESON vermittelten &Ouml;kostromtarife unserer Partner &ndash; darunter MONTANA, LichtBlick, enviaM und RheinEnergie &ndash; sind keine reinen Herkunftsnachweis-Produkte. Sie sind mit anerkannten G&uuml;tesiegeln zertifiziert. Zum Beispiel tr&auml;gt der MONTANA-Tarif &bdquo;&Ouml;kostrom Plus&ldquo; das <strong>ok-power-G&uuml;tesiegel</strong> &ndash; eines der strengsten &Ouml;kostrom-Siegel Deutschlands. LichtBlick ist mit &uuml;ber 1,7 Millionen Kunden Deutschlands gr&ouml;&szlig;ter &Ouml;kostromanbieter.
+  </div>
+</section>
+
+<!-- Preisvergleich -->
+<section class="section">
+  <h2>&Ouml;kostrom g&uuml;nstiger als der Grundversorger? Ja, wirklich.</h2>
+  <p>Viele Frankfurter glauben, &Ouml;kostrom sei automatisch teurer. Das Gegenteil ist der Fall: In den meisten Postleitzahlen Frankfurts schneiden unsere zertifizierten &Ouml;kostromtarife preislich <strong>deutlich besser ab</strong> als die Tarife des lokalen Grundversorgers.</p>
+
+  <div class="comparison-card">
+    <h3 style="text-align:center; color:#1a1a2e; margin-top:0;">Preisvergleich: Grundversorger vs. Unser &Ouml;kostrom</h3>
+    <p style="text-align:center; font-size:0.9rem; color:#777;">Beispielrechnung bei 3.500 kWh Jahresverbrauch in Frankfurt</p>
+    <div class="vs">
+      <div class="grundversorger">
+        <div class="label-tag" style="color:#dc2626;">Grundversorger Frankfurt</div>
+        <div class="price">~1.450 &euro;</div>
+        <p style="font-size:0.85rem; color:#777; margin:8px 0 0;">ca. 41 ct/kWh<br>Konventioneller Strommix</p>
       </div>
-      <div class="hv-arrow">→</div>
-      <div class="hv-price new">
-        <div class="hv-price-label">TELESON Vorteil</div>
-        <div class="hv-price-val">27,5 ct</div>
+      <div class="oekostrom-card">
+        <div class="label-tag" style="color:#16a34a;">Unser &Ouml;kostrom-Tarif</div>
+        <div class="price">~1.022 &euro;</div>
+        <p style="font-size:0.85rem; color:#555; margin:8px 0 0;">ab ca. 29 ct/kWh<br>100 % zertifizierter &Ouml;kostrom</p>
       </div>
     </div>
-    <div class="hv-savings">
-      <div class="hv-savings-val">Bis zu 315 € / Jahr sparen</div>
-      <div class="hv-savings-label">bei gleichem Verbrauch – ohne Komfortverlust</div>
+    <div style="text-align:center;">
+      <span class="savings">Bis zu 428 &euro; j&auml;hrlich sparen &ndash; mit &Ouml;kostrom!</span>
+    </div>
+    <p style="text-align:center; font-size:0.8rem; color:#999; margin-top:12px;">Ersparnis variiert je nach PLZ, Verbrauch und aktuellem Tarif. Unverbindlicher Vergleich &ndash; kostenlos und ohne Verpflichtung.</p>
+  </div>
+
+  <p>Das bedeutet: <strong>Unsere Kunden sparen mit &Ouml;kostrom.</strong> Sie zahlen nicht drauf f&uuml;r ein gutes Gewissen &ndash; sie bekommen es obendrauf. Wir haben deutschlandweit viele Anbieter von Energiedienstleistungen im Portfolio und vergleichen die Marktpreise der alternativen Anbieter direkt mit dem Grundversorgungstarif. Dazu beraten wir kompetent zu Photovoltaik, Balkonkraftwerken und Solar-Installationen &ndash; f&uuml;r alle, die ihre Stromkosten langfristig auf unter 5 Cent pro Kilowattstunde senken wollen.</p>
+</section>
+
+<!-- Guetesiegel -->
+<section class="partner-section">
+  <div class="section" style="padding-top:0; padding-bottom:0;">
+    <h2>Die &Ouml;kostrom-G&uuml;tesiegel unserer Partner</h2>
+    <p>Nicht jedes &bdquo;&Ouml;ko&ldquo;-Label h&auml;lt, was es verspricht. Die strengsten und vom Umweltbundesamt empfohlenen Siegel sind das <strong>ok-power-Label</strong> und das <strong>Gr&uuml;ner Strom-Label</strong>. Unsere TELESON-Partner tragen diese Zertifizierungen:</p>
+  </div>
+  <div class="siegel-grid" style="max-width:800px; margin:20px auto;">
+    <div class="siegel-item">
+      <div class="icon">&#127941;</div>
+      <h4>ok-power-Siegel</h4>
+      <p>100 % erneuerbar, keine Atom-/Kohlebeteiligung, nachweisliche Investition in neue EE-Anlagen. J&auml;hrlich gepr&uuml;ft durch unabh&auml;ngige Gutachter.</p>
+    </div>
+    <div class="siegel-item">
+      <div class="icon">&#128270;</div>
+      <h4>T&Uuml;V-Zertifizierung</h4>
+      <p>T&Uuml;V Nord und T&Uuml;V S&uuml;d pr&uuml;fen die Herkunft des Stroms, die Einhaltung der 100%-EE-Quote und die Transparenz der Anlagenstandorte &ndash; mit monatlichen Nachweisen.</p>
+    </div>
+    <div class="siegel-item">
+      <div class="icon">&#128196;</div>
+      <h4>Herkunftsnachweise</h4>
+      <p>Jede gelieferte Kilowattstunde ist &uuml;ber das Herkunftsnachweisregister des Umweltbundesamtes r&uuml;ckverfolgbar &ndash; keine anonymen Zertifikatsk&auml;ufe aus dem Ausland.</p>
     </div>
   </div>
-</div>
+</section>
 
-<!-- ═══ TRUST BAR ═══ -->
-<div class="trust-bar anim d3">
-  <div class="trust-item"><span class="trust-icon">🏆</span> Deutscher Exzellenz-Preis 2020</div>
-  <div class="trust-item"><span class="trust-icon">💡</span> Innovationspreis-IT Best of 2018</div>
-  <div class="trust-item"><span class="trust-icon">🌱</span> 100% Grüne Energie verfügbar</div>
-  <div class="trust-item"><span class="trust-icon">🤝</span> Persönliche Beratung vor Ort</div>
-</div>
-
-<!-- ═══ TOOL SECTION ═══ -->
-<div class="section">
-  <div class="section-header">
-    <div class="section-badge">PLZ-Tool</div>
-    <div class="section-title">Finden Sie Partner & Tarife in Ihrer Region</div>
-    <div class="section-sub">Geben Sie Ihre Postleitzahl ein und erhalten Sie sofort regionale Energieberater, Lieferanten und Sparpotenziale.</div>
-  </div>
-
-  <div class="tool-panel">
-    <div class="tool-row">
-      <input class="plz-input" id="plz" type="text" maxlength="5" placeholder="PLZ" oninput="this.value=this.value.replace(/\D/g,'')" onkeydown="if(event.key==='Enter')doSearch()">
-      <div class="meta-col">
-        <select class="meta-select" id="gebaeudetyp">
-          <option value="efh">Einfamilienhaus</option>
-          <option value="dhh">Doppelhaushälfte</option>
-          <option value="rh">Reihenhaus</option>
-          <option value="mfh">Mehrfamilienhaus</option>
-          <option value="etw">Eigentumswohnung</option>
-        </select>
-        <input class="meta-input" id="baujahr" type="text" placeholder="Baujahr z.B. 1980" value="1980">
-      </div>
-      <button class="search-btn" onclick="doSearch()">Suchen</button>
+<!-- Partner -->
+<section class="section">
+  <h2>Unsere TELESON-&Ouml;kostrompartner im Detail</h2>
+  <div class="partner-grid">
+    <div class="partner-card">
+      <h4>MONTANA Energie</h4>
+      <p>Seit 1960 am Markt, &uuml;ber 600.000 Kunden. Der Tarif &bdquo;&Ouml;kostrom Plus&ldquo; leistet einen aktiven Beitrag zur Energiewende.</p>
+      <span class="cert">ok-power zertifiziert</span>
     </div>
-    <div class="region-label" id="region-label" style="display:none"></div>
-  </div>
-
-  <div id="content"></div>
-</div>
-
-<!-- ═══ WARUM WIR ═══ -->
-<div class="section">
-  <div class="section-header">
-    <div class="section-badge">Warum Frankfurt-Energie.Online?</div>
-    <div class="section-title">Nicht noch ein Vergleichsportal</div>
-    <div class="section-sub">Kein Check24-Klon. Persönliche Beratung mit lokalem Vertrauen und preisgekröntem Partner.</div>
-  </div>
-  <div class="about-grid">
-    <div class="about-card anim">
-      <div class="about-icon">🏡</div>
-      <div class="about-title">Persönlich & lokal</div>
-      <div class="about-desc">Kein Callcenter, kein Bot. Ich berate Sie persönlich – vor Ort in Frankfurt oder per Video. Ihr Ansprechpartner von Anfang bis Ende.</div>
+    <div class="partner-card">
+      <h4>LichtBlick</h4>
+      <p>Deutschlands gr&ouml;&szlig;ter &Ouml;kostromanbieter mit &uuml;ber 1,7 Mio. Kunden. 100 % &Ouml;kostrom seit &uuml;ber 20 Jahren.</p>
+      <span class="cert">100 % &Ouml;kostrom</span>
     </div>
-    <div class="about-card anim d1">
-      <div class="about-icon">💰</div>
-      <div class="about-title">Sofort sparen</div>
-      <div class="about-desc">TELESON-Vorteilstarife sind im Durchschnitt 20–25% günstiger als regionale Grundversorger. Die Ersparnis beginnt ab dem ersten Monat.</div>
-    </div>
-    <div class="about-card anim d2">
-      <div class="about-icon">🌱</div>
-      <div class="about-title">Grün als Standard</div>
-      <div class="about-desc">Nachhaltige Energie ist bei uns kein Aufpreis, sondern die Basis. Gut für Ihr Gewissen – und für Ihren Geldbeutel.</div>
+    <div class="partner-card">
+      <h4>RheinEnergie</h4>
+      <p>Regional verankert, bundesweit aktiv. Breites Spektrum an Energiel&ouml;sungen mit erneuerbarem Fokus.</p>
+      <span class="cert">Regionaler Partner</span>
     </div>
   </div>
-</div>
+  <p style="margin-top:20px;">&Uuml;ber das TELESON-Netzwerk vermitteln wir ausschlie&szlig;lich Tarife von zugelassenen, gepr&uuml;ften Energieversorgern. Jeder &Ouml;kostromtarif, den wir anbieten, ist mit einem anerkannten G&uuml;tesiegel zertifiziert &ndash; das ist unser Qualit&auml;tsversprechen.</p>
+</section>
 
-<!-- ═══ CTA SECTION ═══ -->
-<div class="cta-section" id="cta">
-  <div class="cta-box">
-    <h2>Kostenlose Beratung – jetzt starten</h2>
-    <p>Ob Strom, Gas oder beides: In 5 Minuten wissen Sie, wie viel Sie sparen können. Einfach melden – der Rest ist mein Job.</p>
-    <button class="btn-white" onclick="window.open('https://wa.me/491625172745?text=Hallo%20Andr%C3%A9%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung.','_blank')">💬 WhatsApp schreiben</button>
-    <div class="cta-contact">
-      <a href="tel:+491625172745">📞 +49 162 517 2745</a>
-      <a href="mailto:kontakt@frankfurt-energie.online">✉️ kontakt@frankfurt-energie.online</a>
-    </div>
+<!-- FAQ -->
+<section class="section">
+  <h2>H&auml;ufige Fragen zu &Ouml;kostrom in Frankfurt</h2>
+
+  <div class="faq-item">
+    <h3>Ist &Ouml;kostrom wirklich g&uuml;nstiger als der Grundversorger?</h3>
+    <p>In den meisten F&auml;llen ja. Unsere &Ouml;kostromtarife schneiden bei einem Vergleich mit dem Frankfurter Grundversorger regelm&auml;&szlig;ig besser ab &ndash; oft um mehrere hundert Euro pro Jahr. Wir haben deutschlandweit viele Anbieter im Portfolio und finden fast immer einen g&uuml;nstigeren Tarif f&uuml;r dich.</p>
   </div>
-</div>
 
-<!-- ═══ FOOTER ═══ -->
-<div class="footer">
-  <div>© 2026 Frankfurt-Energie.Online · André Schwarz · TELESON-Vertriebspartner</div>
-  <div class="footer-links">
-    <a href="#">Impressum</a>
-    <a href="#">Datenschutz</a>
-    <a href="https://www.teleson.de" target="_blank">teleson.de</a>
+  <div class="faq-item">
+    <h3>Wie erkenne ich echten &Ouml;kostrom?</h3>
+    <p>Achte auf anerkannte G&uuml;tesiegel wie das ok-power-Label, das Gr&uuml;ner Strom-Label oder T&Uuml;V-Zertifizierungen (T&Uuml;V Nord, T&Uuml;V S&uuml;d). Reine Herkunftsnachweise ohne G&uuml;tesiegel sagen nichts &uuml;ber die &ouml;kologische Qualit&auml;t aus &ndash; sie k&ouml;nnen sogar Greenwashing verschleiern.</p>
   </div>
-</div>
 
-<script>
-const DB = {
-  "0":{region:"Sachsen / Thüringen / Brandenburg",haupt:{name:"EnergieSachsen GmbH",tel:"+49 351 8800-100",email:"beratung@energiesachsen.de",leistungen:["Energieausweis","Heizungstausch","Photovoltaik","Wärmepumpe"],bew:4.7,zert:true},alt:[{name:"SolarDresden24",tel:"+49 351 2120-55",fokus:"Photovoltaik & Speicher",bew:4.5},{name:"Wärmetechnik Ost GmbH",tel:"+49 361 7340-80",fokus:"Wärmepumpen & Heizung",bew:4.3},{name:"GreenBuild Leipzig",tel:"+49 341 5580-20",fokus:"Gebäudedämmung & BAFA",bew:4.6}],liefer:[{name:"enviaM",typ:"Strom & Gas",reg:"Ostdeutschland"},{name:"DREWAG",typ:"Strom",reg:"Dresden"},{name:"Stadtwerke Leipzig",typ:"Strom & Gas",reg:"Leipzig"}]},
-  "1":{region:"Berlin / Brandenburg",haupt:{name:"Berliner Energieberatung AG",tel:"+49 30 5500-200",email:"info@berliner-energieberatung.de",leistungen:["iSFP","Energieausweis","KfW-Förderung","Heizungsoptimierung"],bew:4.8,zert:true},alt:[{name:"SolarBerlin Pro",tel:"+49 30 2230-40",fokus:"Photovoltaik & Balkonkraftwerke",bew:4.4},{name:"Wärmewende Brandenburg",tel:"+49 331 8870-15",fokus:"Wärmepumpen & GEG-Beratung",bew:4.6},{name:"Dämmprofi Berlin",tel:"+49 30 6690-88",fokus:"Fassade & Dach Dämmung",bew:4.2}],liefer:[{name:"Vattenfall",typ:"Strom & Wärme",reg:"Berlin"},{name:"GASAG",typ:"Gas & Wärme",reg:"Berlin"},{name:"E.ON Energie",typ:"Strom & Gas",reg:"Bundesweit"}]},
-  "2":{region:"Hamburg / Schleswig-Holstein / Niedersachsen Nord",haupt:{name:"NordEnergie Beratung GmbH",tel:"+49 40 7200-300",email:"kontakt@nordenergie-beratung.de",leistungen:["Energieausweis","Heizungstausch","PV-Anlagen","Fördermittelberatung"],bew:4.6,zert:true},alt:[{name:"HanseSolar GmbH",tel:"+49 40 3310-60",fokus:"Solar & Speichersysteme",bew:4.7},{name:"Wärmetechnik Nord",tel:"+49 431 5540-25",fokus:"Wärmepumpe & Fernwärme",bew:4.3},{name:"EcoHaus Lüneburg",tel:"+49 4131 7720-10",fokus:"Altbausanierung & Dämmung",bew:4.5}],liefer:[{name:"Hamburg Energie",typ:"Ökostrom & Gas",reg:"Hamburg"},{name:"E.ON Energie",typ:"Strom & Gas",reg:"Bundesweit"},{name:"SH Netz",typ:"Netz",reg:"Schleswig-Holstein"}]},
-  "3":{region:"Hannover / Niedersachsen / Sachsen-Anhalt",haupt:{name:"Energiehaus Niedersachsen",tel:"+49 511 8800-150",email:"info@energiehaus-nds.de",leistungen:["iSFP","GEG-Beratung","Heizungstausch","Fördermittel"],bew:4.5,zert:true},alt:[{name:"SolarPower Hannover",tel:"+49 511 3340-70",fokus:"PV & E-Mobilität",bew:4.4},{name:"Klimaschutz Braunschweig",tel:"+49 531 2210-90",fokus:"Wärmepumpe & Geothermie",bew:4.3},{name:"DämmExperte Magdeburg",tel:"+49 391 5560-30",fokus:"KfW-Sanierung & Dämmung",bew:4.6}],liefer:[{name:"enercity",typ:"Strom & Gas",reg:"Hannover"},{name:"Avacon",typ:"Strom & Gas",reg:"Niedersachsen / SA"},{name:"SWM Magdeburg",typ:"Strom & Gas",reg:"Magdeburg"}]},
-  "4":{region:"Düsseldorf / NRW West / Ruhrgebiet",haupt:{name:"EnergieWende NRW GmbH",tel:"+49 211 9900-400",email:"beratung@energiewende-nrw.de",leistungen:["Energieausweis","BEG-Förderung","Heizungstausch","PV-Anlagen"],bew:4.9,zert:true},alt:[{name:"RheinSolar GmbH",tel:"+49 211 4450-20",fokus:"Photovoltaik & Speicher",bew:4.7},{name:"Wärmeprofi Essen",tel:"+49 201 8870-55",fokus:"Wärmepumpe & Fußbodenheizung",bew:4.4},{name:"GreenHome Münster",tel:"+49 251 3320-15",fokus:"Passivhaus & Neubau-Beratung",bew:4.8}],liefer:[{name:"Stadtwerke Düsseldorf",typ:"Strom & Gas",reg:"Düsseldorf"},{name:"RWE / innogy",typ:"Strom & Gas",reg:"NRW"},{name:"Naturstrom AG",typ:"Ökostrom",reg:"Bundesweit"}]},
-  "5":{region:"Köln / Bonn / NRW Süd",haupt:{name:"RheinEnergie Beratung",tel:"+49 221 7700-500",email:"energieberatung@rheinenergie-beratung.de",leistungen:["Energieausweis","Heizungstausch","PV","iSFP","BAFA-Förderung"],bew:4.7,zert:true},alt:[{name:"SolarRheinland",tel:"+49 221 8810-30",fokus:"PV-Großanlagen & Gewerbe",bew:4.5},{name:"KlimaHaus Bonn",tel:"+49 228 5530-40",fokus:"Altbausanierung & GEG",bew:4.6},{name:"WärmePunkt Siegen",tel:"+49 271 2240-60",fokus:"Wärmepumpe & Pellets",bew:4.3}],liefer:[{name:"RheinEnergie",typ:"Strom & Gas",reg:"Köln"},{name:"SWB Bonn",typ:"Strom & Gas",reg:"Bonn"},{name:"Lichtblick",typ:"Ökostrom & Gas",reg:"Bundesweit"}]},
-  "6":{region:"Frankfurt / Hessen / Rheinland-Pfalz",haupt:{name:"André Schwarz · Frankfurt-Energie.Online",tel:"+49 162 517 2745",email:"kontakt@frankfurt-energie.online",leistungen:["Tarifvergleich","Strom & Gas","TELESON-Partner","Persönliche Beratung"],bew:5.0,zert:true},alt:[{name:"SolarHessen GmbH",tel:"+49 69 4460-15",fokus:"PV & Mieterstrom",bew:4.5},{name:"Wärmelösung Mainz",tel:"+49 6131 7730-20",fokus:"Heizungsmodernisierung",bew:4.4},{name:"GreenBau Darmstadt",tel:"+49 6151 8850-30",fokus:"Neubau & Passivhaus",bew:4.7}],liefer:[{name:"TELESON Vorteilstarif",typ:"Strom & Gas – Preisgekrönt",reg:"Frankfurt & bundesweit"},{name:"Mainova",typ:"Strom & Gas",reg:"Frankfurt"},{name:"ENTEGA",typ:"Ökostrom & Gas",reg:"Südhessen"}]},
-  "7":{region:"Stuttgart / Baden-Württemberg",haupt:{name:"EnergieZentrum BaWü",tel:"+49 711 9900-700",email:"beratung@energiezentrum-bawue.de",leistungen:["iSFP","Energieausweis","Heizungstausch","PV","E-Mobilität"],bew:4.8,zert:true},alt:[{name:"SchwarzwaldSolar",tel:"+49 761 5540-20",fokus:"PV & Batteriespeicher",bew:4.6},{name:"Wärmetechnik Stuttgart",tel:"+49 711 3370-45",fokus:"Wärmepumpe & Hybridheizung",bew:4.5},{name:"EcoBau Karlsruhe",tel:"+49 721 8820-10",fokus:"Gebäudehülle & Fenster",bew:4.4}],liefer:[{name:"EnBW",typ:"Strom & Gas",reg:"Baden-Württemberg"},{name:"Stadtwerke Stuttgart",typ:"Strom & Gas",reg:"Stuttgart"},{name:"badenova",typ:"Ökostrom & Gas",reg:"Südbaden"}]},
-  "8":{region:"München / Bayern Süd",haupt:{name:"BayernEnergie Beratung AG",tel:"+49 89 5500-800",email:"info@bayernenergie-beratung.de",leistungen:["Energieausweis","iSFP","Heizungstausch","PV","BAFA/KfW"],bew:4.9,zert:true},alt:[{name:"AlpenSolar München",tel:"+49 89 2230-55",fokus:"PV & Wallbox",bew:4.8},{name:"Wärmewende Bayern",tel:"+49 89 7750-30",fokus:"Wärmepumpe & Geothermie",bew:4.6},{name:"IsarDämm GmbH",tel:"+49 89 4480-20",fokus:"Dachdämmung & Fassade",bew:4.5}],liefer:[{name:"SWM München",typ:"Strom & Gas & Fernwärme",reg:"München"},{name:"Bayernwerk",typ:"Strom",reg:"Bayern"},{name:"Polarstern",typ:"Ökostrom & Gas",reg:"Bundesweit"}]},
-  "9":{region:"Nürnberg / Franken / Bayern Nord",haupt:{name:"FrankenEnergie Beratung",tel:"+49 911 8800-900",email:"kontakt@frankenenergie-beratung.de",leistungen:["Energieausweis","Heizungscheck","PV-Beratung","Fördermittel"],bew:4.5,zert:true},alt:[{name:"SolarFranken GmbH",tel:"+49 911 3350-10",fokus:"PV & Agri-Solar",bew:4.4},{name:"WärmeWerk Nürnberg",tel:"+49 911 6640-25",fokus:"Pellet & Wärmepumpe",bew:4.3},{name:"GreenBau Würzburg",tel:"+49 931 7780-40",fokus:"KfW-Effizienzhaus",bew:4.6}],liefer:[{name:"N-ERGIE",typ:"Strom & Gas",reg:"Nürnberg"},{name:"Stadtwerke Würzburg",typ:"Strom & Gas",reg:"Würzburg"},{name:"E.ON Energie",typ:"Strom & Gas",reg:"Bundesweit"}]}
-};
+  <div class="faq-item">
+    <h3>Was bedeutet &bdquo;ok-power zertifiziert&ldquo;?</h3>
+    <p>Das ok-power-Siegel wird vom gemeinn&uuml;tzigen EnergieVision e.V. vergeben. Es garantiert: 100 % Strom aus erneuerbaren Quellen, keine Beteiligung an Atom- oder Kohlekraftwerken, nachweisliche Investition in neue EE-Anlagen und faire Vertragsbedingungen. Die Pr&uuml;fung erfolgt j&auml;hrlich durch unabh&auml;ngige Gutachter.</p>
+  </div>
 
-const MASSNAHMEN = [
-  {id:"pv",icon:"☀️",label:"Photovoltaik-Anlage",kosten:"8.000 – 18.000 €",spar:1200,foerd:"bis 25% BAFA",amort:"8–12 Jahre"},
-  {id:"wp",icon:"🌡️",label:"Wärmepumpe",kosten:"15.000 – 35.000 €",spar:1800,foerd:"bis 40% BEG",amort:"10–15 Jahre"},
-  {id:"daemmung",icon:"🧱",label:"Gebäudedämmung",kosten:"12.000 – 40.000 €",spar:900,foerd:"bis 20% KfW",amort:"12–18 Jahre"},
-  {id:"fenster",icon:"🪟",label:"Fensteraustausch",kosten:"8.000 – 20.000 €",spar:600,foerd:"bis 20% KfW",amort:"15–20 Jahre"},
-  {id:"heizung",icon:"🔧",label:"Heizungsoptimierung",kosten:"2.000 – 8.000 €",spar:400,foerd:"bis 15% BAFA",amort:"5–8 Jahre"},
-  {id:"smart",icon:"📱",label:"Smart Home Energie",kosten:"1.500 – 5.000 €",spar:300,foerd:"keine",amort:"4–7 Jahre"},
-];
+  <div class="faq-item">
+    <h3>Was macht TELESON anders als Vergleichsportale?</h3>
+    <p>TELESON ist kein anonymes Vergleichsportal, sondern ein Netzwerk aus pers&ouml;nlichen Energieberatern. Wir sitzen in Frankfurt, sprechen 9 Sprachen und beraten dich individuell &ndash; nicht nur zu Strom und Gas, sondern auch zu Photovoltaik, Balkonkraftwerken und Solar-Installationen. Der Tarifvergleich ist kostenlos, wir &uuml;bernehmen den gesamten Wechselprozess und du bekommst eine pers&ouml;nliche Ansprechperson &ndash; kein Bot, kein Callcenter.</p>
+  </div>
 
-let currentTab="partner",currentData=null,selectedMass=new Set();
-function stars(n){return "★".repeat(Math.floor(n))+(n%1>=0.5?"½":"")}
-function fmt(n){return n.toLocaleString("de-DE")}
+  <div class="faq-item">
+    <h3>Beratet ihr auch zu Photovoltaik und Balkonkraftwerken?</h3>
+    <p>Ja. Neben Strom- und Gastarifen beraten wir kompetent zu Photovoltaik-Anlagen f&uuml;r Eigenheimbesitzer, Balkonkraftwerken f&uuml;r Mieter, Solar-Installationen und Speicherl&ouml;sungen sowie, wo verf&uuml;gbar, auch zu Fernw&auml;rme. Wir finden die L&ouml;sung, die zu deiner Wohnsituation passt.</p>
+  </div>
 
-function switchTab(tab){
-  currentTab=tab;
-  document.querySelectorAll('.nav-link').forEach(t=>t.classList.toggle('active',t.dataset.tab===tab));
-  render();
-}
+  <div class="faq-item">
+    <h3>Bekomme ich bei euch auch Gas-Tarife?</h3>
+    <p>Ja. &Uuml;ber das TELESON-Netzwerk vermitteln wir neben &Ouml;kostrom auch g&uuml;nstige Gastarife. Unser Energiecheck deckt Strom und Gas in einem Vergleich ab &ndash; kostenlos und unverbindlich.</p>
+  </div>
+</section>
 
-function doSearch(){
-  const plz=document.getElementById('plz').value;
-  if(plz.length<1)return;
-  currentData=DB[plz.charAt(0)]||null;
-  const rl=document.getElementById('region-label');
-  if(currentData){rl.style.display='block';rl.innerHTML=`Region: <b>${currentData.region}</b>`}
-  else{rl.style.display='block';rl.innerHTML=`Keine Daten für PLZ <b>${plz}</b> gefunden.`}
-  render();
-}
+<!-- CTA -->
+<section class="section">
+  <div class="cta-section">
+    <h2>Jetzt &Ouml;kostrom-Vergleich starten</h2>
+    <p>Kostenlos. Unverbindlich. In 5 Minuten. Finde heraus, wie viel du mit zertifiziertem &Ouml;kostrom, Photovoltaik oder einem Balkonkraftwerk in Frankfurt sparen kannst.</p>
+    <a href="https://www.teleson-vertrieb.de/AndreSchwarz-435/" class="cta-btn">Tarifcheck starten</a>
+    <a href="https://wa.me/4915734779561?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20%C3%96kostrom-Vergleich%20f%C3%BCr%20Frankfurt." class="cta-whatsapp">&#128172; WhatsApp Beratung</a>
+  </div>
+</section>
 
-function toggleMass(id){if(selectedMass.has(id))selectedMass.delete(id);else selectedMass.add(id);render()}
+<!-- Footer -->
+<footer>
+  <p><strong>Frankfurt Energie Online</strong> &ndash; Dein lokaler TELESON-Vertriebspartner f&uuml;r Strom, Gas, &Ouml;kostrom, Photovoltaik, Balkonkraftwerke und Solar in Frankfurt am Main.</p>
+  <p>Andr&eacute; Schwarz | ASGlobal | <a href="https://www.frankfurt-energie.online">frankfurt-energie.online</a></p>
+  <p style="margin-top:8px;">&copy; 2026 Frankfurt Energie Online. Alle Rechte vorbehalten.</p>
+  <p style="margin-top:4px; font-size:0.78rem; color:#aaa;">Dein Nachbar. Dein Berater. Deine Sprache.</p>
+</footer>
 
-function render(){
-  const el=document.getElementById('content');
-  if(currentTab==='partner'){
-    if(!currentData){el.innerHTML=emptyState();return}
-    const h=currentData.haupt;
-    el.innerHTML=`
-      <div class="sec-label anim">★ Empfohlener Hauptpartner</div>
-      <div class="partner-hero anim d1">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px">
-          <div>
-            <div class="p-name">${h.name}</div>
-            <div class="p-tel">📞 ${h.tel}</div>
-            <div class="p-email">✉️ ${h.email}</div>
-            <div class="p-tags">${h.leistungen.map(l=>`<span class="p-tag">${l}</span>`).join('')}</div>
-          </div>
-          <div style="text-align:right">
-            <div class="stars">${stars(h.bew)} ${h.bew}</div>
-            ${h.zert?'<div class="badge-cert">✓ Zertifizierter Partner</div>':''}
-          </div>
-        </div>
-      </div>
-      <div class="sec-label anim d2">Weitere Partner in der Region</div>
-      <div class="card-grid">${currentData.alt.map((a,i)=>`
-        <div class="card anim d${Math.min(i+2,4)}">
-          <div class="card-name">${a.name}</div>
-          <div class="card-sub">📞 ${a.tel}</div>
-          <div class="card-accent">${a.fokus}</div>
-          <div class="card-stars">${stars(a.bew)} ${a.bew}</div>
-        </div>`).join('')}
-      </div>`;
-  } else if(currentTab==='lieferanten'){
-    if(!currentData){el.innerHTML=emptyState();return}
-    el.innerHTML=`
-      <div class="sec-label anim">⚡ Energielieferanten in ${currentData.region}</div>
-      <div class="card-grid">${currentData.liefer.map((l,i)=>`
-        <div class="card anim d${Math.min(i+1,4)}">
-          <div class="badge-placeholder">Tarife folgen</div>
-          <div class="card-name" style="font-size:1rem">⚡ ${l.name}</div>
-          <div class="card-sub">Typ: <span style="color:var(--text)">${l.typ}</span></div>
-          <div class="card-sub">Region: <span style="color:var(--text)">${l.reg}</span></div>
-          <div class="tarif-placeholder">Tarifvergleich &amp; Preise<br>werden noch ergänzt</div>
-        </div>`).join('')}
-      </div>
-      <div class="verbrauch-panel anim d4">
-        <div class="sec-label">Verbrauchsdaten (für künftigen Tarifvergleich)</div>
-        <div class="verbrauch-grid">
-          <div><label class="v-label">Stromverbrauch kWh/Jahr</label><input class="v-input" type="number" id="vStrom" value="3500"></div>
-          <div><label class="v-label">Gasverbrauch kWh/Jahr</label><input class="v-input" type="number" id="vGas" value="15000"></div>
-          <div><label class="v-label">Wohnfläche m²</label><input class="v-input" type="number" id="vFlaeche" value="120"></div>
-        </div>
-      </div>`;
-  } else if(currentTab==='rechner'){
-    let html=`
-      <div class="sec-label anim">🏠 Maßnahmen auswählen</div>
-      <div class="card-grid">${MASSNAHMEN.map((m,i)=>{
-        const sel=selectedMass.has(m.id);
-        return `<div class="mass-card ${sel?'sel':''} anim d${Math.min(i+1,4)}" onclick="toggleMass('${m.id}')">
-          <div class="mass-check">${sel?'✓':''}</div>
-          <div class="mass-icon">${m.icon}</div>
-          <div class="mass-name">${m.label}</div>
-          <div class="mass-detail">Kosten: <b>${m.kosten}</b></div>
-          <div class="mass-detail">Ersparnis/Jahr: <b class="g">~${fmt(m.spar)} €</b></div>
-          <div class="mass-detail">Förderung: <b class="y">${m.foerd}</b></div>
-          <div class="mass-detail">Amortisation: <b class="b">${m.amort}</b></div>
-        </div>`}).join('')}
-      </div>`;
-    if(selectedMass.size>0){
-      const total=[...selectedMass].reduce((s,id)=>{const m=MASSNAHMEN.find(x=>x.id===id);return s+(m?m.spar:0)},0);
-      const vStrom=parseInt(document.getElementById('vStrom')?.value)||3500;
-      const vGas=parseInt(document.getElementById('vGas')?.value)||15000;
-      const kv=Math.round(vStrom*0.32+vGas*0.12);
-      const kn=Math.max(0,kv-total);
-      html+=`<div class="result-panel anim">
-        <div class="result-hero">
-          <div class="result-label">Geschätzte jährliche Ersparnis</div>
-          <div class="result-big">~${fmt(total)} €</div>
-          <div class="result-sub">pro Jahr bei ${selectedMass.size} Maßnahme${selectedMass.size>1?'n':''}</div>
-        </div>
-        <div class="stat-grid">
-          <div class="stat-box"><div class="stat-val" style="color:var(--green)">~${fmt(total*20)} €</div><div class="stat-label">In 20 Jahren</div></div>
-          <div class="stat-box"><div class="stat-val" style="color:var(--orange)">~${fmt(Math.round(total/12))} €</div><div class="stat-label">Pro Monat</div></div>
-          <div class="stat-box"><div class="stat-val" style="color:var(--blue)">${selectedMass.size}</div><div class="stat-label">Maßnahmen</div></div>
-          <div class="stat-box"><div class="stat-val" style="color:var(--gold)">~${fmt(kn)} €</div><div class="stat-label">Kosten danach/J.</div></div>
-        </div>
-        <div class="warn-box">⚠️ Alle Werte sind Schätzungen auf Basis von Durchschnittswerten. Exakte Berechnung erfolgt durch Ihren Energieberater vor Ort.</div>
-      </div>`}
-    el.innerHTML=html;
-  }
-}
-
-function emptyState(){
-  return `<div class="empty"><div class="empty-icon">⚡</div><div class="empty-text">Postleitzahl oben eingeben</div><div class="empty-sub">Partner, Lieferanten und Sparpotenziale für Ihre Region</div></div>`;
-}
-
-render();
-document.getElementById('plz').focus();
-</script>
 </body>
 </html>
