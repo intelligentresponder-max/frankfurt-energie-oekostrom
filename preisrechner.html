@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strompreisrechner Frankfurt | Frankfurt Energie Online</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0d0f1a;
+  --card:#13162a;
+  --card2:#1a1e35;
+  --border:rgba(255,255,255,0.08);
+  --gold:#c9a84c;
+  --gold-light:#f0d080;
+  --silver:#a8b2bf;
+  --text:#e8eaf0;
+  --muted:#64748b;
+  --green:#4ade80;
+  --red:#f87171;
+}
+body{
+  background:var(--bg);
+  font-family:system-ui,sans-serif;
+  color:var(--text);
+  min-height:100vh;
+  max-width:520px;
+  margin:0 auto;
+}
+
+/* HEADER */
+.header{
+  background:var(--card);
+  padding:14px 20px 10px;
+  border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:200;
+  border-bottom:2px solid var(--gold);
+}
+.header-top{display:flex;justify-content:space-between;align-items:center}
+.header-brand{color:var(--gold);font-weight:900;font-size:16px}
+.header-sub{color:var(--muted);font-size:10px;margin-top:2px}
+.header-badge{
+  background:rgba(201,168,76,.2);
+  color:var(--gold);
+  border:1px solid rgba(201,168,76,.4);
+  border-radius:8px;
+  padding:4px 10px;
+  font-size:11px;font-weight:800;
+}
+
+/* TABS */
+.tabs{
+  background:var(--card);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  justify-content:space-around;
+  padding:8px 0;
+  position:sticky;top:57px;z-index:100;
+}
+.tab-btn{
+  background:none;border:none;cursor:pointer;
+  color:var(--muted);font-size:20px;
+  padding:4px 8px;
+  border-bottom:2px solid transparent;
+  transition:all .2s;
+}
+.tab-btn.active{
+  color:var(--gold);
+  border-bottom-color:var(--gold);
+}
+
+/* CONTENT */
+.page{padding:20px;display:none}
+.page.active{display:block}
+
+/* CARDS */
+.card{
+  background:var(--card2);
+  border-radius:14px;
+  padding:16px;
+  margin-bottom:14px;
+  border:1px solid var(--border);
+}
+.card-gold{border-color:rgba(201,168,76,.35)}
+.card-silver{border-color:rgba(168,178,191,.25)}
+
+/* SCHIEBEREGLER */
+.slider-wrap{margin:16px 0}
+.slider-label{
+  display:flex;justify-content:space-between;
+  font-size:12px;color:var(--muted);margin-bottom:8px;
+}
+.slider-val{color:var(--gold);font-weight:800;font-size:16px}
+input[type=range]{
+  width:100%;
+  -webkit-appearance:none;
+  height:6px;
+  border-radius:3px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-light));
+  outline:none;
+}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  width:22px;height:22px;
+  border-radius:50%;
+  background:var(--gold);
+  cursor:pointer;
+  border:3px solid var(--bg);
+  box-shadow:0 2px 8px rgba(201,168,76,.5);
+}
+
+/* HAUSHALT BUTTONS */
+.hh-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:12px 0}
+.hh-btn{
+  background:rgba(255,255,255,.05);
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  padding:10px 4px;
+  cursor:pointer;
+  text-align:center;
+  transition:all .2s;
+}
+.hh-btn.active{
+  background:rgba(201,168,76,.15);
+  border-color:var(--gold);
+}
+.hh-btn .icon{font-size:20px}
+.hh-btn .lbl{font-size:9px;color:var(--muted);margin-top:3px}
+.hh-btn.active .lbl{color:var(--gold)}
+
+/* FILTER TOGGLES */
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.filter-btn{
+  background:rgba(255,255,255,.05);
+  border:1.5px solid var(--border);
+  border-radius:20px;
+  padding:6px 14px;
+  font-size:11px;font-weight:700;
+  cursor:pointer;color:var(--muted);
+  transition:all .2s;
+}
+.filter-btn.active{
+  background:rgba(74,222,128,.15);
+  border-color:#4ade80;
+  color:#4ade80;
+}
+.filter-btn.active-gold{
+  background:rgba(201,168,76,.15);
+  border-color:var(--gold);
+  color:var(--gold);
+}
+
+/* ERGEBNIS-KARTEN */
+.result-card{
+  background:var(--card2);
+  border-radius:12px;
+  padding:14px;
+  margin-bottom:10px;
+  border:1px solid var(--border);
+  position:relative;
+  overflow:hidden;
+}
+.result-card.gold-pick{
+  border:2px solid var(--gold);
+  background:linear-gradient(135deg,#1a1a0a,#1a1e35);
+}
+.result-card.silver-pick{
+  border:2px solid var(--silver);
+  background:linear-gradient(135deg,#121820,#1a1e35);
+}
+.result-card .rank{
+  position:absolute;top:10px;right:12px;
+  font-size:18px;
+}
+.result-name{font-size:13px;font-weight:800;color:#fff;margin-bottom:2px}
+.result-tarif{font-size:11px;color:var(--muted);margin-bottom:8px}
+.result-preis{font-size:22px;font-weight:900;color:var(--gold)}
+.result-preis-sub{font-size:10px;color:var(--muted);margin-left:4px}
+.ersparnis-bar-wrap{margin:10px 0 6px}
+.ersparnis-bar-bg{
+  height:8px;background:rgba(255,255,255,.06);
+  border-radius:4px;overflow:hidden;
+}
+.ersparnis-bar{
+  height:100%;border-radius:4px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-light));
+  transition:width .6s ease;
+}
+.result-footer{
+  display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;
+}
+.badge-ok{
+  background:rgba(74,222,128,.15);
+  color:#4ade80;
+  border:1px solid rgba(74,222,128,.3);
+  border-radius:20px;padding:2px 8px;font-size:10px;font-weight:700;
+}
+.badge-pg{
+  background:rgba(201,168,76,.15);
+  color:var(--gold);
+  border:1px solid rgba(201,168,76,.3);
+  border-radius:20px;padding:2px 8px;font-size:10px;font-weight:700;
+}
+.badge-bonus{
+  background:rgba(99,102,241,.15);
+  color:#818cf8;
+  border:1px solid rgba(99,102,241,.3);
+  border-radius:20px;padding:2px 8px;font-size:10px;font-weight:700;
+}
+.ersparnis-zahl{
+  font-size:13px;font-weight:800;color:#4ade80;
+}
+
+/* VERGLEICH */
+.vs-grid{display:flex;gap:10px;margin:14px 0}
+.vs-col{flex:1}
+select{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;
+  color:var(--text);
+  padding:10px 12px;
+  width:100%;font-size:13px;
+  -webkit-appearance:none;
+}
+
+/* CTA */
+.cta-btn{
+  display:block;width:100%;
+  background:linear-gradient(90deg,#8a6a1a,var(--gold));
+  color:#fff;border:none;
+  border-radius:50px;
+  padding:14px;
+  font-size:15px;font-weight:800;
+  cursor:pointer;text-align:center;
+  text-decoration:none;
+  box-shadow:0 4px 18px rgba(201,168,76,.4);
+  margin-top:14px;
+}
+.cta-btn-wa{
+  background:#25D366;
+  box-shadow:0 4px 14px rgba(37,211,102,.3);
+}
+
+/* SEKTION TITLE */
+.sec-title{font-size:17px;font-weight:900;color:#fff;margin-bottom:16px}
+.sec-muted{font-size:12px;color:var(--muted);margin-bottom:16px}
+
+/* GRUNDVERSORGER BOX */
+.gv-box{
+  background:rgba(248,113,113,.08);
+  border:1px solid rgba(248,113,113,.25);
+  border-radius:12px;padding:12px 16px;
+  margin-bottom:14px;
+}
+.gv-box .label{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#f87171;font-weight:700;margin-bottom:4px}
+.gv-box .preis{font-size:24px;font-weight:900;color:#f87171}
+
+/* STATISTIK */
+.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.stat-box{background:var(--card2);border-radius:12px;padding:14px;text-align:center;border:1px solid var(--border)}
+.stat-num{font-size:22px;font-weight:900;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-lbl{font-size:10px;color:var(--muted);margin-top:3px;line-height:1.4}
+
+footer{text-align:center;padding:20px;color:var(--muted);font-size:10px;border-top:1px solid var(--border)}
+footer a{color:var(--gold)}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-top">
+    <div>
+      <div class="header-brand">⚡ Energie-Rechner Frankfurt</div>
+      <div class="header-sub">Frankfurt Energie Online · Tarifvergleich 2026</div>
+    </div>
+    <div class="header-badge">💰 Bis zu 179 € sparen</div>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab-btn active" onclick="showTab('rechner')" id="tab-rechner">🔢</button>
+  <button class="tab-btn" onclick="showTab('vergleich')" id="tab-vergleich">⚖️</button>
+  <button class="tab-btn" onclick="showTab('ranking')" id="tab-ranking">🏆</button>
+  <button class="tab-btn" onclick="showTab('info')" id="tab-info">ℹ️</button>
+</div>
+
+<!-- ═══ SEITE 1: RECHNER ═══ -->
+<div class="page active" id="page-rechner">
+
+  <div class="stat-row">
+    <div class="stat-box"><div class="stat-num">88%</div><div class="stat-lbl">fühlen sich durch Energiekosten belastet</div></div>
+    <div class="stat-box"><div class="stat-num">179€</div><div class="stat-lbl">max. Jahresersparnis für Frankfurt</div></div>
+  </div>
+
+  <div class="card card-gold">
+    <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:14px">🏠 Wie groß ist dein Haushalt?</div>
+    <div class="hh-grid" id="hh-grid">
+      <div class="hh-btn" onclick="setHH(1,1000)"><div class="icon">👤</div><div class="lbl">1 Person</div></div>
+      <div class="hh-btn" onclick="setHH(2,2000)"><div class="icon">👥</div><div class="lbl">2 Pers.</div></div>
+      <div class="hh-btn active" onclick="setHH(3,3500)"><div class="icon">👨‍👩‍👦</div><div class="lbl">3 Pers.</div></div>
+      <div class="hh-btn" onclick="setHH(4,4500)"><div class="icon">👨‍👩‍👧‍👦</div><div class="lbl">4 Pers.</div></div>
+      <div class="hh-btn" onclick="setHH(5,6000)"><div class="icon">🏡</div><div class="lbl">5+ Pers.</div></div>
+    </div>
+
+    <div class="slider-wrap">
+      <div class="slider-label">
+        <span>
+
