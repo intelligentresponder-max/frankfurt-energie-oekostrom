@@ -1,698 +1,100 @@
 <!DOCTYPE html>
 <html lang="de">
-  <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"Frankfurt Energie Online","url":"https://frankfurt-energie.online","description":"Zertifizierter Ökostrom, Gas, Photovoltaik und Solar in Frankfurt am Main. Kostenloser Tarifvergleich.","author":{"@type":"Person","name":"André Schwarz","url":"https://frankfurt-energie.online"},"publisher":{"@type":"Organization","name":"Frankfurt Energie Online – ASGlobal","url":"https://frankfurt-energie.online"}}
-</script>
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZP09D28S9V"></script>
-<script>
-window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-gtag('js',new Date());gtag('config','G-ZP09D28S9V');
-</script>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Zertifizierter Ökostrom in Frankfurt am Main. Günstiger als der Grundversorger. ok-power und TÜV-zertifiziert. Bis zu 179 € sparen. Jetzt kostenlos vergleichen.">
+<meta name="description" content="Zertifizierter Ökostrom in Frankfurt am Main. Bis zu 26% günstiger als der Grundversorger. Wechsel in 24 Stunden. ok-power und TÜV-zertifiziert.">
 <title>Ökostrom Frankfurt – Zertifiziert. Günstiger. Ehrlich. | Frankfurt Energie Online</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Segoe UI',system-ui,sans-serif;color:#1a1a2e;line-height:1.7;background:#fafaf8}
-
-/* GOLD/SILBER PALETTE */
-:root{
-  --gold:#c9a84c;
-  --gold-light:#f0d080;
-  --gold-dark:#8a6a1a;
-  --silver:#a8b2bf;
-  --silver-light:#dce3ea;
-  --silver-dark:#6b7a8a;
-  --green-deep:#0a4d2e;
-  --green-mid:#16a34a;
-  --green-bright:#22c55e;
-  --bg-dark:#0f1923;
-}
-
-/* HERO */
-.hero{
-  background:linear-gradient(135deg,#0a1f12,#0a4d2e,#16a34a);
-  color:#fff;
-  padding:70px 20px 60px;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
-}
-.hero::before{
-  content:'';
-  position:absolute;inset:0;
-  background:radial-gradient(ellipse at 70% 30%, rgba(201,168,76,.18) 0%, transparent 60%),
-             radial-gradient(ellipse at 20% 80%, rgba(168,178,191,.1) 0%, transparent 50%);
-}
+:root{--gold:#c9a84c;--gl:#f0d080;--gd:#8a6a1a;--sv:#a8b2bf;--sd:#6b7a8a;--gn:#0a4d2e;--gm:#16a34a;--bg:#fafaf8}
+.hero{background:linear-gradient(135deg,#0a1f12,#0a4d2e,#16a34a);color:#fff;padding:70px 20px 60px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(201,168,76,.18) 0%,transparent 60%),radial-gradient(ellipse at 20% 80%,rgba(168,178,191,.1) 0%,transparent 50%)}
 .hero>*{position:relative;z-index:1}
 .hero h1{font-size:2.1rem;font-weight:800;margin-bottom:12px;letter-spacing:-.5px}
-.hero h1 span{color:var(--gold-light)}
+.hero h1 span{color:var(--gl)}
 .hero .sub{font-size:1.08rem;opacity:.92;max-width:700px;margin:0 auto 28px;line-height:1.75}
-.badge{
-  display:inline-block;
-  background:rgba(201,168,76,.18);
-  border:1px solid rgba(201,168,76,.5);
-  border-radius:50px;
-  padding:7px 16px;
-  font-size:.82rem;
-  margin:4px;
-  color:#f0d080;
-  font-weight:600;
-}
-
-/* STATS BANNER */
+.badge{display:inline-block;background:rgba(201,168,76,.18);border:1px solid rgba(201,168,76,.5);border-radius:50px;padding:7px 16px;font-size:.82rem;margin:4px;color:#f0d080;font-weight:600}
 .stats{background:linear-gradient(90deg,#0f1923,#162b1a,#0f1923);padding:36px 20px;border-top:2px solid var(--gold);border-bottom:2px solid var(--gold)}
-.stats-inner{max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:30px}
-.stat{min-width:160px;text-align:center}
-.stat .num{font-size:2.3rem;font-weight:800;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.stat .lbl{font-size:.8rem;color:var(--silver-light);margin-top:4px;line-height:1.4}
-
-/* BILD-GALERIE */
-.img-grid{display:flex;gap:0;flex-wrap:nowrap;overflow:hidden;max-height:220px}
-.img-grid img{flex:1;min-width:0;object-fit:cover;width:25%;filter:brightness(.75) saturate(.9);transition:filter .3s}
-.img-grid img:hover{filter:brightness(.9) saturate(1.1)}
-.img-grid-label{
-  display:flex;gap:0;flex-wrap:nowrap;
-  background:linear-gradient(90deg,#0a1f12,#0a4d2e);
-  padding:10px 0;
-}
-.img-grid-label span{flex:1;text-align:center;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);border-right:1px solid rgba(201,168,76,.3)}
+.stats-inner{max-width:900px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:24px}
+.stat{min-width:140px;text-align:center}
+.stat .num{font-size:2.1rem;font-weight:800;background:linear-gradient(135deg,var(--gold),var(--gl));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat .lbl{font-size:.78rem;color:#dce3ea;margin-top:4px;line-height:1.4}
+.img-grid{display:flex;gap:0;flex-wrap:nowrap;overflow:hidden;max-height:200px}
+.img-grid img{flex:1;min-width:0;object-fit:cover;width:25%;filter:brightness(.75) saturate(.9)}
+.img-grid-label{display:flex;gap:0;background:linear-gradient(90deg,#0a1f12,#0a4d2e);padding:9px 0}
+.img-grid-label span{flex:1;text-align:center;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);border-right:1px solid rgba(201,168,76,.3)}
 .img-grid-label span:last-child{border-right:none}
-
-/* ALLGEMEIN */
 .sec{max-width:900px;margin:0 auto;padding:48px 20px}
-.sec h2{font-size:1.4rem;color:var(--green-deep);margin-bottom:14px;font-weight:800;position:relative;padding-left:14px}
-.sec h2::before{content:'';position:absolute;left:0;top:4px;bottom:4px;width:4px;background:linear-gradient(var(--gold),var(--gold-light));border-radius:4px}
+.sec h2{font-size:1.4rem;color:var(--gn);margin-bottom:14px;font-weight:800;position:relative;padding-left:14px}
+.sec h2::before{content:'';position:absolute;left:0;top:4px;bottom:4px;width:4px;background:linear-gradient(var(--gold),var(--gl));border-radius:4px}
 .sec p{margin-bottom:14px;color:#2a2a2a}
-
-/* ZIELGRUPPEN-SPLIT */
 .split{display:flex;gap:20px;flex-wrap:wrap;max-width:900px;margin:0 auto 10px}
 .split-card{flex:1;min-width:280px;border-radius:18px;padding:28px 24px;position:relative;overflow:hidden}
-.split-young{
-  background:linear-gradient(145deg,#0d1b2a,#0f2a1e);
-  color:#fff;
-  border:1.5px solid var(--gold);
-  box-shadow:0 0 30px rgba(201,168,76,.15);
-}
-.split-old{
-  background:linear-gradient(145deg,#0f1f10,#162b1a);
-  color:#fff;
-  border:1.5px solid var(--silver);
-  box-shadow:0 0 30px rgba(168,178,191,.12);
-}
+.split-young{background:linear-gradient(145deg,#0d1b2a,#0f2a1e);color:#fff;border:1.5px solid var(--gold);box-shadow:0 0 30px rgba(201,168,76,.15)}
+.split-old{background:linear-gradient(145deg,#0f1f10,#162b1a);color:#fff;border:1.5px solid var(--sv);box-shadow:0 0 30px rgba(168,178,191,.12)}
 .split-card .tag{font-size:.7rem;text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:10px;color:var(--gold)}
-.split-old .tag{color:var(--silver-light)}
+.split-old .tag{color:#dce3ea}
 .split-card h3{font-size:1.2rem;font-weight:800;margin-bottom:10px;line-height:1.35}
 .split-card p{font-size:.9rem;opacity:.85;margin-bottom:16px}
 .split-card ul{list-style:none;padding:0;margin-bottom:22px}
 .split-card ul li{padding:8px 0 8px 26px;position:relative;font-size:.88rem;opacity:.92;border-bottom:1px solid rgba(255,255,255,.08)}
 .split-card ul li::before{content:"✓";position:absolute;left:0;font-weight:800;font-size:1rem}
-.split-young ul li::before{color:var(--gold-light)}
-.split-old ul li::before{color:var(--silver-light)}
-.cta-young{
-  display:inline-block;
-  background:linear-gradient(90deg,var(--gold-dark),var(--gold));
-  color:#fff;
-  padding:13px 26px;
-  border-radius:50px;
-  font-weight:700;
-  font-size:.92rem;
-  text-decoration:none;
-  box-shadow:0 4px 18px rgba(201,168,76,.4);
-}
-.cta-old{
-  display:inline-block;
-  background:linear-gradient(90deg,var(--silver-dark),var(--silver));
-  color:#fff;
-  padding:13px 26px;
-  border-radius:50px;
-  font-weight:700;
-  font-size:.92rem;
-  text-decoration:none;
-  box-shadow:0 4px 18px rgba(168,178,191,.35);
-}
-
-/* ALARM BOX */
-.alarm{
-  background:linear-gradient(135deg,#1a0f00,#2d1800);
-  border:1px solid var(--gold);
-  border-left:5px solid var(--gold);
-  border-radius:0 16px 16px 0;
-  padding:24px 28px;
-  margin:28px 0;
-  display:flex;gap:16px;align-items:flex-start;
-}
+.split-young ul li::before{color:var(--gl)}
+.split-old ul li::before{color:#dce3ea}
+.cta-young{display:inline-block;background:linear-gradient(90deg,var(--gd),var(--gold));color:#fff;padding:13px 26px;border-radius:50px;font-weight:700;font-size:.92rem;text-decoration:none;box-shadow:0 4px 18px rgba(201,168,76,.4)}
+.cta-old{display:inline-block;background:linear-gradient(90deg,var(--sd),var(--sv));color:#fff;padding:13px 26px;border-radius:50px;font-weight:700;font-size:.92rem;text-decoration:none;box-shadow:0 4px 18px rgba(168,178,191,.35)}
+.alarm{background:linear-gradient(135deg,#1a0f00,#2d1800);border:1px solid var(--gold);border-left:5px solid var(--gold);border-radius:0 16px 16px 0;padding:24px 28px;margin:28px 0;display:flex;gap:16px;align-items:flex-start}
 .alarm .ico{font-size:2.2rem;flex-shrink:0}
-.alarm h3{color:var(--gold-light);font-size:1.08rem;font-weight:800;margin-bottom:6px}
+.alarm h3{color:var(--gl);font-size:1.08rem;font-weight:800;margin-bottom:6px}
 .alarm p{color:#e8d5b0;font-size:.9rem;margin:0}
-
-/* HBOX */
-.hbox{
-  background:linear-gradient(135deg,#f5f0e8,#fdf6e3);
-  border-left:5px solid var(--gold);
-  border-radius:0 12px 12px 0;
-  padding:22px 26px;
-  margin:24px 0;
-}
-.hbox strong{color:var(--gold-dark)}
-
-/* CHECKLISTE */
-.fl{list-style:none;padding:0}
-.fl li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid #ece8df}
-.fl li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:800;font-size:1.2rem}
-
-/* PREISVERGLEICH */
+.malo-box{background:linear-gradient(135deg,#0d1b2a,#0f2a3a);border:1.5px solid #38bdf8;border-radius:14px;padding:20px 24px;margin:20px 0;display:flex;gap:14px;align-items:flex-start}
+.malo-box .ico{font-size:2rem;flex-shrink:0}
+.malo-box h4{color:#7dd3fc;font-size:1rem;font-weight:800;margin-bottom:6px}
+.malo-box p{color:#bae6fd;font-size:.88rem;margin:0;line-height:1.6}
 .card{background:#fff;border-radius:16px;padding:26px;box-shadow:0 4px 24px rgba(0,0,0,.07);margin:24px 0;border:1px solid #e8e0d0}
 .vs{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin:18px 0}
 .vs>div{flex:1;min-width:230px;padding:20px;border-radius:12px;text-align:center}
 .gv{background:#fff5f5;border:2px solid #f5a0a0}
 .gv .pr{font-size:2rem;font-weight:800;color:#b91c1c}
 .oe{background:linear-gradient(135deg,#fdfbf4,#fef9ec);border:2px solid var(--gold)}
-.oe .pr{font-size:2rem;font-weight:800;color:var(--gold-dark)}
+.oe .pr{font-size:2rem;font-weight:800;color:var(--gd)}
 .lt{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:6px}
-.sv{
-  background:linear-gradient(90deg,var(--gold-dark),var(--gold));
-  color:#fff;
-  border-radius:50px;
-  display:inline-block;
-  padding:10px 28px;
-  font-weight:700;
-  font-size:1rem;
-  margin-top:12px;
-  box-shadow:0 4px 14px rgba(201,168,76,.4);
-}
-
-/* TARIF-TABELLE */
+.sv2{background:linear-gradient(90deg,var(--gd),var(--gold));color:#fff;border-radius:50px;display:inline-block;padding:10px 28px;font-weight:700;font-size:1rem;margin-top:12px;box-shadow:0 4px 14px rgba(201,168,76,.4)}
 .ttable{width:100%;border-collapse:collapse;font-size:.87rem;margin:20px 0}
-.ttable th{background:linear-gradient(90deg,#0a1f12,#0a4d2e);color:var(--gold-light);padding:12px 10px;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.7px}
+.ttable th{background:linear-gradient(90deg,#0a1f12,#0a4d2e);color:var(--gl);padding:12px 10px;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.7px}
 .ttable td{padding:11px 10px;border-bottom:1px solid #ede8dc;color:#2a2a2a;vertical-align:middle}
 .ttable tr:nth-child(even){background:#faf8f3}
 .ttable tr:hover{background:#fdf6e3}
-.tag-ok{background:linear-gradient(90deg,#d4edda,#c3e6cb);color:#155724;font-size:.7rem;padding:3px 8px;border-radius:20px;font-weight:700;white-space:nowrap}
-.tag-pg{background:linear-gradient(90deg,#e8f0fe,#d2e3fc);color:#1a3a7a;font-size:.7rem;padding:3px 8px;border-radius:20px;font-weight:700;white-space:nowrap}
+.tag-ok{background:linear-gradient(90deg,#d4edda,#c3e6cb);color:#155724;font-size:.7rem;padding:3px 8px;border-radius:20px;font-weight:700}
+.tag-pg{background:linear-gradient(90deg,#e8f0fe,#d2e3fc);color:#1a3a7a;font-size:.7rem;padding:3px 8px;border-radius:20px;font-weight:700}
 .top-pick{background:linear-gradient(90deg,#fefce8,#fdf6d0) !important;border-left:4px solid var(--gold)}
-.ersparnis{color:var(--green-mid);font-weight:700}
-.silver-row{background:linear-gradient(90deg,#f5f7fa,#edf0f3) !important;border-left:4px solid var(--silver)}
-
-/* SIEGEL */
+.silver-row{background:linear-gradient(90deg,#f5f7fa,#edf0f3) !important;border-left:4px solid var(--sv)}
+.ersparnis{color:var(--gm);font-weight:700}
+.hbox{background:linear-gradient(135deg,#f5f0e8,#fdf6e3);border-left:5px solid var(--gold);border-radius:0 12px 12px 0;padding:22px 26px;margin:24px 0}
+.hbox strong{color:var(--gd)}
+.fl{list-style:none;padding:0}
+.fl li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid #ece8df}
+.fl li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:800;font-size:1.2rem}
 .sg{display:flex;gap:14px;flex-wrap:wrap;margin:20px 0}
-.si{
-  flex:1;min-width:190px;
-  background:#fff;
-  border:1px solid #e8e0d0;
-  border-radius:12px;
-  padding:18px;text-align:center;
-  box-shadow:0 2px 8px rgba(0,0,0,.04);
-}
+.si{flex:1;min-width:190px;background:#fff;border:1px solid #e8e0d0;border-radius:12px;padding:18px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,.04)}
 .si .ic{font-size:2rem;margin-bottom:6px}
-.si h4{font-size:.93rem;color:var(--gold-dark);margin-bottom:4px;font-weight:700}
+.si h4{font-size:.93rem;color:var(--gd);margin-bottom:4px;font-weight:700}
 .si p{font-size:.83rem;color:#555;margin:0}
-
-/* PARTNER */
 .pg-grid{display:flex;gap:16px;flex-wrap:wrap}
-.pc{
-  flex:1;min-width:200px;
-  background:#fff;
-  border-radius:12px;
-  padding:20px;
-  box-shadow:0 2px 10px rgba(0,0,0,.05);
-  border-top:3px solid var(--gold);
-}
-.pc.silver-top{border-top-color:var(--silver)}
-.pc h4{color:var(--green-deep);margin-bottom:6px;font-weight:700}
+.pc{flex:1;min-width:200px;background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 10px rgba(0,0,0,.05);border-top:3px solid var(--gold)}
+.pc.st{border-top-color:var(--sv)}
+.pc h4{color:var(--gn);margin-bottom:6px;font-weight:700}
 .pc p{font-size:.86rem;color:#555;margin:0}
-.ct{display:inline-block;background:linear-gradient(90deg,#fef9ec,#fdf0c8);color:var(--gold-dark);font-size:.73rem;padding:3px 10px;border-radius:20px;margin-top:8px;font-weight:700;border:1px solid var(--gold)}
-.ct-silver{background:linear-gradient(90deg,#f0f2f5,#e4e8ed);color:var(--silver-dark);border-color:var(--silver)}
-
-/* FAQ */
+.ct{display:inline-block;background:linear-gradient(90deg,#fef9ec,#fdf0c8);color:var(--gd);font-size:.73rem;padding:3px 10px;border-radius:20px;margin-top:8px;font-weight:700;border:1px solid var(--gold)}
+.ct-sv{background:linear-gradient(90deg,#f0f2f5,#e4e8ed);color:var(--sd);border-color:var(--sv)}
 .fq{border-bottom:1px solid #e8e0d0;padding:18px 0}
 .fq h3{color:#1a1a2e;font-size:1rem;font-weight:700}
 .fq p{margin-top:6px;color:#444;font-size:.93rem}
-
-/* CTA */
-.cta{
-  background:linear-gradient(135deg,#0a1f12,#0a4d2e);
-  color:#fff;
-  text-align:center;
-  padding:48px 20px;
-  border-radius:20px;
-  margin:28px 0;
-  border:1px solid var(--gold);
-  box-shadow:0 0 40px rgba(201,168,76,.15);
-}
-.cta h2{color:var(--gold-light);margin-bottom:10px;font-size:1.5rem;font-weight:800}
-.cta h2::before{display:none}
-.cta p{color:rgba(255,255,255,.88);margin-bottom:22px;max-width:600px;margin-left:auto;margin-right:auto}
-.btn{display:inline-block;padding:14px 30px;border-radius:50px;text-decoration:none;font-weight:700;font-size:.93rem;margin:6px;transition:opacity .2s}
-.btn:hover{opacity:.88}
-.btn-gold{background:linear-gradient(90deg,var(--gold-dark),var(--gold));color:#fff;box-shadow:0 4px 14px rgba(201,168,76,.4)}
-.btn-silver{background:linear-gradient(90deg,var(--silver-dark),var(--silver));color:#fff;box-shadow:0 4px 14px rgba(168,178,191,.3)}
-.btn-g{background:#25D366;color:#fff}
-.btn-w{background:#fff;color:var(--green-deep)}
-.btn-d{background:var(--green-deep);color:#fff}
-.btn-l{background:var(--green-mid);color:#fff}
-
-/* WARN */
-.warn{
-  background:linear-gradient(135deg,#fffbeb,#fef3c7);
-  border-left:5px solid var(--gold);
-  border-radius:0 12px 12px 0;
-  padding:26px;
-}
-.warn h2{color:var(--gold-dark);font-size:1.25rem;margin-bottom:10px}
+.warn{background:linear-gradient(135deg,#fffbeb,#fef3c7);border-left:5px solid var(--gold);border-radius:0 12px 12px 0;padding:26px}
+.warn h2{color:var(--gd);font-size:1.25rem;margin-bottom:10px}
 .warn h2::before{display:none}
 .warn p{color:#4a3200;margin-bottom:10px}
-
-input,select,textarea{font-family:inherit}
-footer{
-  text-align:center;padding:32px 20px;
-  color:#888;font-size:.82rem;
-  background:linear-gradient(90deg,#0a1f12,#0f1923,#0a1f12);
-  border-top:2px solid var(--gold);
-}
-footer a{color:var(--gold)}
-footer p{margin:4px 0;color:#aaa}
-
-@media(max-width:620px){
-  .hero h1{font-size:1.5rem}
-  .vs{flex-direction:column}
-  .split{flex-direction:column}
-  .stats-inner{flex-direction:column;align-items:center}
-  .ttable{font-size:.76rem}
-  .img-grid{flex-wrap:wrap;max-height:none}
-  .img-grid img{width:50%;min-width:50%}
-  .img-grid-label span{font-size:.62rem}
-}
-</style>
-</head>
-<body>
-
-<!-- ═══════════════ HERO ═══════════════ -->
-<section class="hero">
-  <h1>Ökostrom Frankfurt:<br><span>Zertifiziert. Günstiger. Ehrlich.</span></h1>
-  <p class="sub">Schluss mit überteuerten Grundversorger-Preisen. Unsere zertifizierten Ökostromtarife schlagen den Grundversorger regelmäßig um bis zu <strong>179 €</strong> im Jahr – mit Preisgarantie, ohne Risiko, in 5 Minuten erledigt.</p>
-  <span class="badge">🏅 ok-power zertifiziert</span>
-  <span class="badge">🔍 TÜV-geprüft</span>
-  <span class="badge">🌱 100 % erneuerbar</span>
-  <span class="badge">☀️ Solar &amp; Photovoltaik</span>
-  <span class="badge">💰 Bis zu 179 € sparen</span>
-</section>
-
-<!-- ═══════════════ STATISTIK ═══════════════ -->
-<div class="stats">
-  <div class="stats-inner">
-    <div class="stat"><div class="num">88 %</div><div class="lbl">der Deutschen fühlen sich durch hohe Energiekosten belastet</div></div>
-    <div class="stat"><div class="num">84 %</div><div class="lbl">sorgen sich um weiter steigende Strompreise</div></div>
-    <div class="stat"><div class="num">179 €</div><div class="lbl">maximale Jahresersparnis für Frankfurt-Haushalte</div></div>
-    <div class="stat"><div class="num">24 Mon.</div><div class="lbl">Preisgarantie – dein Schutzschild gegen steigende Preise</div></div>
-  </div>
-</div>
-
-<!-- ═══════════════ BILD-GALERIE ═══════════════ -->
-<div class="img-grid">
-  <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?w=600&q=80&fit=crop" alt="Frankfurt Skyline bei Nacht">
-  <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=80&fit=crop" alt="Solaranlage erneuerbare Energie">
-  <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&q=80&fit=crop" alt="Windenergie Ökostrom">
-  <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&q=80&fit=crop" alt="Grüne Energie Familie Zuhause">
-</div>
-<div class="img-grid-label">
-  <span>🏙️ Frankfurt am Main</span>
-  <span>☀️ Solarenergie</span>
-  <span>💨 Windkraft</span>
-  <span>🏠 Grünes Zuhause</span>
-</div>
-
-<!-- ═══════════════ ZIELGRUPPEN-SPLIT ═══════════════ -->
-<section class="sec">
-  <h2 style="text-align:center;padding-left:0;margin-bottom:24px;">Was zählt – für dich und für Sie</h2>
-  <div class="split">
-
-    <div class="split-card split-young">
-      <div class="tag">⚡ Für dich – unter 35</div>
-      <h3>Hör auf, dem Grundversorger jeden Monat zu viel zu zahlen.</h3>
-      <p>WG, erste eigene Wohnung, Berufsstart – Strom ist einer der Posten, bei dem du sofort und einfach sparen kannst. Ohne Aufwand. Ohne Risiko.</p>
-      <ul>
-        <li>Bis zu <strong>179 € mehr</strong> in deiner Tasche – jedes Jahr</li>
-        <li>Wechsel läuft komplett kostenlos &amp; digital ab</li>
-        <li>Preisgarantie: Kein böses Erwachen bei der nächsten Abrechnung</li>
-        <li>Echter Ökostrom – 100 % erneuerbar, TÜV-geprüft</li>
-        <li>Bis zu <strong>100 € Bonus</strong> beim Wechsel kassieren</li>
-      </ul>
-      <a href="https://wa.me/491634692255?text=Hey%20Team%20Frankfurt-Nordost%2C%20ich%20will%20meinen%20Stromtarif%20wechseln!" class="cta-young">⚡ Jetzt in 5 Min. wechseln – kostenlos</a>
-    </div>
-
-    <div class="split-card split-old">
-      <div class="tag">🏠 Für Sie – Familie &amp; Haushalt</div>
-      <h3>Planungssicherheit beim Strom – auch wenn die Preise weltweit steigen.</h3>
-      <p>In Zeiten geopolitischer Unsicherheit und anhaltender Energiekrisen ist eine verlässliche Preisgarantie das wertvollste, was ein Tarif bieten kann.</p>
-      <ul>
-        <li><strong>24 Monate Preisgarantie</strong> – was Sie zahlen, wissen Sie heute</li>
-        <li>Bis zu <strong>165–179 € Ersparnis</strong> pro Jahr für Ihren Haushalt</li>
-        <li>Wir kündigen Ihren alten Vertrag – Sie müssen nichts tun</li>
-        <li>Persönliche Beratung in 9 Sprachen, kein Callcenter</li>
-        <li>Zertifizierter Ökostrom – gut für die Kinder &amp; Enkel</li>
-      </ul>
-      <a href="#kontakt" class="cta-old">📋 Kostenlose persönliche Beratung anfragen</a>
-    </div>
-
-  </div>
-</section>
-  
-<!-- STROM & GAS VERGLEICH -->
-<section class="sec" id="vergleich" style="padding-top:50px;">
-<h2 style="text-align:center;">⚡ Strom- & Gasvergleich – Jetzt Sparpotenzial prüfen</h2>
-<p style="text-align:center;color:#555;max-width:600px;margin:0 auto 24px;">Gib deine Postleitzahl ein und finde in 2 Minuten heraus, wie viel du mit einem Wechsel sparen kannst.</p>
-<div style="display:flex;gap:16px;flex-wrap:wrap;max-width:700px;margin:0 auto;">
-<div style="flex:1;min-width:280px;background:#fff;border:2px solid var(--gold);border-radius:16px;padding:28px;text-align:center;box-shadow:0 4px 16px rgba(201,168,76,.12);">
-<div style="font-size:2.5rem;margin-bottom:8px;">⚡</div>
-<h3 style="color:var(--green-deep);margin-bottom:6px;">Stromvergleich</h3>
-<p style="font-size:.88rem;color:#555;margin-bottom:16px;">Über 10 Anbieter pro PLZ – inkl. zertifizierter Ökostromtarife</p>
-<input type="text" id="plz-strom" placeholder="PLZ eingeben" maxlength="5" style="width:100%;padding:14px;border:2px solid var(--gold);border-radius:10px;font-size:1.1rem;text-align:center;margin-bottom:12px;">
-<button onclick="window.open('https://www.teleson-vertrieb.de/AndreSchwarz-435/?plz='+document.getElementById('plz-strom').value)" style="width:100%;padding:14px;background:var(--green-mid);color:#fff;border:none;border-radius:50px;font-size:1rem;font-weight:700;cursor:pointer;">Stromtarife vergleichen →</button>
-</div>
-<div style="flex:1;min-width:280px;background:#fff;border:2px solid var(--silver);border-radius:16px;padding:28px;text-align:center;box-shadow:0 4px 16px rgba(168,178,191,.12);">
-<div style="font-size:2.5rem;margin-bottom:8px;">🔥</div>
-<h3 style="color:var(--green-deep);margin-bottom:6px;">Gasvergleich</h3>
-<p style="font-size:.88rem;color:#555;margin-bottom:16px;">Günstige Gastarife mit Preisgarantie – transparent & fair</p>
-<input type="text" id="plz-gas" placeholder="PLZ eingeben" maxlength="5" style="width:100%;padding:14px;border:2px solid var(--silver);border-radius:10px;font-size:1.1rem;text-align:center;margin-bottom:12px;">
-<button onclick="window.open('https://www.teleson-vertrieb.de/AndreSchwarz-435/?plz='+document.getElementById('plz-gas').value)" style="width:100%;padding:14px;background:var(--green-mid);color:#fff;border:none;border-radius:50px;font-size:1rem;font-weight:700;cursor:pointer;">Gastarife vergleichen →</button>
-</div>
-</div>
-<p style="text-align:center;font-size:.8rem;color:#999;margin-top:14px;">Kostenlos & unverbindlich. Wir übernehmen den gesamten Wechselprozess für dich.</p>
-</section>
-
-<!-- ═══════════════ ALARM BOX ═══════════════ -->
-<section class="sec" style="padding-top:0">
-  <div class="alarm">
-    <div class="ico">🚨</div>
-    <div>
-      <h3>Die Energiepreise werden nicht sinken – sichern Sie sich jetzt Ihren Festpreis.</h3>
-      <p>Studien und Marktanalysen 2026 sind sich einig: Die Strompreise in Deutschland bleiben langfristig hoch. Geopolitische Krisen, steigende Netzentgelte und Marktturbulenzen treiben die Kosten weiter. Wer heute einen Tarif mit <strong>24 Monaten Preisgarantie</strong> abschließt, sichert sich einen bekannten Fixpreis – unabhängig davon, was auf den Weltmärkten passiert.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ PREISVERGLEICH ═══════════════ -->
-<section class="sec">
-  <h2>Ökostrom günstiger als der Grundversorger? Ja, wirklich.</h2>
-  <p>In den meisten Postleitzahlen Frankfurts schneiden unsere zertifizierten Ökostromtarife <strong>deutlich besser ab</strong> als der lokale Grundversorger.</p>
-  <div class="card">
-    <h3 style="text-align:center;color:#1a1a2e;margin:0 0 4px;font-weight:800;">Preisvergleich: Grundversorger vs. Unser Ökostrom</h3>
-    <p style="text-align:center;font-size:.87rem;color:#777;">Beispiel: 3-Personen-Haushalt, ~3.500 kWh/Jahr in Frankfurt</p>
-    <div class="vs">
-      <div class="gv">
-        <div class="lt" style="color:#b91c1c;">Grundversorger Frankfurt</div>
-        <div class="pr">~1.450 €</div>
-        <p style="font-size:.82rem;color:#888;margin:6px 0 0;">ca. 41 ct/kWh – keine Preisgarantie</p>
-      </div>
-      <div class="oe">
-        <div class="lt" style="color:var(--gold-dark);">Unser bester Ökostrom</div>
-        <div class="pr">ab 1.271 €</div>
-        <p style="font-size:.82rem;color:#555;margin:6px 0 0;">ab ca. 31,90 ct/kWh + 24 Mon. Garantie</p>
-      </div>
-    </div>
-    <div style="text-align:center;"><span class="sv">💰 Bis zu 179 € jährlich sparen – mit Ökostrom!</span></div>
-    <p style="text-align:center;font-size:.77rem;color:#999;margin-top:10px;">Ersparnis variiert je nach PLZ und Verbrauch. Unverbindlicher Vergleich.</p>
-  </div>
-</section>
-
-<!-- ═══════════════ TARIF-TABELLE ═══════════════ -->
-<section style="background:linear-gradient(180deg,#f9f7f2,#f3f0e8);padding:48px 20px;border-top:1px solid #e8e0d0;border-bottom:1px solid #e8e0d0">
-  <div style="max-width:900px;margin:0 auto;">
-    <h2 style="font-size:1.4rem;color:var(--green-deep);margin-bottom:6px;font-weight:800;padding-left:14px;position:relative;">
-      <span style="position:absolute;left:0;top:4px;bottom:4px;width:4px;background:linear-gradient(var(--gold),var(--gold-light));border-radius:4px;display:block;"></span>
-      Aktuelle Top-Tarife für Frankfurt (3.500 kWh/Jahr)
-    </h2>
-    <p style="color:#555;margin-bottom:20px;font-size:.9rem;">Echte Tarife aus unserem Portfolio – Stand März 2026. Wir finden den besten für Ihre Postleitzahl.</p>
-    <div style="overflow-x:auto;">
-      <table class="ttable">
-        <thead>
-          <tr>
-            <th>Anbieter &amp; Tarif</th>
-            <th>Jahreskosten</th>
-            <th>ct/kWh</th>
-            <th>Preisgarantie</th>
-            <th>Ersparnis/Jahr</th>
-            <th>Zertifikat</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="top-pick">
-            <td><strong>GrünVolt – ÖkoPlus 24</strong> 🥇</td>
-            <td>1.283,30 €</td>
-            <td>31,90 ct</td>
-            <td><span class="tag-pg">24 Monate</span></td>
-            <td class="ersparnis">165,49 €</td>
-            <td><span class="tag-ok">✅ Ökostrom</span></td>
-          </tr>
-          <tr class="top-pick">
-            <td><strong>NordStream Energie – Komfort 24</strong> ⭐ <small style="color:var(--green-mid)">(+40€ Bonus)</small></td>
-            <td>1.309,73 €</td>
-            <td>32,83 ct</td>
-            <td><span class="tag-pg">24 Monate</span></td>
-            <td class="ersparnis">179,06 € inkl. Bonus</td>
-            <td>–</td>
-          </tr>
-          <tr>
-            <td><strong>SkyPower – Stadtstrom 24</strong></td>
-            <td>1.293,42 €</td>
-            <td>32,56 ct</td>
-            <td><span class="tag-pg">24 Monate</span></td>
-            <td class="ersparnis">155,37 €</td>
-            <td>–</td>
-          </tr>
-          <tr class="silver-row">
-            <td><strong>EcoBase – KlimaStabil Plus</strong> 🔒 <small style="color:var(--green-mid)">(+100€ Bonus)</small></td>
-            <td>1.395,14 €</td>
-            <td>34,66 ct</td>
-            <td><span class="tag-pg">bis 31.12.2027</span></td>
-            <td class="ersparnis">153,65 € inkl. Bonus</td>
-            <td><span class="tag-ok">✅ Ökostrom</span></td>
-          </tr>
-          <tr>
-            <td><strong>ClearEnergy – ÖkoPrivat 24</strong></td>
-            <td>1.363,42 €</td>
-            <td>34,34 ct</td>
-            <td><span class="tag-pg">24 Monate</span></td>
-            <td class="ersparnis">85,37 €</td>
-            <td><span class="tag-ok">✅ Ökostrom</span></td>
-          </tr>
-          <tr>
-            <td><strong>EcoBase – KlimaBonus 12</strong> <small style="color:var(--green-mid)">(+100€ Bonus)</small></td>
-            <td>1.370,64 €</td>
-            <td>33,96 ct</td>
-            <td><span class="tag-pg">12 Monate</span></td>
-            <td class="ersparnis">178,15 € inkl. Bonus</td>
-            <td><span class="tag-ok">✅ Ökostrom</span></td>
-          </tr>
-          <tr>
-            <td><strong>SkyPower – Stadtstrom Öko 24</strong></td>
-            <td>1.306,02 €</td>
-            <td>32,92 ct</td>
-            <td><span class="tag-pg">24 Monate</span></td>
-            <td class="ersparnis">142,77 €</td>
-            <td><span class="tag-ok">✅ Ökostrom</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p style="font-size:.74rem;color:#999;margin-top:8px;">🥇 Bester Preis + Ökostrom + 24 Mon. | ⭐ Höchste Ersparnis | 🔒 Längste Preissicherheit bis Ende 2027</p>
-    <div style="text-align:center;margin-top:26px;">
-      <a href="#kontakt" class="btn btn-gold" style="font-size:.97rem;">📊 Meinen persönlichen Bestpreis finden</a>
-      <a href="https://wa.me/491634692255?text=Hallo%2C%20ich%20m%C3%B6chte%20den%20besten%20Tarif%20f%C3%BCr%20meine%20PLZ%20in%20Frankfurt." class="btn btn-g" style="font-size:.97rem;">💬 WhatsApp – sofort anfragen</a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ ÖKOSTROM DEFINITION ═══════════════ -->
-<section class="sec">
-  <h2>Was wir unter Ökostrom verstehen – und was nicht</h2>
-  <p>Der Begriff „Ökostrom" ist in Deutschland gesetzlich nicht geschützt. Jeder Anbieter darf seinen Tarif als „Öko" bezeichnen – auch wenn er nur Herkunftsnachweise aus dem Ausland kauft. Das ist legales Greenwashing.</p>
-  <p>Wir bei <strong>Frankfurt Energie Online</strong> definieren Ökostrom anders:</p>
-  <ul class="fl">
-    <li>Der Strom stammt zu <strong>100 %</strong> aus erneuerbaren Energiequellen – Wind, Solar, Wasser, Biomasse</li>
-    <li>Die Herkunft ist durch ein <strong>unabhängiges Gütesiegel zertifiziert</strong> – ok-power, TÜV Nord/Süd oder Grüner Strom-Label</li>
-    <li>Der Anbieter investiert <strong>nachweislich in den Ausbau</strong> neuer Erneuerbare-Energien-Anlagen</li>
-  </ul>
-  <div class="hbox">
-    Unser Partner <strong>GrünVolt</strong> bietet den Tarif „ÖkoPlus 24" mit dem <strong>ok-power-Gütesiegel</strong> an – eines der strengsten Ökostrom-Siegel Deutschlands. <strong>ClearEnergy</strong> ist mit über 1,7 Millionen Kunden einer der größten Ökostromanbieter Deutschlands. Beide gehören zu unserem Portfolio.
-  </div>
-</section>
-
-<!-- ═══════════════ SIEGEL ═══════════════ -->
-<section style="background:linear-gradient(135deg,#faf8f3,#f3efe3);padding:48px 20px;border-top:1px solid #e8e0d0">
-  <div style="max-width:900px;margin:0 auto;">
-    <h2 style="font-size:1.4rem;color:var(--green-deep);margin-bottom:18px;font-weight:800;padding-left:14px;position:relative;">
-      <span style="position:absolute;left:0;top:4px;bottom:4px;width:4px;background:linear-gradient(var(--gold),var(--gold-light));border-radius:4px;display:block;"></span>
-      Die Gütesiegel unserer Partner
-    </h2>
-    <div class="sg">
-      <div class="si"><div class="ic">🏅</div><h4>ok-power</h4><p>100 % erneuerbar, keine Atom-/Kohlebeteiligung, jährlich geprüft durch unabhängige Gutachter.</p></div>
-      <div class="si"><div class="ic">🔍</div><h4>TÜV-Zertifizierung</h4><p>TÜV Nord/Süd prüfen Herkunft, 100%-EE-Quote und Transparenz mit monatlichen Nachweisen.</p></div>
-      <div class="si"><div class="ic">📄</div><h4>Herkunftsnachweise</h4><p>Jede kWh ist über das Register des Umweltbundesamtes rückverfolgbar.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ PARTNER ═══════════════ -->
-<section class="sec">
-  <h2>Unsere Ökostrompartner im Überblick</h2>
-  <div class="pg-grid">
-    <div class="pc"><h4>GrünVolt Energie</h4><p>Seit über 60 Jahren im Markt, 600.000+ Kunden. Tarif „ÖkoPlus 24" mit aktivem Energiewende-Beitrag.</p><span class="ct">ok-power zertifiziert</span></div>
-    <div class="pc"><h4>ClearEnergy</h4><p>Einer der größten Ökostromanbieter Deutschlands. 1,7 Mio. Kunden, 100 % Ökostrom seit über 20 Jahren.</p><span class="ct">100 % Ökostrom</span></div>
-    <div class="pc silver-top"><h4>GrünVolt Regional</h4><p>Regional verankert, bundesweit aktiv. Breites Spektrum an nachhaltigen Energielösungen.</p><span class="ct ct-silver">Regionaler Partner</span></div>
-    <div class="pc"><h4>EcoBase Strom</h4><p>Bis 100 € Bonus, Ökostrom-zertifiziert, längste Preisgarantie bis 31.12.2027 verfügbar.</p><span class="ct">Bonus bis 100 €</span></div>
-    <div class="pc"><h4>NordStream Energie</h4><p>Höchste Gesamtersparnis mit Bonus. 24 Monate Preisgarantie für maximale Planungssicherheit.</p><span class="ct">Bis 179 € Ersparnis</span></div>
-    <div class="pc silver-top"><h4>SkyPower</h4><p>Günstige Stadtstrom-Tarife mit und ohne Ökozertifikat – für jeden Bedarf die passende Lösung.</p><span class="ct ct-silver">Preis-Leistung</span></div>
-  </div>
-</section>
-
-<!-- ═══════════════ EEG-WARNUNG ═══════════════ -->
-<section class="sec">
-  <div class="warn">
-    <h2>⚠️ EU-Genehmigung für Einspeisevergütung läuft Ende 2026 aus</h2>
-    <p>Die beihilferechtliche Genehmigung der EU für das EEG läuft zum <strong>31. Dezember 2026</strong> aus. Die Bundesregierung plant, die feste Einspeisevergütung für neue PV-Anlagen bis 25 kWp <strong>ab 2027 abzuschaffen</strong>.</p>
-    <p>Stattdessen sollen marktorientierte Differenzverträge kommen – weniger Planungssicherheit, schwankende Einnahmen, mehr Komplexität für Eigenheimbesitzer.</p>
-    <p><strong>Wer 2026 in Betrieb nimmt, sichert sich die garantierte Einspeisevergütung für 20 Jahre.</strong> Danach könnte dieses Zeitfenster geschlossen sein.</p>
-    <p style="margin-bottom:0;">Wir beraten Sie zu Photovoltaik, Balkonkraftwerken und Solar – für Stromkosten langfristig unter 5 Cent/kWh. <strong>Handeln Sie jetzt.</strong></p>
-  </div>
-</section>
-
-<!-- ═══════════════ FAQ ═══════════════ -->
-<section class="sec">
-  <h2>Häufige Fragen zu Ökostrom in Frankfurt</h2>
-  <div class="fq"><h3>Ist Ökostrom günstiger als der Grundversorger?</h3><p>In den meisten Fällen ja – oft um mehrere hundert Euro pro Jahr. Unser aktuell günstigster Ökostromtarif liegt bei 31,90 ct/kWh gegenüber ~41 ct/kWh beim lokalen Grundversorger.</p></div>
-  <div class="fq"><h3>Was bedeutet Preisgarantie – und warum ist sie so wichtig?</h3><p>Eine Preisgarantie bedeutet: Der Anbieter darf den Arbeitspreis für die Laufzeit nicht erhöhen. In Zeiten globaler Energiekrisen und geopolitischer Unsicherheit ist das ein echter Schutzschild für Ihren Geldbeutel. Unsere besten Tarife bieten 24 Monate – manche sogar bis 31.12.2027.</p></div>
-  <div class="fq"><h3>Wie erkenne ich echten Ökostrom?</h3><p>Achte auf ok-power, Grüner Strom-Label oder TÜV-Zertifizierungen. Reine Herkunftsnachweise ohne Gütesiegel können Greenwashing sein.</p></div>
-  <div class="fq"><h3>Was bedeutet „ok-power zertifiziert"?</h3><p>100 % erneuerbare Quellen, keine Atom-/Kohlebeteiligung, nachweisliche Investition in neue EE-Anlagen, faire Vertragsbedingungen. Jährlich geprüft.</p></div>
-  <div class="fq"><h3>Was macht Frankfurt Energie Online anders als Vergleichsportale?</h3><p>Persönliche Beratung in 9 Sprachen, kostenloser Wechselservice, kein Bot, kein Callcenter – echte Ansprechpartner vor Ort in Frankfurt.</p></div>
-  <div class="fq"><h3>Kann ich auch einen Bonus beim Wechsel bekommen?</h3><p>Ja! Je nach Tarif gibt es bis zu 100 € Wechselbonus. Das erhöht die effektive Ersparnis im ersten Jahr auf bis zu 178–179 €. Wir zeigen Ihnen alle aktuellen Bonusangebote.</p></div>
-</section>
-
-<!-- ═══════════════ CTA ═══════════════ -->
-<section class="sec">
-  <div class="cta">
-    <h2>Jetzt Ökostrom-Vergleich starten</h2>
-    <p>Kostenlos. Unverbindlich. In 5 Minuten.<br><strong>Wir kümmern uns um alles – Sie müssen nichts kündigen.</strong></p>
-    <a href="#kontakt" class="btn btn-gold">📋 Kostenlos Tarifcheck starten</a>
-    <a href="https://wa.me/491634692255?text=Hallo%20Team%20Frankfurt-Nordost%2C%20ich%20m%C3%B6chte%20einen%20%C3%96kostrom-Vergleich." class="btn btn-g">💬 WhatsApp Team Frankfurt-Nordost</a>
-  </div>
-</section>
-
-<!-- ═══════════════ FORMULAR ═══════════════ -->
-<section class="sec" id="kontakt">
-  <h2 style="text-align:center;padding-left:0;">Kostenloser Tarifcheck – Formular</h2>
-  <p style="text-align:center;color:#555;max-width:600px;margin:0 auto 22px;">Halten Sie Ihre letzte Jahresrechnung und Zählernummer bereit. Wir melden uns innerhalb von 24 Stunden.</p>
-  <div style="max-width:600px;margin:0 auto;background:linear-gradient(135deg,#fafaf5,#f5f0e0);border-radius:18px;padding:30px;border:1.5px solid var(--gold);box-shadow:0 0 30px rgba(201,168,76,.1)">
-    <div style="display:flex;flex-wrap:wrap;gap:10px;">
-      <input type="text" id="fn" placeholder="Vor- und Nachname *" style="flex:1;min-width:200px;padding:12px;border:1.5px solid #d8c88a;border-radius:8px;font-size:.95rem;background:#fff;">
-      <input type="email" id="fe" placeholder="E-Mail-Adresse *" style="flex:1;min-width:200px;padding:12px;border:1.5px solid #d8c88a;border-radius:8px;font-size:.95rem;background:#fff;">
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;">
-      <input type="tel" id="fp" placeholder="Telefonnummer *" style="flex:1;min-width:200px;padding:12px;border:1.5px solid #d8c88a;border-radius:8px;font-size:.95rem;background:#fff;">
-      <input type="text" id="fz" placeholder="Postleitzahl *" style="flex:1;min-width:120px;padding:12px;border:1.5px solid #d8c88a;border-radius:8px;font-size:.95rem;background:#fff;">
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;">
-      <input type="text" id="fza" placeholder="Zählernummer" style="flex:1;min-width:200px;padding:12px;border:1.5px solid #d8c88a;border-radius:8px;font-size:.95rem;background:#fff;">
-      <input type="text" id="fv" placeholder="Aktueller Versorger" style="flex:1;min-width:200px;padding:12px;border:1.5px solid #d8c88a;border-radius:8px;font-size:.95rem;background:#fff;">
-    </div>
-    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;">
-      <input type="text" id="fvb" placeholder="Jahresverbrauch kWh (ca.)" style="flex:1;min-width:200px;padding:12px;border:1.5px solid #d8c88a;border-radius:8px;font-size:.95rem;background:#fff;">
-      <select id="fi" style="flex:1;min-width:200px;padding:12px;border:1.5px solid #d8c88a;border-radius:8px;font-size:.95rem;background:#fff;">
-        <option value="">Interesse an...</option>
-        <option value="Ökostrom">Ökostrom-Wechsel</option>
-        <option value="Gas">Gas-Wechsel</option>
-        <option value="Strom+Gas">Strom + Gas</option>
-        <option value="PV">Photovoltaik / Solar</option>
-        <option value="Balkon">Balkonkraftwerk</option>
-        <option value="Gesamt">Gesamtberatung</option>
-      </select>
-    </div>
-    <textarea id="fw" placeholder="Ihre Wünsche / Anmerkungen (optional)" style="width:100%;padding:12px;border:1.5px solid #d8c88a;border-radius:8px;font-size:.95rem;margin-top:10px;min-height:70px;resize:vertical;background:#fff;"></textarea>
-    <button onclick="sf()" style="width:100%;margin-top:14px;padding:14px;background:linear-gradient(90deg,var(--gold-dark),var(--gold));color:#fff;border:none;border-radius:50px;font-size:1.05rem;font-weight:700;cursor:pointer;box-shadow:0 4px 16px rgba(201,168,76,.4);">📩 Kostenlos Tarifcheck anfordern</button>
-    <p id="st" style="text-align:center;margin-top:10px;font-weight:600;display:none;"></p>
-    <p style="text-align:center;font-size:.74rem;color:#999;margin-top:10px;">Daten werden nur für die Beratung verwendet.</p>
-  </div>
-</section>
-
-<!-- ═══════════════ DIREKTKONTAKT ═══════════════ -->
-<section class="sec">
-  <div style="background:#fff;border-radius:18px;padding:30px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,.06);border:1.5px solid var(--gold);">
-    <h2 style="color:var(--green-deep);margin-bottom:6px;padding-left:0;">Direkt Kontakt aufnehmen</h2>
-    <p style="color:#555;margin-bottom:18px;">Team Frankfurt-Nordost – persönlich für Sie da.</p>
-    <a href="mailto:intelligent.responder@gmail.com?subject=Anfrage%20Energieberatung%20Frankfurt" class="btn btn-d">📧 E-Mail schreiben</a>
-    <a href="https://wa.me/491634692255?text=Hallo%20Team%20Frankfurt-Nordost%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung." class="btn btn-g">💬 WhatsApp</a>
-    <a href="#kontakt" class="btn btn-l">📋 Kontaktformular</a>
-    <p style="color:#555;font-size:.88rem;margin-top:16px;">📧 intelligent.responder@gmail.com</p>
-    <p style="color:#555;font-size:.88rem;">💬 WhatsApp: <a href="https://wa.me/491634692255" style="color:var(--gold-dark);font-weight:700;">+49 163 469 2255</a> (Team Frankfurt-Nordost)</p>
-    <p style="margin-top:14px;"><a href="https://www.frankfurt-energie.online" style="color:var(--green-deep);font-weight:700;font-size:1rem;text-decoration:none;">🌐 www.frankfurt-energie.online</a></p>
-  </div>
-</section>
-
-<script>
-function sf(){
-  var n=document.getElementById('fn').value,e=document.getElementById('fe').value,p=document.getElementById('fp').value,z=document.getElementById('fz').value,s=document.getElementById('st');
-  if(!n||!e||!p||!z){s.style.display='block';s.style.color='#b91c1c';s.textContent='Bitte Name, E-Mail, Telefon und PLZ ausfüllen.';return;}
-  var b='TARIFCHECK%0A%0AName: '+n+'%0AEmail: '+e+'%0ATel: '+p+'%0APLZ: '+z+'%0AZähler: '+(document.getElementById('fza').value||'-')+'%0AVersorger: '+(document.getElementById('fv').value||'-')+'%0AVerbrauch: '+(document.getElementById('fvb').value||'-')+' kWh%0AInteresse: '+(document.getElementById('fi').value||'-')+'%0AWünsche: '+(document.getElementById('fw').value||'-');
-  window.open('mailto:intelligent.responder@gmail.com?subject=Tarifcheck '+n+' PLZ '+z+'&body='+b);
-  s.style.display='block';s.style.color='#16a34a';s.textContent='✓ E-Mail wird geöffnet – bitte absenden!';}
-</script>
-
-  <!-- BLOG BEREICH -->
-<section class="sec" id="blog">
-<h2 style="text-align:center;">📰 Energie-Blog Frankfurt</h2>
-<p style="text-align:center;color:#555;max-width:600px;margin:0 auto 20px;">Aktuelle Tipps, Marktanalysen und Neuigkeiten rund um Strom, Gas, Solar und Frankfurt.</p>
-<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:24px;">
-<a href="#blog" style="background:var(--gold);color:#fff;padding:6px 14px;border-radius:20px;text-decoration:none;font-size:.82rem;font-weight:600;">Alle</a>
-<a href="blog/strom-oekostrom.html" style="background:#f0fdf4;color:var(--green-deep);padding:6px 14px;border-radius:20px;text-decoration:none;font-size:.82rem;font-weight:600;">⚡ Strom & Ökostrom</a>
-<a href="blog/gas-waerme.html" style="background:#fef3c7;color:#92400e;padding:6px 14px;border-radius:20px;text-decoration:none;font-size:.82rem;font-weight:600;">🔥 Gas & Wärme</a>
-<a href="blog/solar-pv.html" style="background:#e0f2fe;color:#0c4a6e;padding:6px 14px;border-radius:20px;text-decoration:none;font-size:.82rem;font-weight:600;">☀️ Solar & PV</a>
-<a href="blog/vertrieb-karriere.html" style="background:#ede9fe;color:#5b21b6;padding:6px 14px;border-radius:20px;text-decoration:none;font-size:.82rem;font-weight:600;">🤝 Vertrieb & Karriere</a>
-<a href="blog/frankfurt.html" style="background:#fce7f3;color:#9d174d;padding:6px 14px;border-radius:20px;text-decoration:none;font-size:.82rem;font-weight:600;">🏙️ Frankfurt</a>
-</div>
-<div style="display:flex;gap:16px;flex-wrap:wrap;">
-<a href="blog/oekostrom-guenstiger-grundversorger.html" style="flex:1;min-width:280px;background:#fff;border-radius:14px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,.05);border:1px solid #e5e7eb;text-decoration:none;color:inherit;">
-<span style="font-size:.72rem;background:#f0fdf4;color:var(--green-deep);padding:3px 10px;border-radius:12px;font-weight:600;">⚡ Strom & Ökostrom</span>
-<h3 style="font-size:1.05rem;color:var(--green-deep);margin:10px 0 6px;">Warum Ökostrom in Frankfurt günstiger ist als der Grundversorger</h3>
-<p style="font-size:.85rem;color:#666;margin:0;">Viele Frankfurter zahlen zu viel. Ein zertifizierter Ökostromtarif spart bis zu 179 € im Jahr – und schützt das Klima.</p>
-<span style="font-size:.75rem;color:#999;margin-top:8px;display:block;">27. März 2026 · 4 Min. Lesezeit</span>
-</a>
-<a href="blog/eeg-reform-2026-einspeiseverguetung.html" style="flex:1;min-width:280px;background:#fff;border-radius:14px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,.05);border:1px solid #e5e7eb;text-decoration:none;color:inherit;">
-<span style="font-size:.72rem;background:#e0f2fe;color:#0c4a6e;padding:3px 10px;border-radius:12px;font-weight:600;">☀️ Solar & PV</span>
-<h3 style="font-size:1.05rem;color:var(--green-deep);margin:10px 0 6px;">EEG-Reform 2026: Warum du deine Solaranlage noch dieses Jahr installieren solltest</h3>
-<p style="font-size:.85rem;color:#666;margin:0;">Die EU-Genehmigung für die Einspeisevergütung läuft Ende 2026 aus. Was das für Eigenheimbesitzer bedeutet.</p>
-<span style="font-size:.75rem;color:#999;margin-top:8px;display:block;">27. März 2026 · 5 Min. Lesezeit</span>
-</a>
-<a href="blog/gaspreise-frankfurt-2026.html" style="flex:1;min-width:280px;background:#fff;border-radius:14px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,.05);border:1px solid #e5e7eb;text-decoration:none;color:inherit;">
-<span style="font-size:.72rem;background:#fef3c7;color:#92400e;padding:3px 10px;border-radius:12px;font-weight:600;">🔥 Gas & Wärme</span>
-<h3 style="font-size:1.05rem;color:var(--green-deep);margin:10px 0 6px;">Gaspreise Frankfurt 2026: Jetzt wechseln oder abwarten?</h3>
-<p style="font-size:.85rem;color:#666;margin:0;">Die Gaspreise bleiben hoch. Warum ein Anbieterwechsel mit Preisgarantie jetzt die klügste Entscheidung ist.</p>
-<span style="font-size:.75rem;color:#999;margin-top:8px;display:block;">26. März 2026 · 3 Min. Lesezeit</span>
-</a>
-</div>
-<div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;">
-<a href="blog/vertriebspartner-werden-teleson.html" style="flex:1;min-width:280px;background:#fff;border-radius:14px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,.05);border:1px solid #e5e7eb;text-decoration:none;color:inherit;">
-<span style="font-size:.72rem;background:#ede9fe;color:#5b21b6;padding:3px 10px;border-radius:12px;font-weight:600;">🤝 Vertrieb & Karriere</span>
-<h3 style="font-size:1.05rem;color:var(--green-deep);margin:10px 0 6px;">TELESON Vertriebspartner werden: Dein Side Hustle mit echtem Impact</h3>
-<p style="font-size:.85rem;color:#666;margin:0;">Hilf deinen Nachbarn beim Sparen und verdiene dabei mehr als in den meisten Nebenjobs.</p>
-<span style="font-size:.75rem;color:#999;margin-top:8px;display:block;">25. März 2026 · 4 Min. Lesezeit</span>
-</a>
-<a href="blog/frankfurt-energiekosten-sparen.html" style="flex:1;min-width:280px;background:#fff;border-radius:14px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,.05);border:1px solid #e5e7eb;text-decoration:none;color:inherit;">
-<span style="font-size:.72rem;background:#fce7f3;color:#9d174d;padding:3px 10px;border-radius:12px;font-weight:600;">🏙️ Frankfurt</span>
-<h3 style="font-size:1.05rem;color:var(--green-deep);margin:10px 0 6px;">Energiekosten in Frankfurt: So viel zahlen Haushalte wirklich – und so sparst du</h3>
-<p style="font-size:.85rem;color:#666;margin:0;">Frankfurter Haushalte zahlen im Schnitt 41 ct/kWh beim Grundversorger. Wir zeigen Alternativen.</p>
-<span style="font-size:.75rem;color:#999;margin-top:8px;display:block;">24. März 2026 · 3 Min. Lesezeit</span>
-</a>
-</div>
-</section>
-
-<footer>
-  <p><strong style="color:var(--gold);">Frankfurt Energie Online</strong> – Ihr unabhängiger Energieberater für Strom, Gas, Ökostrom, Photovoltaik, Balkonkraftwerke und Solar in Frankfurt am Main.</p>
-  <p>André Schwarz | ASGlobal | <a href="https://www.frankfurt-energie.online">frankfurt-energie.online</a></p>
-  <p style="margin-top:6px;color:#777;">© 2026 Frankfurt Energie Online. Alle Rechte vorbehalten.</p>
-</footer>
-</body>
-</html>
+.cta{background:linear-gradient(135deg,#0a1f12,#0a4d2e);color:#fff;text-align:center;padding:48px 20px;border-radius:20px;margin:28px 0;border:1px solid var(--gold);box-shadow:0 0 40px rgba(201,168,76,.15)}
+.cta h2{color:var(--gl);margin-bottom:10px;font-size:1.5rem;font-weight:800
