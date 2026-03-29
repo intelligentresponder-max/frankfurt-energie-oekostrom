@@ -3,134 +3,231 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Strompreisrechner | Frankfurt Energie Online</title>
+<meta name="description" content="Strompreisrechner Frankfurt – Jetzt Ersparnis berechnen und günstigeren Ökostromtarif finden.">
+<title>Strom & Gas Preisrechner | Frankfurt Energie Online</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0d0f1a;--card:#13162a;--card2:#1a1e35;--border:rgba(255,255,255,0.08);--gold:#c9a84c;--gl:#f0d080;--gd:#8a6a1a;--sv:#a8b2bf;--tx:#e8eaf0;--mu:#64748b;--gn:#4ade80;--rd:#f87171}
-body{background:var(--bg);font-family:system-ui,sans-serif;color:var(--tx);max-width:520px;margin:0 auto;min-height:100vh}
-.hdr{background:var(--card);padding:12px 20px;border-bottom:2px solid var(--gold);position:sticky;top:0;z-index:200;display:flex;justify-content:space-between;align-items:center}
-.hdr-brand{color:var(--gold);font-weight:900;font-size:15px}
-.hdr-sub{color:var(--mu);font-size:10px}
-.hdr-badge{background:rgba(201,168,76,.2);color:var(--gold);border:1px solid rgba(201,168,76,.4);border-radius:8px;padding:4px 10px;font-size:11px;font-weight:800}
-.tabs{background:var(--card);border-bottom:1px solid var(--border);display:flex;justify-content:space-around;padding:6px 0;position:sticky;top:53px;z-index:100}
-.tb{background:none;border:none;cursor:pointer;color:var(--mu);font-size:19px;padding:5px 10px;border-bottom:2px solid transparent;transition:all .2s}
-.tb.on{color:var(--gold);border-bottom-color:var(--gold)}
-.pg{padding:18px;display:none}
-.pg.on{display:block}
-.card{background:var(--card2);border-radius:12px;padding:14px;margin-bottom:12px;border:1px solid var(--border)}
-.cg{border-color:rgba(201,168,76,.35)}
-.s2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
-.sb{background:var(--card2);border-radius:10px;padding:12px;text-align:center;border:1px solid var(--border)}
-.sn{font-size:20px;font-weight:900;background:linear-gradient(135deg,var(--gold),var(--gl));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.sl{font-size:10px;color:var(--mu);margin-top:2px;line-height:1.4}
-.hg{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin:10px 0}
-.hb{background:rgba(255,255,255,.05);border:1.5px solid var(--border);border-radius:9px;padding:8px 3px;cursor:pointer;text-align:center;transition:all .2s}
-.hb.on{background:rgba(201,168,76,.15);border-color:var(--gold)}
-.hb .ic{font-size:18px}
-.hb .lb{font-size:9px;color:var(--mu);margin-top:2px}
-.hb.on .lb{color:var(--gold)}
-.sw{margin:14px 0}
-.slb{display:flex;justify-content:space-between;font-size:12px;color:var(--mu);margin-bottom:6px}
-.sv2{color:var(--gold);font-weight:800;font-size:17px}
-input[type=range]{width:100%;-webkit-appearance:none;height:6px;border-radius:3px;background:rgba(255,255,255,.1);outline:none}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--gold);cursor:pointer;border:3px solid var(--bg);box-shadow:0 2px 8px rgba(201,168,76,.5)}
-.fr{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}
-.fb{background:rgba(255,255,255,.05);border:1.5px solid var(--border);border-radius:20px;padding:6px 13px;font-size:11px;font-weight:700;cursor:pointer;color:var(--mu);transition:all .2s}
-.fb.on{background:rgba(74,222,128,.15);border-color:var(--gn);color:var(--gn)}
-.fb.ong{background:rgba(201,168,76,.15);border-color:var(--gold);color:var(--gold)}
-.gvb{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.25);border-radius:10px;padding:12px 14px;margin-bottom:12px}
-.gvl{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--rd);font-weight:700;margin-bottom:3px}
-.gvp{font-size:24px;font-weight:900;color:var(--rd)}
-.gvs{font-size:11px;color:var(--mu);margin-top:2px}
-.rc{background:var(--card2);border-radius:11px;padding:13px;margin-bottom:9px;border:1px solid var(--border);position:relative}
-.rc.gp{border:2px solid var(--gold);background:linear-gradient(135deg,#1a1a0d,#1a1e35)}
-.rc.sp{border:2px solid var(--sv);background:linear-gradient(135deg,#121820,#1a1e35)}
-.rc .rk{position:absolute;top:9px;right:11px;font-size:19px}
-.rn{font-size:13px;font-weight:800;color:#fff;margin-bottom:1px}
-.rt{font-size:11px;color:var(--mu);margin-bottom:8px}
-.rpr{font-size:21px;font-weight:900;color:var(--gold)}
-.re{font-size:13px;font-weight:800;color:var(--gn)}
-.bb{height:7px;background:rgba(255,255,255,.06);border-radius:4px;overflow:hidden;margin:7px 0}
-.bf{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--gd),var(--gold));transition:width .7s}
-.rf{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px}
-.bdg{border-radius:20px;padding:2px 8px;font-size:10px;font-weight:700}
-.bok{background:rgba(74,222,128,.15);color:var(--gn);border:1px solid rgba(74,222,128,.3)}
-.bpg{background:rgba(201,168,76,.15);color:var(--gold);border:1px solid rgba(201,168,76,.3)}
-.bbo{background:rgba(99,102,241,.15);color:#818cf8;border:1px solid rgba(99,102,241,.3)}
-.bno{background:rgba(248,113,113,.1);color:var(--rd);border:1px solid rgba(248,113,113,.25)}
-.ctab{display:block;width:100%;background:linear-gradient(90deg,var(--gd),var(--gold));color:#fff;border:none;border-radius:50px;padding:13px;font-size:14px;font-weight:800;cursor:pointer;text-align:center;text-decoration:none;box-shadow:0 4px 16px rgba(201,168,76,.4);margin-top:12px}
-.ctaw{background:linear-gradient(90deg,#128C7E,#25D366);box-shadow:0 4px 14px rgba(37,211,102,.3)}
-select{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:9px;color:var(--tx);padding:9px 11px;width:100%;font-size:13px}
-.vc{background:var(--card2);border-radius:11px;padding:13px;margin-bottom:9px;border:1px solid var(--border)}
-.ir{display:flex;gap:11px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--border)}
-.ii{font-size:20px;flex-shrink:0}
-.it{font-size:13px;font-weight:800;color:#fff;margin-bottom:3px}
-.ix{font-size:12px;color:var(--mu);line-height:1.6}
-.alm{background:linear-gradient(135deg,#1a0f00,#2d1800);border-left:5px solid var(--gold);border-radius:0 11px 11px 0;padding:14px;margin-bottom:12px}
-.alt{color:var(--gl);font-size:13px;font-weight:800;margin-bottom:5px}
-.alx{color:#e8d5b0;font-size:12px;line-height:1.6}
-.nor{text-align:center;padding:28px;color:var(--mu);font-size:13px}
-.ttl{font-size:16px;font-weight:900;color:#fff;margin-bottom:3px}
-.sub{font-size:12px;color:var(--mu);margin-bottom:14px}
-footer{text-align:center;padding:18px;color:var(--mu);font-size:10px;border-top:1px solid var(--border);margin-top:8px}
-footer a{color:var(--gold)}
+:root{--gold:#c9a84c;--gl:#f0d080;--gd:#8a6a1a;--sv:#a8b2bf;--gn:#0a4d2e;--gm:#16a34a;--bg:#fafaf8}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:#1a1a2e;background:var(--bg);line-height:1.7}
+.nav{background:#0a4d2e;color:#fff;padding:14px 20px;text-align:center}
+.nav a{color:#fff;text-decoration:none;font-weight:700}
+.hero{background:linear-gradient(135deg,#0a1f12,#0a4d2e,#16a34a);color:#fff;padding:50px 20px 40px;text-align:center}
+.hero h1{font-size:1.9rem;font-weight:800;margin-bottom:10px}
+.hero h1 span{color:var(--gl)}
+.hero p{opacity:.9;max-width:600px;margin:0 auto}
+.wrap{max-width:680px;margin:0 auto;padding:40px 20px}
+.card{background:#fff;border-radius:18px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.08);border:1px solid #e8e0d0;margin-bottom:24px}
+.card h2{color:var(--gn);font-size:1.2rem;font-weight:800;margin-bottom:20px;padding-left:12px;border-left:4px solid var(--gold)}
+.tabs{display:flex;gap:0;margin-bottom:28px;border-radius:12px;overflow:hidden;border:2px solid #e8e0d0}
+.tab{flex:1;padding:13px;text-align:center;cursor:pointer;font-weight:700;font-size:.95rem;background:#f5f5f0;color:#888;border:none;transition:all .2s}
+.tab.on{background:linear-gradient(135deg,#0a4d2e,#16a34a);color:#fff}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:700;color:#333;margin-bottom:6px;font-size:.9rem}
+.field input,.field select{width:100%;padding:13px 16px;border:2px solid #e8e0d0;border-radius:10px;font-size:1rem;color:#1a1a2e;background:#fafaf8;transition:border .2s}
+.field input:focus,.field select:focus{outline:none;border-color:var(--gold)}
+.slider-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.slider-val{font-size:1.3rem;font-weight:900;color:var(--gd)}
+input[type=range]{width:100%;-webkit-appearance:none;height:6px;border-radius:3px;background:#e8e0d0;outline:none;margin-top:6px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--gold);cursor:pointer;border:3px solid #fff;box-shadow:0 2px 8px rgba(201,168,76,.5)}
+.presets{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.preset{background:#f0fdf4;border:1.5px solid #d1fae5;border-radius:20px;padding:5px 13px;font-size:.82rem;font-weight:700;cursor:pointer;color:#166534;transition:all .2s}
+.preset:hover,.preset.on{background:#0a4d2e;color:#fff;border-color:#0a4d2e}
+.result{background:linear-gradient(135deg,#0a1f12,#0a4d2e);color:#fff;border-radius:18px;padding:32px;margin-bottom:24px;text-align:center;border:1px solid var(--gold);box-shadow:0 0 40px rgba(201,168,76,.15);display:none}
+.result.show{display:block}
+.result h2{color:var(--gl);font-size:1.1rem;font-weight:700;margin-bottom:20px}
+.result-grid{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-bottom:24px}
+.rbox{flex:1;min-width:140px;background:rgba(255,255,255,.07);border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,.1)}
+.rbox.highlight{background:linear-gradient(135deg,rgba(201,168,76,.2),rgba(240,208,128,.1));border-color:var(--gold)}
+.rbox .lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:1px;color:#aaa;margin-bottom:6px}
+.rbox .val{font-size:1.6rem;font-weight:900}
+.rbox.highlight .val{background:linear-gradient(135deg,var(--gold),var(--gl));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.saving-bar{background:rgba(255,255,255,.08);border-radius:8px;height:10px;overflow:hidden;margin:16px 0 8px}
+.saving-fill{height:100%;background:linear-gradient(90deg,var(--gd),var(--gold));border-radius:8px;transition:width 1s}
+.saving-note{font-size:.82rem;color:#bbb;margin-bottom:20px}
+.btn-main{display:block;width:100%;background:linear-gradient(90deg,var(--gd),var(--gold));color:#fff;border:none;border-radius:50px;padding:16px;font-size:1.05rem;font-weight:800;cursor:pointer;text-align:center;text-decoration:none;box-shadow:0 4px 18px rgba(201,168,76,.4);margin-bottom:12px}
+.btn-wa{display:block;width:100%;background:linear-gradient(90deg,#128C7E,#25D366);color:#fff;border:none;border-radius:50px;padding:14px;font-size:1rem;font-weight:700;cursor:pointer;text-align:center;text-decoration:none;box-shadow:0 4px 14px rgba(37,211,102,.3)}
+.calc-btn{width:100%;background:linear-gradient(135deg,#0a4d2e,#16a34a);color:#fff;border:none;border-radius:50px;padding:15px;font-size:1.05rem;font-weight:800;cursor:pointer;margin-top:8px;box-shadow:0 4px 16px rgba(10,77,46,.3);transition:opacity .2s}
+.calc-btn:hover{opacity:.9}
+.hint{font-size:.8rem;color:#999;text-align:center;margin-top:8px}
+footer{text-align:center;padding:24px;color:#888;font-size:.83rem;border-top:1px solid #e8e0d0}
+footer a{color:var(--gm)}
 </style>
 </head>
 <body>
+<div class="nav">
+  <a href="https://frankfurt-energie.online">← Frankfurt Energie Online</a> | Preisrechner
+</div>
+<div class="hero">
+  <h1>⚡ Strom & Gas <span>Preisrechner</span></h1>
+  <p>Berechne dein persönliches Sparpotenzial – kostenlos, in 60 Sekunden.</p>
+</div>
+<div class="wrap">
+  <div class="card">
+    <div class="tabs">
+      <button class="tab on" onclick="switchTab('strom',this)">⚡ Strom</button>
+      <button class="tab" onclick="switchTab('gas',this)">🔥 Gas</button>
+    </div>
 
-<div class="hdr">
-  <div>
-    <div class="hdr-brand">⚡ Energie-Rechner Frankfurt</div>
-    <div class="hdr-sub">Frankfurt Energie Online · 2026</div>
+    <!-- STROM -->
+    <div id="tab-strom">
+      <h2>Stromverbrauch eingeben</h2>
+      <div class="field">
+        <label>Postleitzahl</label>
+        <input type="text" id="plz-strom" placeholder="z.B. 60386" maxlength="5">
+      </div>
+      <div class="field">
+        <label>Jahresverbrauch</label>
+        <div class="slider-row">
+          <span style="font-size:.85rem;color:#888">1.000 kWh</span>
+          <span class="slider-val" id="strom-val">2.500 kWh</span>
+          <span style="font-size:.85rem;color:#888">10.000 kWh</span>
+        </div>
+        <input type="range" id="strom-slider" min="1000" max="10000" step="100" value="2500" oninput="updateSlider('strom')">
+        <div class="presets">
+          <span class="preset" onclick="setPreset('strom',1500,'1 Person')">1 Person<br><small>~1.500</small></span>
+          <span class="preset on" onclick="setPreset('strom',2500,'2 Pers.')">2 Pers.<br><small>~2.500</small></span>
+          <span class="preset" onclick="setPreset('strom',3500,'3–4 Pers.')">3–4 Pers.<br><small>~3.500</small></span>
+          <span class="preset" onclick="setPreset('strom',5000,'5+ Pers.')">5+ Pers.<br><small>~5.000</small></span>
+        </div>
+      </div>
+      <div class="field">
+        <label>Aktueller Anbieter</label>
+        <select id="anbieter-strom">
+          <option value="41">Mainova (Grundversorger) – ca. 41 ct/kWh</option>
+          <option value="38">Anderer Grundversorger – ca. 38 ct/kWh</option>
+          <option value="35">Günstiger Anbieter – ca. 35 ct/kWh</option>
+          <option value="32">Weiß ich nicht – Durchschnitt 32 ct/kWh</option>
+        </select>
+      </div>
+      <button class="calc-btn" onclick="berechnen('strom')">⚡ Ersparnis berechnen</button>
+    </div>
+
+    <!-- GAS -->
+    <div id="tab-gas" style="display:none">
+      <h2>Gasverbrauch eingeben</h2>
+      <div class="field">
+        <label>Postleitzahl</label>
+        <input type="text" id="plz-gas" placeholder="z.B. 60386" maxlength="5">
+      </div>
+      <div class="field">
+        <label>Jahresverbrauch</label>
+        <div class="slider-row">
+          <span style="font-size:.85rem;color:#888">5.000 kWh</span>
+          <span class="slider-val" id="gas-val">12.000 kWh</span>
+          <span style="font-size:.85rem;color:#888">30.000 kWh</span>
+        </div>
+        <input type="range" id="gas-slider" min="5000" max="30000" step="500" value="12000" oninput="updateSlider('gas')">
+        <div class="presets">
+          <span class="preset" onclick="setPreset('gas',7000,'Whg. klein')">Whg. klein<br><small>~7.000</small></span>
+          <span class="preset on" onclick="setPreset('gas',12000,'Whg. mittel')">Whg. mittel<br><small>~12.000</small></span>
+          <span class="preset" onclick="setPreset('gas',18000,'Haus klein')">Haus klein<br><small>~18.000</small></span>
+          <span class="preset" onclick="setPreset('gas',25000,'Haus groß')">Haus groß<br><small>~25.000</small></span>
+        </div>
+      </div>
+      <div class="field">
+        <label>Aktueller Anbieter</label>
+        <select id="anbieter-gas">
+          <option value="12.5">Mainova (Grundversorger) – ca. 12,5 ct/kWh</option>
+          <option value="11.5">Anderer Grundversorger – ca. 11,5 ct/kWh</option>
+          <option value="10.5">Günstiger Anbieter – ca. 10,5 ct/kWh</option>
+          <option value="10">Weiß ich nicht – Durchschnitt 10 ct/kWh</option>
+        </select>
+      </div>
+      <button class="calc-btn" onclick="berechnen('gas')">🔥 Ersparnis berechnen</button>
+    </div>
   </div>
-  <div class="hdr-badge">💰 Bis zu 179 €</div>
+
+  <!-- ERGEBNIS -->
+  <div class="result" id="result-box">
+    <h2 id="result-title">Dein Sparpotenzial</h2>
+    <div class="result-grid">
+      <div class="rbox">
+        <div class="lbl">Aktuell / Jahr</div>
+        <div class="val" id="res-aktuell">–</div>
+      </div>
+      <div class="rbox highlight">
+        <div class="lbl">Mit uns / Jahr</div>
+        <div class="val" id="res-neu">–</div>
+      </div>
+      <div class="rbox highlight">
+        <div class="lbl">Du sparst</div>
+        <div class="val" id="res-spar">–</div>
+      </div>
+    </div>
+    <div class="saving-bar"><div class="saving-fill" id="saving-fill" style="width:0%"></div></div>
+    <p class="saving-note" id="saving-note"></p>
+    <a id="btn-teleson" href="#" target="_blank" class="btn-main">✅ Jetzt Tarif sichern – kostenlos & unverbindlich →</a>
+    <a href="https://wa.me/491634692255?text=Hallo%2C%20ich%20habe%20den%20Preisrechner%20genutzt%20und%20m%C3%B6chte%20mehr%20erfahren!" class="btn-wa">💬 WhatsApp – Persönliche Beratung</a>
+  </div>
+
+  <p class="hint">* Alle Berechnungen sind Schätzungen auf Basis aktueller Marktpreise (Stand März 2026). Endpreise können je nach PLZ und Tarif variieren.</p>
 </div>
 
-<div class="tabs">
-  <button class="tb on" onclick="showTab('rechner')" id="tb-rechner">🔢</button>
-  <button class="tb" onclick="showTab('ranking')" id="tb-ranking">🏆</button>
-  <button class="tb" onclick="showTab('vergleich')" id="tb-vergleich">⚖️</button>
-  <button class="tb" onclick="showTab('info')" id="tb-info">ℹ️</button>
-</div>
+<footer>
+  <a href="https://frankfurt-energie.online">← Zurück zur Startseite</a> · <a href="https://frankfurt-energie.online/#blog">Blog</a><br>
+  © 2026 Frankfurt Energie Online · André Schwarz · ASGlobal
+</footer>
 
-<!-- TAB 1: RECHNER -->
-<div class="pg on" id="pg-rechner">
-  <div class="s2">
-    <div class="sb"><div class="sn">88%</div><div class="sl">fühlen sich durch Energiekosten belastet</div></div>
-    <div class="sb"><div class="sn">179€</div><div class="sl">max. Jahresersparnis in Frankfurt</div></div>
-  </div>
+<script>
+const STROM_NEU = 0.299; // ct/kWh unser Tarif
+const GAS_NEU = 0.089;   // ct/kWh unser Tarif
+let aktTab = 'strom';
 
-  <div class="card cg">
-    <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:3px">🏠 Haushaltsgröße</div>
-    <div style="font-size:11px;color:var(--mu);margin-bottom:10px">Verbrauch wird automatisch geschätzt</div>
-    <div class="hg">
-      <div class="hb" onclick="setHH(this,1000)"><div class="ic">👤</div><div class="lb">1 Pers.</div></div>
-      <div class="hb" onclick="setHH(this,2000)"><div class="ic">👥</div><div class="lb">2 Pers.</div></div>
-      <div class="hb on" onclick="setHH(this,3500)"><div class="ic">👨‍👩‍👦</div><div class="lb">3 Pers.</div></div>
-      <div class="hb" onclick="setHH(this,4500)"><div class="ic">👨‍👩‍👧‍👦</div><div class="lb">4 Pers.</div></div>
-      <div class="hb" onclick="setHH(this,6000)"><div class="ic">🏡</div><div class="lb">5+ Pers.</div></div>
-    </div>
-    <div class="sw">
-      <div class="slb"><span>📊 Jahresverbrauch</span><span class="sv2"><span id="kwh-val">3.500</span> kWh</span></div>
-      <input type="range" id="kwh-slider" min="500" max="10000" step="100" value="3500" oninput="onSlider(this.value)">
-      <div class="slb" style="margin-top:6px"><span>500 kWh</span><span>10.000 kWh</span></div>
-    </div>
-  </div>
+function switchTab(t, el) {
+  aktTab = t;
+  document.getElementById('tab-strom').style.display = t==='strom'?'block':'none';
+  document.getElementById('tab-gas').style.display = t==='gas'?'block':'none';
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('on'));
+  el.classList.add('on');
+  document.getElementById('result-box').classList.remove('show');
+}
 
-  <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:8px">🔍 Filter</div>
-  <div class="fr">
-    <button class="fb" id="fb-oko" onclick="toggleFilter('oko')">🌱 Nur Ökostrom</button>
-    <button class="fb" id="fb-pg24" onclick="toggleFilter('pg24')">🔒 24 Mon. Garantie</button>
-    <button class="fb" id="fb-bonus" onclick="toggleFilter('bonus')">🎁 Mit Bonus</button>
-  </div>
+function updateSlider(t) {
+  const v = document.getElementById(t+'-slider').value;
+  document.getElementById(t+'-val').textContent = Number(v).toLocaleString('de-DE') + ' kWh';
+}
 
-  <div class="gvb">
-    <div class="gvl">⚡ Grundversorger Frankfurt</div>
-    <div class="gvp" id="gv-preis">–</div>
-    <div class="gvs">ca. 41 ct/kWh · keine Preisgarantie</div>
-  </div>
+function setPreset(t, val, lbl) {
+  document.getElementById(t+'-slider').value = val;
+  document.getElementById(t+'-val').textContent = Number(val).toLocaleString('de-DE') + ' kWh';
+  document.querySelectorAll('#tab-'+t+' .preset').forEach(p=>p.classList.remove('on'));
+  event.target.closest('.preset').classList.add('on');
+}
 
-  <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:10px">🏆 Beste Tarife für dich</div>
-  <div id="results"></div>
+function berechnen(t) {
+  const verbrauch = parseInt(document.getElementById(t+'-slider').value);
+  const plz = document.getElementById('plz-'+t).value || '60386';
+  let preisAlt, preisNeu, einheit;
 
-  <a href="https://wa.me/491634692255?text=Hallo%20Team%20Frankfurt-Nordost%2C%20ich%20m%C3%B6chte%20einen%20Tarifvergleich." class="ctab ctaw">💬 Kostenlose Beratung via WhatsApp</a>
+  if(t === 'strom') {
+    preisAlt = parseFloat(document.getElementById('anbieter-strom').value) / 100;
+    preisNeu = STROM_NEU;
+    einheit = 'Strom';
+  } else {
+    preisAlt = parseFloat(document.getElementById('anbieter-gas').value) / 100;
+    preisNeu = GAS_NEU;
+    einheit = 'Gas';
+  }
+
+  const kostenAlt = Math.round(verbrauch * preisAlt);
+  const kostenNeu = Math.round(verbrauch * preisNeu);
+  const ersparnis = kostenAlt - kostenNeu;
+  const pct = Math.round((ersparnis / kostenAlt) * 100);
+
+  document.getElementById('res-aktuell').textContent = kostenAlt.toLocaleString('de-DE') + ' €';
+  document.getElementById('res-neu').textContent = kostenNeu.toLocaleString('de-DE') + ' €';
+  document.getElementById('res-spar').textContent = ersparnis.toLocaleString('de-DE') + ' €';
+  document.getElementById('result-title').textContent = einheit + 'ersparnis für PLZ ' + plz;
+  document.getElementById('saving-note').textContent = 'Das entspricht ' + pct + '% weniger als dein aktueller Tarif – bei ' + verbrauch.toLocaleString('de-DE') + ' kWh Jahresverbrauch.';
+  document.getElementById('saving-fill').style.width = Math.min(pct * 2, 100) + '%';
+
+  const url = 'https://www.teleson-vertrieb.de/AndreSchwarz-435/?plz=' + plz;
+  document.getElementById('btn-teleson').href = url;
+
+  const box = document.getElementById('result-box');
+  box.classList.add('show');
+  box.scrollIntoView({behavior:'smooth', block:'start'});
+}
+</script>
+</body>
+</html>
