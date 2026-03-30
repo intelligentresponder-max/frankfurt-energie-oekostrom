@@ -1,388 +1,979 @@
 {
   "meta": {
-    "stand": "27.03.2026",
-    "naechste_pruefung": "03.04.2026",
+    "stand": "30.03.2026",
+    "naechste_pruefung": "06.04.2026",
+    "quelle": "Teleson VPP Partner-Portal",
     "grundversorger": [
       {
-        "name": "Grundversorger Frankfurt",
+        "name": "Mainova AG (Grundversorger Frankfurt)",
         "plz_von": 60001,
         "plz_bis": 60599,
         "ap_ct": 41.0,
         "gp_euro_jahr": 180.0
       },
       {
-        "name": "Grundversorger Frankfurt",
+        "name": "Mainova AG (Grundversorger Frankfurt)",
         "plz_von": 65901,
         "plz_bis": 65936,
         "ap_ct": 41.0,
         "gp_euro_jahr": 180.0
       }
-    ]
+    ],
+    "referenz_beispiel": {
+      "plz": "60489",
+      "verbrauch_kwh": 4999,
+      "haushalt": "4 Personen",
+      "grundversorger_gesamt_eur": 2229.59
+    }
   },
   "tarife": [
     {
-      "id": "gruenvolt-oekoplus24",
-      "anbieter": "GrünVolt",
-      "tarif": "ÖkoPlus 24",
+      "id": "einsenergie-einsstrom-komfort",
+      "anbieter": "eins energie",
+      "tarif": "einsstrom Komfort",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 31.38,
+        "gp_euro_monat": 14.17,
+        "gp_euro_jahr": 170.04
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1738.73,
+        "ersparnis_vs_gv_eur": 490.86
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": false,
+        "zertifikat": "",
+        "herkunft": ""
+      },
+      "provision": {
+        "einmal_eur": 47.50,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "gold",
+        "badge": "🥇 Günstigster Preis",
+        "highlight": true,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "vattenfall-oekostrom24-pur",
+      "anbieter": "Vattenfall",
+      "tarif": "ÖkoStrom24 Pur",
       "kategorie": "strom",
       "preise": {
         "ap_ct": 31.90,
-        "gp_euro_jahr": 120.00
+        "gp_euro_monat": 13.90,
+        "gp_euro_jahr": 166.80
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1761.48,
+        "ersparnis_vs_gv_eur": 468.11
       },
       "vertrag": {
         "preisgarantie": "24 Monate",
         "pg_monate": 24,
         "laufzeit_monate": 12,
         "kuendigungsfrist_wochen": 6,
-        "verlaengerung": "1 Monat",
-        "mindestlaufzeit_monate": 12
+        "verlaengerung": "1 Monat"
       },
       "verfuegbarkeit": {
         "deutschlandweit": true,
-        "plz_ausnahmen": [],
-        "nur_plz": [],
-        "bundeslaender": []
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
       },
       "aktion": {
         "aktiv": false,
-        "bonus_euro": 0,
-        "bonus_typ": "",
-        "aktions_ende": "",
-        "letzter_wechsel": "",
-        "countdown_aktiv": false
-      },
-      "bedingungen": {
-        "nur_privatkunden": true,
-        "nur_gewerbe": false,
-        "neukunden_only": true,
-        "kein_gewerbe": true,
-        "kein_neubau": false,
-        "kein_heizstrom": false,
-        "max_verbrauch_kwh": 100000,
-        "sonstiges": ""
+        "bonus_euro": 0
       },
       "produkt": {
         "oekostrom": true,
-        "zertifikat": "ok-power",
-        "herkunft": "Wind & Solar",
-        "co2_neutral": true
+        "zertifikat": "Ökostrom",
+        "herkunft": "100% Erneuerbar"
+      },
+      "provision": {
+        "einmal_eur": 82.50,
+        "folge_eur": 0
       },
       "anzeige": {
         "empfehlung": "gold",
-        "badge": "🥇 Beste Wahl",
+        "badge": "🌱 Bester Ökostrom",
         "highlight": true,
         "sichtbar": true
       }
     },
     {
-      "id": "nordstream-komfort24",
-      "anbieter": "NordStream Energie",
-      "tarif": "Komfort 24",
+      "id": "enviam-meinstrom-privat12",
+      "anbieter": "enviaM",
+      "tarif": "MEIN STROM best Privat 12",
       "kategorie": "strom",
       "preise": {
-        "ap_ct": 32.83,
-        "gp_euro_jahr": 115.00
+        "ap_ct": 32.82,
+        "gp_euro_monat": 13.39,
+        "gp_euro_jahr": 160.68
       },
-      "vertrag": {
-        "preisgarantie": "24 Monate",
-        "pg_monate": 24,
-        "laufzeit_monate": 24,
-        "kuendigungsfrist_wochen": 6,
-        "verlaengerung": "1 Monat",
-        "mindestlaufzeit_monate": 24
-      },
-      "verfuegbarkeit": {
-        "deutschlandweit": true,
-        "plz_ausnahmen": [],
-        "nur_plz": [],
-        "bundeslaender": []
-      },
-      "aktion": {
-        "aktiv": true,
-        "bonus_euro": 40,
-        "bonus_typ": "Gutschrift nach 3 Monaten",
-        "aktions_ende": "30.06.2026",
-        "letzter_wechsel": "15.06.2026",
-        "countdown_aktiv": true
-      },
-      "bedingungen": {
-        "nur_privatkunden": true,
-        "nur_gewerbe": false,
-        "neukunden_only": true,
-        "kein_gewerbe": true,
-        "kein_neubau": false,
-        "kein_heizstrom": true,
-        "max_verbrauch_kwh": 50000,
-        "sonstiges": "Nicht kombinierbar mit anderen Aktionen"
-      },
-      "produkt": {
-        "oekostrom": false,
-        "zertifikat": "",
-        "herkunft": "",
-        "co2_neutral": false
-      },
-      "anzeige": {
-        "empfehlung": "gold",
-        "badge": "⭐ Höchste Ersparnis",
-        "highlight": true,
-        "sichtbar": true
-      }
-    },
-    {
-      "id": "skypower-stadtstrom24",
-      "anbieter": "SkyPower",
-      "tarif": "Stadtstrom 24",
-      "kategorie": "strom",
-      "preise": {
-        "ap_ct": 32.56,
-        "gp_euro_jahr": 114.00
-      },
-      "vertrag": {
-        "preisgarantie": "24 Monate",
-        "pg_monate": 24,
-        "laufzeit_monate": 12,
-        "kuendigungsfrist_wochen": 6,
-        "verlaengerung": "1 Monat",
-        "mindestlaufzeit_monate": 12
-      },
-      "verfuegbarkeit": {
-        "deutschlandweit": true,
-        "plz_ausnahmen": [],
-        "nur_plz": [],
-        "bundeslaender": []
-      },
-      "aktion": {
-        "aktiv": false,
-        "bonus_euro": 0,
-        "bonus_typ": "",
-        "aktions_ende": "",
-        "letzter_wechsel": "",
-        "countdown_aktiv": false
-      },
-      "bedingungen": {
-        "nur_privatkunden": true,
-        "nur_gewerbe": false,
-        "neukunden_only": true,
-        "kein_gewerbe": true,
-        "kein_neubau": false,
-        "kein_heizstrom": false,
-        "max_verbrauch_kwh": 100000,
-        "sonstiges": ""
-      },
-      "produkt": {
-        "oekostrom": false,
-        "zertifikat": "",
-        "herkunft": "",
-        "co2_neutral": false
-      },
-      "anzeige": {
-        "empfehlung": "silver",
-        "badge": "💰 Günstigster Preis",
-        "highlight": false,
-        "sichtbar": true
-      }
-    },
-    {
-      "id": "ecobase-klimastabil",
-      "anbieter": "EcoBase",
-      "tarif": "KlimaStabil Plus",
-      "kategorie": "strom",
-      "preise": {
-        "ap_ct": 34.66,
-        "gp_euro_jahr": 118.00
-      },
-      "vertrag": {
-        "preisgarantie": "bis 31.12.2027",
-        "pg_monate": 24,
-        "laufzeit_monate": 24,
-        "kuendigungsfrist_wochen": 6,
-        "verlaengerung": "1 Monat",
-        "mindestlaufzeit_monate": 24
-      },
-      "verfuegbarkeit": {
-        "deutschlandweit": true,
-        "plz_ausnahmen": [],
-        "nur_plz": [],
-        "bundeslaender": []
-      },
-      "aktion": {
-        "aktiv": true,
-        "bonus_euro": 100,
-        "bonus_typ": "Sofortbonus auf Rechnung",
-        "aktions_ende": "31.12.2026",
-        "letzter_wechsel": "15.12.2026",
-        "countdown_aktiv": true
-      },
-      "bedingungen": {
-        "nur_privatkunden": true,
-        "nur_gewerbe": false,
-        "neukunden_only": true,
-        "kein_gewerbe": true,
-        "kein_neubau": false,
-        "kein_heizstrom": false,
-        "max_verbrauch_kwh": 100000,
-        "sonstiges": ""
-      },
-      "produkt": {
-        "oekostrom": true,
-        "zertifikat": "TÜV",
-        "herkunft": "Wind & Wasser",
-        "co2_neutral": true
-      },
-      "anzeige": {
-        "empfehlung": "silver",
-        "badge": "🔒 Längste Preissicherheit",
-        "highlight": true,
-        "sichtbar": true
-      }
-    },
-    {
-      "id": "clearenergy-oekopriv24",
-      "anbieter": "ClearEnergy",
-      "tarif": "ÖkoPrivat 24",
-      "kategorie": "strom",
-      "preise": {
-        "ap_ct": 34.34,
-        "gp_euro_jahr": 116.00
-      },
-      "vertrag": {
-        "preisgarantie": "24 Monate",
-        "pg_monate": 24,
-        "laufzeit_monate": 12,
-        "kuendigungsfrist_wochen": 6,
-        "verlaengerung": "1 Monat",
-        "mindestlaufzeit_monate": 12
-      },
-      "verfuegbarkeit": {
-        "deutschlandweit": true,
-        "plz_ausnahmen": [],
-        "nur_plz": [],
-        "bundeslaender": []
-      },
-      "aktion": {
-        "aktiv": false,
-        "bonus_euro": 0,
-        "bonus_typ": "",
-        "aktions_ende": "",
-        "letzter_wechsel": "",
-        "countdown_aktiv": false
-      },
-      "bedingungen": {
-        "nur_privatkunden": true,
-        "nur_gewerbe": false,
-        "neukunden_only": true,
-        "kein_gewerbe": false,
-        "kein_neubau": false,
-        "kein_heizstrom": false,
-        "max_verbrauch_kwh": 100000,
-        "sonstiges": "Auch für Bestandskunden verfügbar"
-      },
-      "produkt": {
-        "oekostrom": true,
-        "zertifikat": "ok-power",
-        "herkunft": "100% erneuerbar",
-        "co2_neutral": true
-      },
-      "anzeige": {
-        "empfehlung": "none",
-        "badge": "🌱 Ökostrom",
-        "highlight": false,
-        "sichtbar": true
-      }
-    },
-    {
-      "id": "ecobase-klimabonus12",
-      "anbieter": "EcoBase",
-      "tarif": "KlimaBonus 12",
-      "kategorie": "strom",
-      "preise": {
-        "ap_ct": 33.96,
-        "gp_euro_jahr": 116.00
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1801.35,
+        "ersparnis_vs_gv_eur": 428.24
       },
       "vertrag": {
         "preisgarantie": "12 Monate",
         "pg_monate": 12,
         "laufzeit_monate": 12,
         "kuendigungsfrist_wochen": 6,
-        "verlaengerung": "1 Monat",
-        "mindestlaufzeit_monate": 12
+        "verlaengerung": "1 Monat"
       },
       "verfuegbarkeit": {
         "deutschlandweit": true,
-        "plz_ausnahmen": [],
-        "nur_plz": [],
-        "bundeslaender": []
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": false,
+        "zertifikat": "",
+        "herkunft": ""
+      },
+      "provision": {
+        "einmal_eur": 11.00,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "silver",
+        "badge": "💰 Günstig + flexibel",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "enviam-meinstrom-privat24",
+      "anbieter": "enviaM",
+      "tarif": "MEIN STROM best Privat 24",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 32.83,
+        "gp_euro_monat": 13.39,
+        "gp_euro_jahr": 160.68
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1801.85,
+        "gesamt_nach_bonus_eur": 1761.85,
+        "ersparnis_vs_gv_eur": 467.74
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 24,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
       },
       "aktion": {
         "aktiv": true,
-        "bonus_euro": 100,
-        "bonus_typ": "Gutschrift im 2. Monat",
-        "aktions_ende": "30.09.2026",
-        "letzter_wechsel": "15.09.2026",
-        "countdown_aktiv": true
-      },
-      "bedingungen": {
-        "nur_privatkunden": true,
-        "nur_gewerbe": false,
-        "neukunden_only": true,
-        "kein_gewerbe": true,
-        "kein_neubau": false,
-        "kein_heizstrom": false,
-        "max_verbrauch_kwh": 50000,
-        "sonstiges": ""
+        "bonus_euro": 40,
+        "bonus_typ": "Bonus nach Lieferbeginn"
       },
       "produkt": {
-        "oekostrom": true,
-        "zertifikat": "TÜV",
-        "herkunft": "Solar & Wind",
-        "co2_neutral": true
+        "oekostrom": false,
+        "zertifikat": "",
+        "herkunft": ""
+      },
+      "provision": {
+        "einmal_eur": 68.50,
+        "folge_eur": 0
       },
       "anzeige": {
         "empfehlung": "gold",
-        "badge": "🎁 100€ Bonus",
+        "badge": "⭐ 24M + 40€ Bonus",
         "highlight": true,
         "sichtbar": true
       }
     },
     {
-      "id": "skypower-stadtoko24",
-      "anbieter": "SkyPower",
-      "tarif": "Stadtstrom Öko 24",
+      "id": "rheinenergie-fair-oekostrom24",
+      "anbieter": "RheinEnergie",
+      "tarif": "Fair Ökostrom 24",
       "kategorie": "strom",
       "preise": {
-        "ap_ct": 32.92,
-        "gp_euro_jahr": 114.00
+        "ap_ct": 33.78,
+        "gp_euro_monat": 11.50,
+        "gp_euro_jahr": 138.00
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1826.66,
+        "ersparnis_vs_gv_eur": 402.93
       },
       "vertrag": {
         "preisgarantie": "24 Monate",
         "pg_monate": 24,
         "laufzeit_monate": 12,
         "kuendigungsfrist_wochen": 6,
-        "verlaengerung": "1 Monat",
-        "mindestlaufzeit_monate": 12
+        "verlaengerung": "1 Monat"
       },
       "verfuegbarkeit": {
         "deutschlandweit": true,
-        "plz_ausnahmen": [],
-        "nur_plz": [],
-        "bundeslaender": []
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
       },
       "aktion": {
         "aktiv": false,
-        "bonus_euro": 0,
-        "bonus_typ": "",
-        "aktions_ende": "",
-        "letzter_wechsel": "",
-        "countdown_aktiv": false
+        "bonus_euro": 0
       },
-      "bedingungen": {
-        "nur_privatkunden": true,
-        "nur_gewerbe": false,
-        "neukunden_only": true,
-        "kein_gewerbe": true,
-        "kein_neubau": false,
-        "kein_heizstrom": false,
-        "max_verbrauch_kwh": 100000,
-        "sonstiges": ""
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "Ökostrom",
+        "herkunft": "100% Erneuerbar"
       },
-      
+      "provision": {
+        "einmal_eur": 72.00,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "gold",
+        "badge": "🌱 Ökostrom 24M",
+        "highlight": true,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "montana-oekostrom-pur-24m",
+      "anbieter": "MONTANA Energie",
+      "tarif": "ÖkoStrom Pur (24M)",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 33.21,
+        "gp_euro_monat": 14.48,
+        "gp_euro_jahr": 173.76
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1833.93,
+        "ersparnis_vs_gv_eur": 395.66
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 24,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "Ökostrom",
+        "herkunft": "100% Erneuerbar"
+      },
+      "provision": {
+        "einmal_eur": 44.00,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "silver",
+        "badge": "🌱 Öko 24M günstig",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "eprimo-primaklima-bonus",
+      "anbieter": "eprimo",
+      "tarif": "eprimoStrom PrimaKlima mit Bonus",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 33.96,
+        "gp_euro_monat": 15.17,
+        "gp_euro_jahr": 182.04
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1879.70,
+        "gesamt_nach_bonus_eur": 1779.70,
+        "ersparnis_vs_gv_eur": 449.89
+      },
+      "vertrag": {
+        "preisgarantie": "keine Angabe",
+        "pg_monate": 0,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
+      },
+      "aktion": {
+        "aktiv": true,
+        "bonus_euro": 100,
+        "bonus_typ": "Sofortbonus"
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "Ökostrom",
+        "herkunft": "PrimaKlima"
+      },
+      "provision": {
+        "einmal_eur": 30.00,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "gold",
+        "badge": "🎁 100€ Sofortbonus",
+        "highlight": true,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "lichtblick-oekostrom24-privat",
+      "anbieter": "LichtBlick",
+      "tarif": "ÖkoStrom 24 (Privat)",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 34.22,
+        "gp_euro_monat": 13.46,
+        "gp_euro_jahr": 161.52
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1872.18,
+        "ersparnis_vs_gv_eur": 357.41
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "Ökostrom",
+        "herkunft": "100% Erneuerbar"
+      },
+      "provision": {
+        "einmal_eur": 82.50,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "silver",
+        "badge": "🌱 Ökostrom 24M",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "swk-meinstadt-strom24",
+      "anbieter": "SWK",
+      "tarif": "meinSTADT Strom24",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 34.34,
+        "gp_euro_monat": 12.87,
+        "gp_euro_jahr": 154.46
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1871.12,
+        "ersparnis_vs_gv_eur": 358.47
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": false,
+        "zertifikat": "",
+        "herkunft": ""
+      },
+      "provision": {
+        "einmal_eur": 51.00,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "silver",
+        "badge": "💰 Preis-Leistung",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "powerstrom-oeko-privat24fix",
+      "anbieter": "POWERSTROM",
+      "tarif": "Ökostrom Privat 24 fix",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 34.52,
+        "gp_euro_monat": 13.72,
+        "gp_euro_jahr": 164.64
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1890.29,
+        "ersparnis_vs_gv_eur": 339.30
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate fix",
+        "pg_monate": 24,
+        "laufzeit_monate": 24,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "Ökostrom",
+        "herkunft": "100% Erneuerbar"
+      },
+      "provision": {
+        "einmal_eur": 85.00,
+        "folge_eur": 30.00,
+        "folge_ab_monat": 25
+      },
+      "anzeige": {
+        "empfehlung": "silver",
+        "badge": "🌱 Öko fix 24M",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "vattenfall-oekostrom24-best",
+      "anbieter": "Vattenfall",
+      "tarif": "ÖkoStrom24 Best",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 33.90,
+        "gp_euro_monat": 16.90,
+        "gp_euro_jahr": 202.80
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1897.46,
+        "ersparnis_vs_gv_eur": 332.13
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "Ökostrom",
+        "herkunft": "100% Erneuerbar"
+      },
+      "provision": {
+        "einmal_eur": 117.50,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "silver",
+        "badge": "🌱 Ökostrom Premium",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "swk-meinstadt-oeko24",
+      "anbieter": "SWK",
+      "tarif": "meinSTADT Strom Öko24",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 34.70,
+        "gp_euro_monat": 12.87,
+        "gp_euro_jahr": 154.46
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1889.11,
+        "ersparnis_vs_gv_eur": 340.48
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "Ökostrom",
+        "herkunft": "100% Erneuerbar"
+      },
+      "provision": {
+        "einmal_eur": 51.00,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "silver",
+        "badge": "🌱 Öko Stadtstrom",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "eprimo-primaklima-pur-stabil",
+      "anbieter": "eprimo",
+      "tarif": "eprimoStrom PrimaKlima Pur Stabil",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 34.66,
+        "gp_euro_monat": 15.17,
+        "gp_euro_jahr": 182.04
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1914.69,
+        "gesamt_nach_bonus_eur": 1814.69,
+        "ersparnis_vs_gv_eur": 414.90
+      },
+      "vertrag": {
+        "preisgarantie": "keine Angabe",
+        "pg_monate": 0,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
+      },
+      "aktion": {
+        "aktiv": true,
+        "bonus_euro": 100,
+        "bonus_typ": "Sofortbonus"
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "Ökostrom",
+        "herkunft": "PrimaKlima"
+      },
+      "provision": {
+        "einmal_eur": 72.00,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "silver",
+        "badge": "🎁 100€ Bonus Öko",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "lichtblick-oekostrom12-privat",
+      "anbieter": "LichtBlick",
+      "tarif": "ÖkoStrom 12 (Privat)",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 35.06,
+        "gp_euro_monat": 13.30,
+        "gp_euro_jahr": 159.60
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1912.25,
+        "ersparnis_vs_gv_eur": 317.34
+      },
+      "vertrag": {
+        "preisgarantie": "12 Monate",
+        "pg_monate": 12,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "Ökostrom",
+        "herkunft": "100% Erneuerbar"
+      },
+      "provision": {
+        "einmal_eur": 21.00,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "none",
+        "badge": "🌱 Ökostrom flexibel",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "rabotenergie-rabotfix24",
+      "anbieter": "Rabot Energy",
+      "tarif": "rabot.Fix 24",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 35.97,
+        "gp_euro_monat": 9.88,
+        "gp_euro_jahr": 118.56
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1916.70,
+        "ersparnis_vs_gv_eur": 312.89
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 24,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": false,
+        "zertifikat": "",
+        "herkunft": ""
+      },
+      "provision": {
+        "einmal_eur": 86.00,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "none",
+        "badge": "🔒 Fix 24M",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "rheinenergie-fair-oekostrom12",
+      "anbieter": "RheinEnergie",
+      "tarif": "Fair Ökostrom 12",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 35.40,
+        "gp_euro_monat": 12.49,
+        "gp_euro_jahr": 149.88
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1919.53,
+        "ersparnis_vs_gv_eur": 310.06
+      },
+      "vertrag": {
+        "preisgarantie": "12 Monate",
+        "pg_monate": 12,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "Ökostrom",
+        "herkunft": "100% Erneuerbar"
+      },
+      "provision": {
+        "einmal_eur": 30.00,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "none",
+        "badge": "🌱 Ökostrom 12M",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "lichtblick-oekostrom-relax24",
+      "anbieter": "LichtBlick",
+      "tarif": "ÖkoStrom Relax 24",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 34.77,
+        "gp_euro_monat": 18.94,
+        "gp_euro_jahr": 227.28
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1965.43,
+        "ersparnis_vs_gv_eur": 264.16
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "Ökostrom",
+        "herkunft": "100% Erneuerbar"
+      },
+      "provision": {
+        "einmal_eur": 93.00,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "none",
+        "badge": "🌱 Ökostrom Relax",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "rabotenergie-rabotfix12",
+      "anbieter": "Rabot Energy",
+      "tarif": "rabot.Fix 12",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 36.82,
+        "gp_euro_monat": 9.88,
+        "gp_euro_jahr": 118.56
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1959.19,
+        "ersparnis_vs_gv_eur": 270.40
+      },
+      "vertrag": {
+        "preisgarantie": "12 Monate",
+        "pg_monate": 12,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": false,
+        "zertifikat": "",
+        "herkunft": ""
+      },
+      "provision": {
+        "einmal_eur": 66.00,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "none",
+        "badge": "🔒 Fix 12M",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "montana-oekostrom-extra24m",
+      "anbieter": "MONTANA Energie",
+      "tarif": "ÖkoStrom Extra (24M)",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 36.10,
+        "gp_euro_monat": 14.48,
+        "gp_euro_jahr": 173.76
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 1978.40,
+        "ersparnis_vs_gv_eur": 251.19
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 24,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "Ökostrom",
+        "herkunft": "100% Erneuerbar"
+      },
+      "provision": {
+        "einmal_eur": 135.00,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "none",
+        "badge": "🌱 Öko Extra 24M",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "rheinenergie-fair-oeko24-dgv",
+      "anbieter": "RheinEnergie",
+      "tarif": "Fair ÖkoStrom 24 D GV",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 36.99,
+        "gp_euro_monat": 13.19,
+        "gp_euro_jahr": 158.28
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 2007.41,
+        "ersparnis_vs_gv_eur": 222.18
+      },
+      "vertrag": {
+        "preisgarantie": "24 Monate",
+        "pg_monate": 24,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": true,
+        "zertifikat": "Ökostrom",
+        "herkunft": "100% Erneuerbar"
+      },
+      "provision": {
+        "einmal_eur": 110.50,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "none",
+        "badge": "🌱 Ökostrom DGV",
+        "highlight": false,
+        "sichtbar": true
+      }
+    },
+    {
+      "id": "gasag-strom-fix-privat",
+      "anbieter": "Gasag",
+      "tarif": "Strom Fix Privat",
+      "kategorie": "strom",
+      "preise": {
+        "ap_ct": 38.62,
+        "gp_euro_monat": 11.90,
+        "gp_euro_jahr": 142.80
+      },
+      "beispiel_4999kwh": {
+        "gesamt_eur": 2073.41,
+        "ersparnis_vs_gv_eur": 156.18
+      },
+      "vertrag": {
+        "preisgarantie": "keine Angabe",
+        "pg_monate": 0,
+        "laufzeit_monate": 12,
+        "kuendigungsfrist_wochen": 6,
+        "verlaengerung": "1 Monat"
+      },
+      "verfuegbarkeit": {
+        "deutschlandweit": true,
+        "netzbetreiber_beispiel": "NRM Netzdienste Rhein-Main GmbH"
+      },
+      "aktion": {
+        "aktiv": false,
+        "bonus_euro": 0
+      },
+      "produkt": {
+        "oekostrom": false,
+        "zertifikat": "",
+        "herkunft": ""
+      },
+      "provision": {
+        "einmal_eur": 117.50,
+        "folge_eur": 0
+      },
+      "anzeige": {
+        "empfehlung": "none",
+        "badge": "🔒 Strom Fix",
+        "highlight": false,
+        "sichtbar": false
+      }
+    }
+  ]
+}
