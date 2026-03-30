@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Strompreisrechner Frankfurt – Jetzt Ersparnis berechnen und günstigeren Ökostromtarif finden.">
+<meta name="description" content="Strompreisrechner Frankfurt – Jetzt Ersparnis berechnen und günstigeren Ökostromtarif finden. Echte Tarife, Stand März 2026.">
 <title>Strom & Gas Preisrechner | Frankfurt Energie Online</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -15,7 +15,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;color:#1a1a2e;background:var(--
 .hero h1{font-size:1.9rem;font-weight:800;margin-bottom:10px}
 .hero h1 span{color:var(--gl)}
 .hero p{opacity:.9;max-width:600px;margin:0 auto}
-.wrap{max-width:680px;margin:0 auto;padding:40px 20px}
+.wrap{max-width:700px;margin:0 auto;padding:40px 20px}
 .card{background:#fff;border-radius:18px;padding:32px;box-shadow:0 4px 24px rgba(0,0,0,.08);border:1px solid #e8e0d0;margin-bottom:24px}
 .card h2{color:var(--gn);font-size:1.2rem;font-weight:800;margin-bottom:20px;padding-left:12px;border-left:4px solid var(--gold)}
 .tabs{display:flex;gap:0;margin-bottom:28px;border-radius:12px;overflow:hidden;border:2px solid #e8e0d0}
@@ -49,6 +49,23 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;heigh
 .calc-btn{width:100%;background:linear-gradient(135deg,#0a4d2e,#16a34a);color:#fff;border:none;border-radius:50px;padding:15px;font-size:1.05rem;font-weight:800;cursor:pointer;margin-top:8px;box-shadow:0 4px 16px rgba(10,77,46,.3);transition:opacity .2s}
 .calc-btn:hover{opacity:.9}
 .hint{font-size:.8rem;color:#999;text-align:center;margin-top:8px}
+
+/* TARIFLISTE */
+.tarif-liste{width:100%;border-collapse:collapse;font-size:.87rem;margin:16px 0}
+.tarif-liste th{background:linear-gradient(90deg,#0a1f12,#0a4d2e);color:var(--gl);padding:11px 10px;text-align:left;font-size:.73rem;text-transform:uppercase;letter-spacing:.7px}
+.tarif-liste td{padding:10px;border-bottom:1px solid #ede8dc;color:#2a2a2a;vertical-align:middle}
+.tarif-liste tr:nth-child(even){background:#faf8f3}
+.tarif-liste tr:hover{background:#fdf6e3}
+.row-gv{background:#fff5f5 !important;border-left:4px solid #f5a0a0}
+.row-gv td:first-child{color:#b91c1c;font-weight:700}
+.row-gold{background:linear-gradient(90deg,#fefce8,#fdf6d0) !important;border-left:4px solid var(--gold)}
+.row-gold td:first-child{color:var(--gd);font-weight:700}
+.row-silver{background:linear-gradient(90deg,#f5f7fa,#edf0f3) !important;border-left:4px solid var(--sv)}
+.badge-oeko{background:#d4edda;color:#155724;font-size:.68rem;padding:2px 7px;border-radius:12px;font-weight:700;white-space:nowrap;margin-left:4px}
+.badge-bonus{background:#fff3cd;color:#856404;font-size:.68rem;padding:2px 7px;border-radius:12px;font-weight:700;white-space:nowrap;margin-left:4px}
+.ersparnis-pos{color:var(--gm);font-weight:700}
+.disclaimer{font-size:.75rem;color:#999;margin-top:10px;line-height:1.5}
+
 footer{text-align:center;padding:24px;color:#888;font-size:.83rem;border-top:1px solid #e8e0d0}
 footer a{color:var(--gm)}
 </style>
@@ -59,9 +76,11 @@ footer a{color:var(--gm)}
 </div>
 <div class="hero">
   <h1>⚡ Strom & Gas <span>Preisrechner</span></h1>
-  <p>Berechne dein persönliches Sparpotenzial – kostenlos, in 60 Sekunden.</p>
+  <p>Berechne dein persönliches Sparpotenzial – echte Tarife, kostenlos, in 60 Sekunden.</p>
 </div>
 <div class="wrap">
+
+  <!-- RECHNER CARD -->
   <div class="card">
     <div class="tabs">
       <button class="tab on" onclick="switchTab('strom',this)">⚡ Strom</button>
@@ -72,31 +91,31 @@ footer a{color:var(--gm)}
     <div id="tab-strom">
       <h2>Stromverbrauch eingeben</h2>
       <div class="field">
-        <label>Postleitzahl</label>
-        <input type="text" id="plz-strom" placeholder="z.B. 60386" maxlength="5">
+        <label>Postleitzahl (Frankfurt & Umgebung)</label>
+        <input type="text" id="plz-strom" placeholder="z.B. 60489" maxlength="5">
       </div>
       <div class="field">
         <label>Jahresverbrauch</label>
         <div class="slider-row">
           <span style="font-size:.85rem;color:#888">1.000 kWh</span>
-          <span class="slider-val" id="strom-val">2.500 kWh</span>
+          <span class="slider-val" id="strom-val">3.500 kWh</span>
           <span style="font-size:.85rem;color:#888">10.000 kWh</span>
         </div>
-        <input type="range" id="strom-slider" min="1000" max="10000" step="100" value="2500" oninput="updateSlider('strom')">
+        <input type="range" id="strom-slider" min="1000" max="10000" step="100" value="3500" oninput="updateSlider('strom')">
         <div class="presets">
-          <span class="preset" onclick="setPreset('strom',1500,'1 Person')">1 Person<br><small>~1.500</small></span>
-          <span class="preset on" onclick="setPreset('strom',2500,'2 Pers.')">2 Pers.<br><small>~2.500</small></span>
-          <span class="preset" onclick="setPreset('strom',3500,'3–4 Pers.')">3–4 Pers.<br><small>~3.500</small></span>
-          <span class="preset" onclick="setPreset('strom',5000,'5+ Pers.')">5+ Pers.<br><small>~5.000</small></span>
+          <span class="preset" onclick="setPreset('strom',1500)">1 Person<br><small>~1.500</small></span>
+          <span class="preset" onclick="setPreset('strom',2500)">2 Pers.<br><small>~2.500</small></span>
+          <span class="preset on" onclick="setPreset('strom',3500)">3–4 Pers.<br><small>~3.500</small></span>
+          <span class="preset" onclick="setPreset('strom',5000)">5+ Pers.<br><small>~5.000</small></span>
         </div>
       </div>
       <div class="field">
-        <label>Aktueller Anbieter</label>
+        <label>Aktueller Anbieter / Tarif</label>
         <select id="anbieter-strom">
-          <option value="41">Mainova (Grundversorger) – ca. 41 ct/kWh</option>
-          <option value="38">Anderer Grundversorger – ca. 38 ct/kWh</option>
-          <option value="35">Günstiger Anbieter – ca. 35 ct/kWh</option>
-          <option value="32">Weiß ich nicht – Durchschnitt 32 ct/kWh</option>
+          <option value="41|180">Mainova (Grundversorger Frankfurt) – ~41 ct/kWh</option>
+          <option value="38|180">Anderer Grundversorger – ~38 ct/kWh</option>
+          <option value="35|160">Günstiger Anbieter – ~35 ct/kWh</option>
+          <option value="32|160">Weiß ich nicht – Durchschnitt ~32 ct/kWh</option>
         </select>
       </div>
       <button class="calc-btn" onclick="berechnen('strom')">⚡ Ersparnis berechnen</button>
@@ -107,7 +126,7 @@ footer a{color:var(--gm)}
       <h2>Gasverbrauch eingeben</h2>
       <div class="field">
         <label>Postleitzahl</label>
-        <input type="text" id="plz-gas" placeholder="z.B. 60386" maxlength="5">
+        <input type="text" id="plz-gas" placeholder="z.B. 60489" maxlength="5">
       </div>
       <div class="field">
         <label>Jahresverbrauch</label>
@@ -118,19 +137,19 @@ footer a{color:var(--gm)}
         </div>
         <input type="range" id="gas-slider" min="5000" max="30000" step="500" value="12000" oninput="updateSlider('gas')">
         <div class="presets">
-          <span class="preset" onclick="setPreset('gas',7000,'Whg. klein')">Whg. klein<br><small>~7.000</small></span>
-          <span class="preset on" onclick="setPreset('gas',12000,'Whg. mittel')">Whg. mittel<br><small>~12.000</small></span>
-          <span class="preset" onclick="setPreset('gas',18000,'Haus klein')">Haus klein<br><small>~18.000</small></span>
-          <span class="preset" onclick="setPreset('gas',25000,'Haus groß')">Haus groß<br><small>~25.000</small></span>
+          <span class="preset" onclick="setPreset('gas',7000)">Whg. klein<br><small>~7.000</small></span>
+          <span class="preset on" onclick="setPreset('gas',12000)">Whg. mittel<br><small>~12.000</small></span>
+          <span class="preset" onclick="setPreset('gas',18000)">Haus klein<br><small>~18.000</small></span>
+          <span class="preset" onclick="setPreset('gas',25000)">Haus groß<br><small>~25.000</small></span>
         </div>
       </div>
       <div class="field">
         <label>Aktueller Anbieter</label>
         <select id="anbieter-gas">
-          <option value="12.5">Mainova (Grundversorger) – ca. 12,5 ct/kWh</option>
-          <option value="11.5">Anderer Grundversorger – ca. 11,5 ct/kWh</option>
-          <option value="10.5">Günstiger Anbieter – ca. 10,5 ct/kWh</option>
-          <option value="10">Weiß ich nicht – Durchschnitt 10 ct/kWh</option>
+          <option value="12.5|108">Mainova (Grundversorger Frankfurt) – ~12,5 ct/kWh</option>
+          <option value="11.5|108">Anderer Grundversorger – ~11,5 ct/kWh</option>
+          <option value="10.5|96">Günstiger Anbieter – ~10,5 ct/kWh</option>
+          <option value="10|96">Weiß ich nicht – Durchschnitt ~10 ct/kWh</option>
         </select>
       </div>
       <button class="calc-btn" onclick="berechnen('gas')">🔥 Ersparnis berechnen</button>
@@ -146,7 +165,7 @@ footer a{color:var(--gm)}
         <div class="val" id="res-aktuell">–</div>
       </div>
       <div class="rbox highlight">
-        <div class="lbl">Mit uns / Jahr</div>
+        <div class="lbl">Bester Tarif / Jahr</div>
         <div class="val" id="res-neu">–</div>
       </div>
       <div class="rbox highlight">
@@ -156,99 +175,188 @@ footer a{color:var(--gm)}
     </div>
     <div class="saving-bar"><div class="saving-fill" id="saving-fill" style="width:0%"></div></div>
     <p class="saving-note" id="saving-note"></p>
-    <a id="btn-teleson" href="#" target="_blank" class="btn-main">✅ Jetzt Tarif sichern – kostenlos & unverbindlich →</a>
+    <a id="btn-teleson" href="https://www.teleson-vertrieb.de/AndreSchwarz-435/" target="_blank" class="btn-main">✅ Jetzt besten Tarif sichern – kostenlos & unverbindlich →</a>
     <a href="https://wa.me/491634692255?text=Hallo%2C%20ich%20habe%20den%20Preisrechner%20genutzt%20und%20m%C3%B6chte%20mehr%20erfahren!" class="btn-wa">💬 WhatsApp – Persönliche Beratung</a>
   </div>
 
-  <p class="hint">* Alle Berechnungen sind Schätzungen auf Basis aktueller Marktpreise (Stand März 2026). Endpreise können je nach PLZ und Tarif variieren.</p>
+  <p class="hint">* Berechnung inkl. Arbeits- und Grundpreis (Stand März 2026). Endpreise variieren je nach PLZ und Tarif.</p>
 
+  <!-- STROM VERGLEICHSTABELLE -->
   <div class="card" style="margin-top:32px">
-    <h2>⚡ Strom – Echte Preise im Vergleich</h2>
-    <p style="font-size:.85rem;color:#666;margin-bottom:16px">Beispielrechnung: PLZ 60435 · 1.500 kWh/Jahr · Stand März 2026</p>
+    <h2>⚡ Strom – Aktuelle Top-Tarife für Frankfurt</h2>
+    <p style="font-size:.85rem;color:#666;margin-bottom:16px">
+      Echte Tarife aus dem Teleson-Partnernetz · PLZ 60489 · 4-Personen-Haushalt · 4.999 kWh/Jahr · Stand 30.03.2026
+    </p>
     <div style="overflow-x:auto">
-    <table style="width:100%;border-collapse:collapse;font-size:.88rem">
+    <table class="tarif-liste">
       <thead>
-        <tr style="background:linear-gradient(90deg,#0a1f12,#0a4d2e);color:#f0d080">
-          <th style="padding:11px 10px;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.7px">Anbieter</th>
-          <th style="padding:11px 10px;text-align:right">Arbeitspreis</th>
-          <th style="padding:11px 10px;text-align:right">Grundpreis</th>
-          <th style="padding:11px 10px;text-align:right">Laufzeit</th>
-          <th style="padding:11px 10px;text-align:right">Gesamtkosten/Jahr</th>
+        <tr>
+          <th>Anbieter & Tarif</th>
+          <th style="text-align:right">AP ct/kWh</th>
+          <th style="text-align:right">GP/Jahr</th>
+          <th style="text-align:right">Gesamt/Jahr</th>
+          <th style="text-align:right">Ersparnis</th>
         </tr>
       </thead>
       <tbody>
-        <tr style="background:#fff5f5;border-left:4px solid #f5a0a0">
-          <td style="padding:11px 10px;font-weight:700;color:#b91c1c">GV-1 <span style="font-size:.75rem;font-weight:400;color:#999">(Grundversorger)</span></td>
-          <td style="padding:11px 10px;text-align:right">38,78 ct/kWh</td>
-          <td style="padding:11px 10px;text-align:right">7,62 €/Mon.</td>
-          <td style="padding:11px 10px;text-align:right">–</td>
-          <td style="padding:11px 10px;text-align:right;font-weight:800;color:#b91c1c">673,19 €</td>
+        <tr class="row-gv">
+          <td>Mainova AG <span style="font-size:.75rem;font-weight:400;color:#999">(Grundversorger)</span></td>
+          <td style="text-align:right">41,00 ct</td>
+          <td style="text-align:right">180,00 €</td>
+          <td style="text-align:right;font-weight:800;color:#b91c1c">2.229,59 €</td>
+          <td style="text-align:right;color:#b91c1c">–</td>
         </tr>
-        <tr style="background:linear-gradient(90deg,#fefce8,#fdf6d0);border-left:4px solid #c9a84c">
-          <td style="padding:11px 10px;font-weight:700;color:#8a6a1a">WA-1 ⭐ <span style="font-size:.75rem;font-weight:400;color:#999">(Öko-Tarif)</span></td>
-          <td style="padding:11px 10px;text-align:right">31,90 ct/kWh</td>
-          <td style="padding:11px 10px;text-align:right">13,90 €/Mon.</td>
-          <td style="padding:11px 10px;text-align:right">24 Mon.</td>
-          <td style="padding:11px 10px;text-align:right;font-weight:800;color:#0a4d2e">645,30 € <span style="font-size:.75rem;color:#16a34a">−27,89 €</span></td>
+        <tr class="row-gold">
+          <td><strong>eins energie – einsstrom Komfort 🥇</strong></td>
+          <td style="text-align:right">31,38 ct</td>
+          <td style="text-align:right">170,04 €</td>
+          <td style="text-align:right;font-weight:800;color:var(--gn)">1.738,73 €</td>
+          <td style="text-align:right" class="ersparnis-pos">−490,86 €</td>
         </tr>
-        <tr style="background:#f5f7fa;border-left:4px solid #a8b2bf">
-          <td style="padding:11px 10px;font-weight:700;color:#6b7a8a">WA-2 <span style="font-size:.75rem;font-weight:400;color:#999">(mit Bonus)</span></td>
-          <td style="padding:11px 10px;text-align:right">32,89 ct/kWh</td>
-          <td style="padding:11px 10px;text-align:right">13,76 €/Mon.</td>
-          <td style="padding:11px 10px;text-align:right">–</td>
-          <td style="padding:11px 10px;text-align:right;font-weight:800;color:#6b7a8a">658,47 € <span style="font-size:.75rem;color:#16a34a">−14,72 €</span></td>
+        <tr class="row-gold">
+          <td><strong>Vattenfall – ÖkoStrom24 Pur</strong><span class="badge-oeko">Öko</span></td>
+          <td style="text-align:right">31,90 ct</td>
+          <td style="text-align:right">166,80 €</td>
+          <td style="text-align:right;font-weight:800;color:var(--gn)">1.761,48 €</td>
+          <td style="text-align:right" class="ersparnis-pos">−468,11 €</td>
+        </tr>
+        <tr class="row-gold">
+          <td><strong>enviaM – MEIN STROM best Privat 24</strong><span class="badge-bonus">+40€ Bonus</span></td>
+          <td style="text-align:right">32,83 ct</td>
+          <td style="text-align:right">160,68 €</td>
+          <td style="text-align:right;font-weight:800;color:var(--gn)">1.761,85 € *</td>
+          <td style="text-align:right" class="ersparnis-pos">−467,74 € *</td>
+        </tr>
+        <tr>
+          <td>enviaM – MEIN STROM best Privat 12</td>
+          <td style="text-align:right">32,82 ct</td>
+          <td style="text-align:right">160,68 €</td>
+          <td style="text-align:right;font-weight:700">1.801,35 €</td>
+          <td style="text-align:right" class="ersparnis-pos">−428,24 €</td>
+        </tr>
+        <tr>
+          <td>RheinEnergie – Fair Ökostrom 24<span class="badge-oeko">Öko</span></td>
+          <td style="text-align:right">33,78 ct</td>
+          <td style="text-align:right">138,00 €</td>
+          <td style="text-align:right;font-weight:700">1.826,66 €</td>
+          <td style="text-align:right" class="ersparnis-pos">−402,93 €</td>
+        </tr>
+        <tr>
+          <td>MONTANA – ÖkoStrom Pur (24M)<span class="badge-oeko">Öko</span></td>
+          <td style="text-align:right">33,21 ct</td>
+          <td style="text-align:right">173,76 €</td>
+          <td style="text-align:right;font-weight:700">1.833,93 €</td>
+          <td style="text-align:right" class="ersparnis-pos">−395,66 €</td>
+        </tr>
+        <tr>
+          <td>eprimo – PrimaKlima mit Bonus<span class="badge-oeko">Öko</span><span class="badge-bonus">+100€</span></td>
+          <td style="text-align:right">33,96 ct</td>
+          <td style="text-align:right">182,04 €</td>
+          <td style="text-align:right;font-weight:700">1.779,70 € *</td>
+          <td style="text-align:right" class="ersparnis-pos">−449,89 € *</td>
+        </tr>
+        <tr>
+          <td>LichtBlick – ÖkoStrom 24 (Privat)<span class="badge-oeko">Öko</span></td>
+          <td style="text-align:right">34,22 ct</td>
+          <td style="text-align:right">161,52 €</td>
+          <td style="text-align:right;font-weight:700">1.872,18 €</td>
+          <td style="text-align:right" class="ersparnis-pos">−357,41 €</td>
+        </tr>
+        <tr class="row-silver">
+          <td>SWK – meinSTADT Strom24</td>
+          <td style="text-align:right">34,34 ct</td>
+          <td style="text-align:right">154,46 €</td>
+          <td style="text-align:right;font-weight:700">1.871,12 €</td>
+          <td style="text-align:right" class="ersparnis-pos">−358,47 €</td>
+        </tr>
+        <tr>
+          <td>POWERSTROM – Ökostrom Privat 24 fix<span class="badge-oeko">Öko</span></td>
+          <td style="text-align:right">34,52 ct</td>
+          <td style="text-align:right">164,64 €</td>
+          <td style="text-align:right;font-weight:700">1.890,29 €</td>
+          <td style="text-align:right" class="ersparnis-pos">−339,30 €</td>
+        </tr>
+        <tr>
+          <td>Vattenfall – ÖkoStrom24 Best<span class="badge-oeko">Öko</span></td>
+          <td style="text-align:right">33,90 ct</td>
+          <td style="text-align:right">202,80 €</td>
+          <td style="text-align:right;font-weight:700">1.897,46 €</td>
+          <td style="text-align:right" class="ersparnis-pos">−332,13 €</td>
         </tr>
       </tbody>
     </table>
     </div>
-    <p style="font-size:.75rem;color:#999;margin-top:10px">* inkl. MwSt. WA-2 nach Abzug von 125 € Einmalbonus. Preisgarantie WA-1: 24 Monate.</p>
+    <p class="disclaimer">* Ersparnis inkl. Wechselbonus nach dessen Gutschrift. Alle Preise brutto inkl. MwSt. Quelle: Teleson VPP Partnerportal, Stand 30.03.2026. Netzbetreiber: NRM Netzdienste Rhein-Main GmbH.</p>
   </div>
 
+  <!-- GAS VERGLEICHSTABELLE -->
   <div class="card">
     <h2>🔥 Gas – Echte Preise im Vergleich</h2>
-    <p style="font-size:.85rem;color:#666;margin-bottom:16px">Beispielrechnung: PLZ 60435 · 8.045 kWh/Jahr · Stand März 2026</p>
+    <p style="font-size:.85rem;color:#666;margin-bottom:16px">Beispielrechnung: PLZ 60489 · 8.045 kWh/Jahr · Stand März 2026</p>
     <div style="overflow-x:auto">
-    <table style="width:100%;border-collapse:collapse;font-size:.88rem">
+    <table class="tarif-liste">
       <thead>
-        <tr style="background:linear-gradient(90deg,#0a1f12,#0a4d2e);color:#f0d080">
-          <th style="padding:11px 10px;text-align:left;font-size:.75rem;text-transform:uppercase;letter-spacing:.7px">Anbieter</th>
-          <th style="padding:11px 10px;text-align:right">Arbeitspreis</th>
-          <th style="padding:11px 10px;text-align:right">Grundpreis</th>
-          <th style="padding:11px 10px;text-align:right">Laufzeit</th>
-          <th style="padding:11px 10px;text-align:right">Gesamtkosten/Jahr</th>
+        <tr>
+          <th>Anbieter</th>
+          <th style="text-align:right">Arbeitspreis</th>
+          <th style="text-align:right">Grundpreis</th>
+          <th style="text-align:right">Laufzeit</th>
+          <th style="text-align:right">Gesamt/Jahr</th>
         </tr>
       </thead>
       <tbody>
-        <tr style="background:#fff5f5;border-left:4px solid #f5a0a0">
-          <td style="padding:11px 10px;font-weight:700;color:#b91c1c">GV-1 <span style="font-size:.75rem;font-weight:400;color:#999">(Grundversorger)</span></td>
-          <td style="padding:11px 10px;text-align:right">12,76 ct/kWh</td>
-          <td style="padding:11px 10px;text-align:right">9,03 €/Mon.</td>
-          <td style="padding:11px 10px;text-align:right">–</td>
-          <td style="padding:11px 10px;text-align:right;font-weight:800;color:#b91c1c">1.134,84 €</td>
+        <tr class="row-gv">
+          <td>Mainova (Grundversorger)<span style="font-size:.75rem;font-weight:400;color:#999"> Frankfurt</span></td>
+          <td style="text-align:right">12,76 ct/kWh</td>
+          <td style="text-align:right">9,03 €/Mon.</td>
+          <td style="text-align:right">–</td>
+          <td style="text-align:right;font-weight:800;color:#b91c1c">1.134,84 €</td>
         </tr>
-        <tr style="background:linear-gradient(90deg,#fefce8,#fdf6d0);border-left:4px solid #c9a84c">
-          <td style="padding:11px 10px;font-weight:700;color:#8a6a1a">WA-3 ⭐ <span style="font-size:.75rem;font-weight:400;color:#999">(Bio-Gas)</span></td>
-          <td style="padding:11px 10px;text-align:right">10,82 ct/kWh</td>
-          <td style="padding:11px 10px;text-align:right">11,46 €/Mon.</td>
-          <td style="padding:11px 10px;text-align:right">24 Mon.</td>
-          <td style="padding:11px 10px;text-align:right;font-weight:800;color:#0a4d2e">1.007,99 € <span style="font-size:.75rem;color:#16a34a">−126,85 €</span></td>
+        <tr class="row-gold">
+          <td><strong>Bester Gastarif ⭐</strong><span class="badge-oeko">Bio-Gas</span></td>
+          <td style="text-align:right">10,82 ct/kWh</td>
+          <td style="text-align:right">11,46 €/Mon.</td>
+          <td style="text-align:right">24 Mon.</td>
+          <td style="text-align:right;font-weight:800;color:var(--gn)">1.007,99 € <span style="font-size:.75rem;color:var(--gm)">−126,85 €</span></td>
         </tr>
       </tbody>
     </table>
     </div>
-    <p style="font-size:.75rem;color:#999;margin-top:10px">* inkl. MwSt. Ersparnis über 2 Jahre: 253,70 €. Stand: März 2026.</p>
+    <p class="disclaimer">* Ersparnis über 2 Jahre: ~253 €. Stand: März 2026. Weitere Gastarife auf Anfrage.</p>
   </div>
-</div>
 
+  <!-- CTA -->
+  <div style="background:linear-gradient(135deg,#0a1f12,#0a4d2e);border-radius:18px;padding:32px;text-align:center;border:1px solid var(--gold);margin-bottom:24px">
+    <h3 style="color:var(--gl);font-size:1.2rem;font-weight:800;margin-bottom:10px">Jetzt Tarif sichern – kostenlos & in 5 Minuten</h3>
+    <p style="color:rgba(255,255,255,.85);font-size:.9rem;margin-bottom:20px;max-width:500px;margin-left:auto;margin-right:auto">Wir übernehmen die Kündigung beim alten Anbieter. Kein Aufwand für Sie.</p>
+    <a href="https://www.teleson-vertrieb.de/AndreSchwarz-435/" target="_blank" class="btn-main" style="max-width:400px;margin:0 auto 12px">✅ Zum Tarifabschluss →</a>
+    <a href="https://wa.me/491634692255?text=Hallo%20Team%20Frankfurt-Nordost%2C%20ich%20m%C3%B6chte%20den%20besten%20Tarif%20f%C3%BCr%20meine%20PLZ." class="btn-wa" style="max-width:400px;margin:0 auto">💬 WhatsApp – Sofortberatung</a>
+  </div>
+
+</div>
 
 <footer>
   <a href="https://frankfurt-energie.online">← Zurück zur Startseite</a> · <a href="https://frankfurt-energie.online/#blog">Blog</a><br>
-  © 2026 Frankfurt Energie Online · André Schwarz · ASGlobal
+  © 2026 Frankfurt Energie Online · André Schwarz · ASGlobal<br>
+  <span style="font-size:.75rem;color:#bbb">Preise: Teleson VPP Partnerportal, Stand 30.03.2026. Alle Angaben ohne Gewähr.</span>
 </footer>
 
 <script>
-const STROM_NEU = 0.299; // ct/kWh unser Tarif
-const GAS_NEU = 0.089;   // ct/kWh unser Tarif
+// ── TARIFDATEN (aus tarife.json synchronisiert) ──
+const TARIFE = {
+  strom: {
+    // [ap_ct, gp_jahr] des günstigsten Tarifs (einsstrom Komfort)
+    bestAP: 0.3138,
+    bestGP: 170.04,
+    bestName: "einsstrom Komfort (eins energie)"
+  },
+  gas: {
+    bestAP: 0.1082,
+    bestGP: 137.52,
+    bestName: "Bester Gastarif (Bio-Gas, 24 Mon.)"
+  }
+};
+
 let aktTab = 'strom';
 
 function switchTab(t, el) {
@@ -265,7 +373,7 @@ function updateSlider(t) {
   document.getElementById(t+'-val').textContent = Number(v).toLocaleString('de-DE') + ' kWh';
 }
 
-function setPreset(t, val, lbl) {
+function setPreset(t, val) {
   document.getElementById(t+'-slider').value = val;
   document.getElementById(t+'-val').textContent = Number(val).toLocaleString('de-DE') + ' kWh';
   document.querySelectorAll('#tab-'+t+' .preset').forEach(p=>p.classList.remove('on'));
@@ -274,30 +382,26 @@ function setPreset(t, val, lbl) {
 
 function berechnen(t) {
   const verbrauch = parseInt(document.getElementById(t+'-slider').value);
-  const plz = document.getElementById('plz-'+t).value || '60386';
-  let preisAlt, preisNeu, einheit;
+  const plz = document.getElementById('plz-'+t).value || '60489';
+  const sel = document.getElementById('anbieter-'+t).value.split('|');
+  const apAlt = parseFloat(sel[0]) / 100;
+  const gpAlt = parseFloat(sel[1]);
 
-  if(t === 'strom') {
-    preisAlt = parseFloat(document.getElementById('anbieter-strom').value) / 100;
-    preisNeu = STROM_NEU;
-    einheit = 'Strom';
-  } else {
-    preisAlt = parseFloat(document.getElementById('anbieter-gas').value) / 100;
-    preisNeu = GAS_NEU;
-    einheit = 'Gas';
-  }
-
-  const kostenAlt = Math.round(verbrauch * preisAlt);
-  const kostenNeu = Math.round(verbrauch * preisNeu);
+  const tarif = TARIFE[t];
+  const kostenAlt = Math.round(verbrauch * apAlt + gpAlt);
+  const kostenNeu = Math.round(verbrauch * tarif.bestAP + tarif.bestGP);
   const ersparnis = kostenAlt - kostenNeu;
   const pct = Math.round((ersparnis / kostenAlt) * 100);
+  const einheit = t === 'strom' ? 'Strom' : 'Gas';
 
   document.getElementById('res-aktuell').textContent = kostenAlt.toLocaleString('de-DE') + ' €';
   document.getElementById('res-neu').textContent = kostenNeu.toLocaleString('de-DE') + ' €';
   document.getElementById('res-spar').textContent = ersparnis.toLocaleString('de-DE') + ' €';
   document.getElementById('result-title').textContent = einheit + 'ersparnis für PLZ ' + plz;
-  document.getElementById('saving-note').textContent = 'Das entspricht ' + pct + '% weniger als dein aktueller Tarif – bei ' + verbrauch.toLocaleString('de-DE') + ' kWh Jahresverbrauch.';
-  document.getElementById('saving-fill').style.width = Math.min(pct * 2, 100) + '%';
+  document.getElementById('saving-note').textContent =
+    'Das entspricht ' + pct + '% weniger – bei ' + verbrauch.toLocaleString('de-DE') +
+    ' kWh/Jahr. Bester Tarif: ' + tarif.bestName;
+  document.getElementById('saving-fill').style.width = Math.min(pct * 2.5, 100) + '%';
 
   const url = 'https://www.teleson-vertrieb.de/AndreSchwarz-435/?plz=' + plz;
   document.getElementById('btn-teleson').href = url;
