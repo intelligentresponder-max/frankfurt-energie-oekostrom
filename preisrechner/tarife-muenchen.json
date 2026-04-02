@@ -1,0 +1,111 @@
+{
+  "80333": {
+    "stadt": "München",
+    "region": "München Innenstadt",
+    "verbrauch_basis": 3500,
+    "datum": "2026-04-02",
+    "grundversorger": {
+      "name_anonym": "Lokaler Grundversorger München",
+      "icon": "🏢",
+      "arbeitspreis": 35.20,
+      "grundpreis_monat": 18.50,
+      "grundpreis_jahr": 222.00,
+      "gesamt_jahr_3500kwh": 1454.00,
+      "hinweis": "Grundversorgungstarif"
+    },
+    "alternativen": [
+      {
+        "id": "komfort_1",
+        "name_anonym": "Komfort-Tarif",
+        "icon": "💰",
+        "kategorie": "best_preis",
+        "arbeitspreis": 28.12,
+        "grundpreis_monat": 15.80,
+        "grundpreis_jahr": 189.64,
+        "eigenschaften": ["Günstigster Tarif", "Flexible Laufzeit", "Monatlich kündbar", "Keine Vorkasse"],
+        "laufzeit": "Flexibel",
+        "kuendigungsfrist": "1 Monat"
+      },
+      {
+        "id": "best_12",
+        "name_anonym": "Best Privat 12",
+        "icon": "💚",
+        "kategorie": "oeko",
+        "arbeitspreis": 29.54,
+        "grundpreis_monat": 16.20,
+        "grundpreis_jahr": 194.40,
+        "eigenschaften": ["12 Monate Preisgarantie", "Kurze Laufzeit", "Stabil & günstig"],
+        "laufzeit": "12 Monate",
+        "kuendigungsfrist": "1 Monat"
+      },
+      {
+        "id": "best_24",
+        "name_anonym": "Best Privat 24",
+        "icon": "🌿",
+        "kategorie": "oeko",
+        "arbeitspreis": 29.55,
+        "grundpreis_monat": 16.20,
+        "grundpreis_jahr": 194.40,
+        "eigenschaften": ["24 Monate Preisgarantie", "Langfristige Sicherheit", "Stabile Preise"],
+        "laufzeit": "24 Monate",
+        "kuendigungsfrist": "3 Monate"
+      },
+      {
+        "id": "fair_24",
+        "name_anonym": "Fair Ökostrom 24",
+        "icon": "🌱",
+        "kategorie": "oeko_premium",
+        "arbeitspreis": 30.50,
+        "grundpreis_monat": 14.31,
+        "grundpreis_jahr": 171.72,
+        "eigenschaften": ["100% Ökostrom", "Fair gehandelt", "24 Monate Garantie", "Regional"],
+        "laufzeit": "24 Monate",
+        "kuendigungsfrist": "3 Monate",
+        "oekostrom": true,
+        "siegel": "TÜV"
+      },
+      {
+        "id": "klima_bonus",
+        "name_anonym": "PrimaKlima mit Bonus",
+        "icon": "🌍",
+        "kategorie": "klima",
+        "arbeitspreis": 30.67,
+        "grundpreis_monat": 17.49,
+        "grundpreis_jahr": 209.88,
+        "eigenschaften": ["Klimaneutral", "Mit Neukundenbonus", "Fördert Aufforstung", "CO₂-kompensiert"],
+        "laufzeit": "12 Monate",
+        "kuendigungsfrist": "1 Monat",
+        "oekostrom": true,
+        "klimaneutral": true
+      },
+      {
+        "id": "oeko_privat",
+        "name_anonym": "Ökostrom Privat 24 fix",
+        "icon": "🏆",
+        "kategorie": "oeko",
+        "arbeitspreis": 31.24,
+        "grundpreis_monat": 16.10,
+        "grundpreis_jahr": 193.20,
+        "eigenschaften": ["100% Ökostrom", "24 Monate fest", "Planbare Kosten", "Keine Preisanpassung"],
+        "laufzeit": "24 Monate",
+        "kuendigungsfrist": "3 Monate",
+        "oekostrom": true
+      },
+      {
+        "id": "fair_12",
+        "name_anonym": "Fair Ökostrom 12",
+        "icon": "⭐",
+        "kategorie": "oeko",
+        "arbeitspreis": 32.12,
+        "grundpreis_monat": 15.30,
+        "grundpreis_jahr": 183.60,
+        "eigenschaften": ["100% Ökostrom", "Fair & transparent", "12 Monate", "Regional bezogen"],
+        "laufzeit": "12 Monate",
+        "kuendigungsfrist": "1 Monat",
+        "oekostrom": true,
+        "siegel": "TÜV"
+      }
+    ],
+    "hinweis": "Alle Preise sind Beispiele basierend auf 3.500 kWh Jahresverbrauch. Stand: 02.04.2026."
+  }
+}
