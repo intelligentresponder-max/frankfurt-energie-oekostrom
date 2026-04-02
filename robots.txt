@@ -1,6 +1,3 @@
-# robots.txt für frankfurt-energie.online
-# Erlaubt allen Suchmaschinen vollen Zugriff
-
 User-agent: *
 Allow: /
 
