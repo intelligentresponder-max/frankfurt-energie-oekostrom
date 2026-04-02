@@ -1,0 +1,44 @@
+**KOPIEREN SIE VON HIER BIS "ENDE ROBOTS":**
+
+```
+# robots.txt für frankfurt-energie.online
+# Erlaubt allen Suchmaschinen vollen Zugriff
+
+User-agent: *
+Allow: /
+
+# Sitemap-Verweis
+Sitemap: https://frankfurt-energie.online/sitemap.xml
+
+# Spezifische Bot-Regeln
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Keine Einschränkungen für AI-Crawler
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Crawl-Delay für andere Bots
+User-agent: *
+Crawl-delay: 1
+```
+
+**ENDE ROBOTS**
