@@ -1,4 +1,122 @@
+**KOPIEREN SIE VON HIER BIS "ENDE SITEMAP":**
+
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://frankfurt-energie.online/</loc><lastmod>2026-03-27</lastmod><priority>1.0</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Hauptseiten -->
+  <url>
+    <loc>https://frankfurt-energie.online/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://frankfurt-energie.online/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://frankfurt-energie.online/en.html" />
+  </url>
+  
+  <url>
+    <loc>https://frankfurt-energie.online/en.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://frankfurt-energie.online/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://frankfurt-energie.online/en.html" />
+  </url>
+  
+  <url>
+    <loc>https://frankfurt-energie.online/preisrechner.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Blog-Artikel -->
+  <url>
+    <loc>https://frankfurt-energie.online/blog/photovoltaik-einspeiseverguetung-wegfall-2027.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://frankfurt-energie.online/blog/photovoltaik-frankfurt-2026-einspeiseverguetung.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://frankfurt-energie.online/blog/oekostrom-guenstiger-grundversorger.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://frankfurt-energie.online/blog/gaspreise-frankfurt-2026.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://frankfurt-energie.online/blog/frankfurt-energiekosten-sparen.html</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://frankfurt-energie.online/blog/oekostrom-urvertrauen-frankfurt.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://frankfurt-energie.online/blog/eeg-reform-2026-einspeiseverguetung.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://frankfurt-energie.online/blog/teleson-tools-remote-energieberater.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://frankfurt-energie.online/blog/folgeprovision-passives-einkommen-energie.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://frankfurt-energie.online/blog/nebeneinkommen-energiemarkt-vertriebspartner.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://frankfurt-energie.online/blog/vertriebspartner-werden-teleson.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://frankfurt-energie.online/blog/glossar.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
 </urlset>
+```
+
+**ENDE SITEMAP**
